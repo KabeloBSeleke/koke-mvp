@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Koke Holdings (Pty) Ltd — Project Management Unit for public-sector skills development and learnership programmes across South African provinces.">
+  <meta name="theme-color" content="#191D26">
+  <title>Koke Holdings — Project Management for Skills Development</title>
+
+  <!-- Theme detection (prevent FOUC) -->
+  <script>
+    (function() {
+      var d = document.documentElement;
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || t === 'light') {
+        d.classList.toggle('dark', t === 'dark');
+      } else {
+        d.classList.toggle('dark', window.matchMedia('(prefers-color-scheme: dark)').matches);
+      }
+    })();
+  </script>
+
+  <!-- Open Graph / Social Share -->
+  <!-- TODO: Update og:image to absolute URL once domain is known (e.g., https://kokeholdings.co.za/assets/og-image.png) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Koke Holdings — Project Management for Skills Development">
+  <meta property="og:description" content="Trusted Project Management Unit for public-sector skills initiatives across South African provinces. On time, on budget, in full compliance.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Koke Holdings — Project Management for Skills Development">
+  <meta name="twitter:description" content="Trusted Project Management Unit for public-sector skills initiatives across South African provinces.">
+  <meta name="twitter:image" content="assets/og-image.png">
+
+  <!-- Canonical URL -->
+  <!-- TODO: Update href to deployed URL once domain is known -->
+  <link rel="canonical" href="">
+
+  <!-- Apple Touch Icon -->
+  <!-- TODO: Create assets/apple-touch-icon.png (180x180) from logo -->
+
+  <!-- Tailwind CSS CDN (Play CDN with JIT) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#F26522',
+            secondary: '#191D26',
+            surface: '#F5F5F5',
+            accent: '#FF8A4C',
+            border: '#E0E0E0',
+            'text-primary': '#1A1A1A',
+            'text-inverse': '#FFFFFF',
+          },
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Schema.org Organization markup (TODO: Add deployed URL to "url" field once domain is known) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Koke Holdings (Pty) Ltd",
+    "url": "",
+    "logo": "assets/logo.svg",
+    "description": "Project Management Unit for public-sector skills development and learnership programmes across South African provinces.",
+    "telephone": "+27-81-040-0918",
+    "email": "kokeholdings@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "839 Ntlole Street, Boitumelong",
+      "addressLocality": "Bloemhof",
+      "addressRegion": "North West",
+      "postalCode": "2660",
+      "addressCountry": "ZA"
+    },
+    "sameAs": []
+  }
+  </script>
+</head>
+<body class="font-body text-text-primary bg-white dark:bg-[#111318] dark:text-gray-200 antialiased">
+
+  <!-- Skip to main content (keyboard accessibility) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold focus:outline-none">
+    Skip to main content
+  </a>
+
+  <!-- ===== NAV ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full bg-secondary z-50">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-2">
+        <img src="assets/logo.svg" alt="Koke Holdings logo" class="h-10 w-auto">
+        <span class="text-white font-heading font-bold text-lg hidden sm:inline">Koke Holdings</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+        <li><a href="#services" class="hover:text-primary transition-colors focus-ring">Services</a></li>
+        <li><a href="#about" class="hover:text-primary transition-colors focus-ring">About</a></li>
+        <li><a href="#lifecycle" class="hover:text-primary transition-colors focus-ring">Lifecycle</a></li>
+        <li><a href="#stakeholders" class="hover:text-primary transition-colors focus-ring">Stakeholders</a></li>
+        <li><a href="#contact" class="hover:text-primary transition-colors focus-ring">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="text-gray-300 hover:text-primary transition-colors focus-ring rounded p-1" aria-label="Toggle dark mode">
+            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+        </li>
+        <li>
+          <a href="#contact" class="bg-primary hover:bg-accent text-white px-5 py-2 rounded-full text-sm font-semibold transition-colors focus-ring btn-active">
+            Partner With Us
+          </a>
+        </li>
+      </ul>
+
+      <!-- Hamburger button (mobile) -->
+      <div class="md:hidden flex items-center gap-2">
+        <button id="theme-toggle-mobile" class="text-white focus-ring rounded p-1" aria-label="Toggle dark mode">
+          <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <button id="menu-toggle" class="text-white focus-ring rounded" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-secondary border-t border-gray-700" role="menu" aria-label="Mobile navigation">
+      <ul class="flex flex-col px-4 py-4 gap-3 text-sm font-medium text-gray-300">
+        <li><a href="#services" class="block py-2 hover:text-primary transition-colors focus-ring">Services</a></li>
+        <li><a href="#about" class="block py-2 hover:text-primary transition-colors focus-ring">About</a></li>
+        <li><a href="#lifecycle" class="block py-2 hover:text-primary transition-colors focus-ring">Lifecycle</a></li>
+        <li><a href="#stakeholders" class="block py-2 hover:text-primary transition-colors focus-ring">Stakeholders</a></li>
+        <li><a href="#contact" class="block py-2 hover:text-primary transition-colors focus-ring">Contact</a></li>
+        <li>
+          <a href="#contact" class="block text-center bg-primary hover:bg-accent text-white px-5 py-2 rounded-full font-semibold transition-colors mt-2 focus-ring btn-active">
+            Partner With Us
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- ===== HERO ===== -->
+  <header id="hero" class="relative min-h-screen flex items-center bg-secondary overflow-hidden grain-overlay">
+    <!-- SVG sweep background motif -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 400" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height: 50%;">
+        <path d="M0 400V200C200 100 400 50 720 80C1040 110 1280 200 1440 250V400H0Z" fill="#F26522" fill-opacity="0.15"/>
+        <path d="M0 400V280C240 200 480 160 720 180C960 200 1200 280 1440 320V400H0Z" fill="#F26522" fill-opacity="0.1"/>
+      </svg>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-4 md:px-8 py-24 text-center">
+      <h1 data-reveal class="reveal text-3xl md:text-5xl font-bold font-heading text-white leading-tight mb-6 tracking-tight">
+        Delivering Skills Development Projects That Work
+      </h1>
+      <p data-reveal class="reveal text-lg text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+        On Time, On Budget, In Full Compliance. Koke Holdings is a trusted Project Management Unit for public-sector skills initiatives across South African provinces.
+      </p>
+      <a data-reveal href="#contact" class="reveal inline-block bg-primary hover:bg-accent text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors focus-ring btn-active">
+        Partner With Us
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== TRUST STRIP ===== -->
+  <div class="bg-white dark:bg-[#111318] border-y border-border dark:border-gray-700 py-4">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400">
+        <span>PFMA Compliant</span>
+        <span class="hidden sm:inline text-border">|</span>
+        <span>SAQA Accredited</span>
+        <span class="hidden sm:inline text-border">|</span>
+        <span>QCTO Certified</span>
+        <span class="hidden sm:inline text-border">|</span>
+        <span>SETA / LMIS Aligned</span>
+        <span class="hidden sm:inline text-border">|</span>
+        <span>National Skills Fund</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== IMPACT STATS ===== -->
+  <div class="bg-secondary text-white py-8 grain-overlay relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+      <div data-reveal class="reveal grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-left">
+        <div>
+          <span class="block text-3xl md:text-4xl font-bold font-heading text-primary" data-count="36">0</span>
+          <span class="text-sm text-gray-400 mt-1">Month Project Lifecycle</span>
+        </div>
+        <div>
+          <span class="block text-3xl md:text-4xl font-bold font-heading text-primary" data-count="4">0</span>
+          <span class="text-sm text-gray-400 mt-1">Districts Covered</span>
+        </div>
+        <div>
+          <span class="block text-3xl md:text-4xl font-bold font-heading text-primary" data-count="2017">0</span>
+          <span class="text-sm text-gray-400 mt-1">Year Established</span>
+        </div>
+        <div>
+          <span class="block text-3xl md:text-4xl font-bold font-heading text-primary" data-count="5">0</span>
+          <span class="text-sm text-gray-400 mt-1">Delivery Phases</span>
+        </div>
+      </div>
+    </div>
+    <!-- Decorative vertical rule -->
+    <div class="hidden md:block absolute right-12 top-1/2 -translate-y-1/2 w-px h-16 bg-primary opacity-30" aria-hidden="true"></div>
+  </div>
+  <section id="services" class="relative bg-surface dark:bg-[#111318] py-16 md:py-28">
+    <!-- Section divider: Hero → Services -->
+    <div class="section-divider" aria-hidden="true">
+      <svg class="relative block w-full" style="height: 60px;" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 60V0C240 40 480 55 720 50C960 45 1200 20 1440 0V60H0Z" fill="#F26522" fill-opacity="0.18"/>
+      </svg>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 md:px-8 text-center mb-12">
+      <span class="eyebrow">Our Expertise</span>
+      <h2 class="text-2xl md:text-3xl font-semibold font-heading text-secondary dark:text-white mb-4 tracking-tight">What We Do</h2>
+      <p class="text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        End-to-end Project Management Unit capability — from scope definition through to certification and exit.
+      </p>
+    </div>
+    <div data-reveal class="reveal max-w-6xl mx-auto px-4 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Service Card 1 -->
+      <div class="bg-white dark:bg-[#1a1d24] rounded-lg shadow-card border border-border dark:border-gray-700 overflow-hidden">
+        <div class="relative aspect-video bg-surface dark:bg-[#1a1d24] flex items-center justify-center img-duotone">
+          <div class="text-center p-4">
+            <svg class="w-8 h-8 text-gray-300 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-8 h-8 bg-primary bg-opacity-10 rounded flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold font-heading text-secondary dark:text-white">Scope & Target Definition</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Confirming what will be delivered, where, and by when — aligning all stakeholders on project goals from day one.</p>
+        </div>
+      </div>
+      <!-- Service Card 2 -->
+      <div class="bg-white dark:bg-[#1a1d24] rounded-lg shadow-card border border-border dark:border-gray-700 overflow-hidden">
+        <div class="relative aspect-video bg-surface dark:bg-[#1a1d24] flex items-center justify-center img-duotone">
+          <div class="text-center p-4">
+            <svg class="w-8 h-8 text-gray-300 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-8 h-8 bg-primary bg-opacity-10 rounded flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold font-heading text-secondary dark:text-white">Team Mobilisation</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Setting up the PMU, governance structures, roles, and reporting lines for effective programme execution.</p>
+        </div>
+      </div>
+      <!-- Service Card 3 -->
+      <div class="bg-white dark:bg-[#1a1d24] rounded-lg shadow-card border border-border dark:border-gray-700 overflow-hidden">
+        <div class="relative aspect-video bg-surface dark:bg-[#1a1d24] flex items-center justify-center img-duotone">
+          <div class="text-center p-4">
+            <svg class="w-8 h-8 text-gray-300 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-8 h-8 bg-primary bg-opacity-10 rounded flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold font-heading text-secondary dark:text-white">Procurement & Contracting</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Appointing service providers in line with PFMA supply chain procedures and public finance rules.</p>
+        </div>
+      </div>
+      <!-- Service Card 4 -->
+      <div class="bg-white dark:bg-[#1a1d24] rounded-lg shadow-card border border-border dark:border-gray-700 overflow-hidden">
+        <div class="relative aspect-video bg-surface dark:bg-[#1a1d24] flex items-center justify-center img-duotone">
+          <div class="text-center p-4">
+            <svg class="w-8 h-8 text-gray-300 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-8 h-8 bg-primary bg-opacity-10 rounded flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold font-heading text-secondary dark:text-white">Implementation Coordination</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Managing programme design, delivery, and quality checks across all sites and districts.</p>
+        </div>
+      </div>
+      <!-- Service Card 5 -->
+      <div class="bg-white dark:bg-[#1a1d24] rounded-lg shadow-card border border-border dark:border-gray-700 overflow-hidden">
+        <div class="relative aspect-video bg-surface dark:bg-[#1a1d24] flex items-center justify-center img-duotone">
+          <div class="text-center p-4">
+            <svg class="w-8 h-8 text-gray-300 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-8 h-8 bg-primary bg-opacity-10 rounded flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold font-heading text-secondary dark:text-white">Capacity Building</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Training departmental staff and local partners for programme continuity and long-term sustainability.</p>
+        </div>
+      </div>
+      <!-- Service Card 6 -->
+      <div class="bg-white dark:bg-[#1a1d24] rounded-lg shadow-card border border-border dark:border-gray-700 overflow-hidden">
+        <div class="relative aspect-video bg-surface dark:bg-[#1a1d24] flex items-center justify-center img-duotone">
+          <div class="text-center p-4">
+            <svg class="w-8 h-8 text-gray-300 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-8 h-8 bg-primary bg-opacity-10 rounded flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold font-heading text-secondary dark:text-white">Monitoring & Evaluation</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Continuous M&E throughout the project lifecycle — performance evaluations, site inspections, and routine reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / GOVERNANCE ===== -->
+  <section id="about" class="bg-white dark:bg-[#111318] py-16 md:py-28">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 grid md:grid-cols-5 gap-12 items-center">
+      <!-- Left: Text -->
+      <div data-reveal class="reveal md:col-span-3">
+        <span class="eyebrow">Governance & Capability</span>
+        <h2 class="text-2xl md:text-3xl font-semibold font-heading text-secondary dark:text-white mb-6 tracking-tight">About &amp; Governance</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+          Koke Holdings (Pty) Ltd operates as the appointed Project Management Service Provider, working alongside the client's internal oversight structure and a dedicated Project Steering Committee.
+        </p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+          Since public-sector clients cannot hold SAQA accreditation directly, Koke Holdings designates and manages qualified, accredited service providers to deliver programmes compliantly under PFMA supply chain procedures.
+        </p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+          Our proposed PMU structure: <strong class="text-secondary dark:text-white">Managing Director</strong> → <strong class="text-secondary dark:text-white">Programme Manager</strong>, supported by Programme Support and a Finance Manager, with Project Managers assigned per district/region (DRSM, DKK, Ngaka Modiri, Bojanala).
+        </p>
+        <div class="flex flex-wrap gap-3 mb-6">
+          <span class="inline-block bg-surface dark:bg-[#1a1d24] text-secondary dark:text-gray-200 text-xs font-semibold px-3 py-1.5 rounded-full border border-border dark:border-gray-700">PFMA</span>
+          <span class="inline-block bg-surface dark:bg-[#1a1d24] text-secondary dark:text-gray-200 text-xs font-semibold px-3 py-1.5 rounded-full border border-border dark:border-gray-700">SAQA</span>
+          <span class="inline-block bg-surface dark:bg-[#1a1d24] text-secondary dark:text-gray-200 text-xs font-semibold px-3 py-1.5 rounded-full border border-border dark:border-gray-700">QCTO</span>
+          <span class="inline-block bg-surface dark:bg-[#1a1d24] text-secondary dark:text-gray-200 text-xs font-semibold px-3 py-1.5 rounded-full border border-border dark:border-gray-700">SETA / LMIS</span>
+        </div>
+        <blockquote class="pull-quote">
+          &ldquo;Since the applicant is a government agency, it is not allowed to get accreditation under SAQA requirements. Instead, the applicant will designate qualified service providers to carry out the suggested programs in accordance with the PFMA supply chain procedures.&rdquo;
+          <cite>Governance Framework</cite>
+        </blockquote>
+        <blockquote class="pull-quote">
+          &ldquo;To measure the project&rsquo;s efficacy and progress, we shall create strong monitoring and evaluation systems throughout the duration of the project. This covers performance evaluations, site inspections by designated M&amp;E officers, and routine reporting &mdash; including speaking with students one-on-one to find out how they view project development.&rdquo;
+          <cite>M&amp;E Philosophy</cite>
+        </blockquote>
+      </div>
+      <!-- Right: Visual -->
+      <div data-reveal class="reveal md:col-span-2 flex justify-center">
+        <div class="bg-surface dark:bg-[#1a1d24] rounded-lg p-8 border border-border dark:border-gray-700 w-full max-w-sm">
+          <h3 class="text-lg font-semibold font-heading text-secondary dark:text-white mb-6 text-center">PMU Structure</h3>
+          <svg viewBox="0 0 320 260" class="w-full h-auto" role="img" aria-label="PMU organisational chart: Managing Director oversees Programme Manager, who manages Programme Support, Finance Manager, and Project Managers per district">
+            <!-- Connecting lines -->
+            <line x1="160" y1="52" x2="160" y2="80" stroke="#F26522" stroke-width="2" stroke-opacity="0.4"/>
+            <line x1="160" y1="124" x2="160" y2="152" stroke="#F26522" stroke-width="2" stroke-opacity="0.4"/>
+            <line x1="80" y1="184" x2="240" y2="184" stroke="#F26522" stroke-width="2" stroke-opacity="0.4"/>
+            <line x1="80" y1="184" x2="80" y2="216" stroke="#F26522" stroke-width="2" stroke-opacity="0.4"/>
+            <line x1="160" y1="184" x2="160" y2="216" stroke="#F26522" stroke-width="2" stroke-opacity="0.4"/>
+            <line x1="240" y1="184" x2="240" y2="216" stroke="#F26522" stroke-width="2" stroke-opacity="0.4"/>
+            <!-- Managing Director -->
+            <rect x="100" y="8" width="120" height="44" rx="8" fill="#191D26"/>
+            <text x="160" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="600" font-family="Poppins, sans-serif">Managing Director</text>
+            <text x="160" y="42" text-anchor="middle" fill="#F26522" font-size="9" font-family="Inter, sans-serif">Leads PMU</text>
+            <!-- Programme Manager -->
+            <rect x="100" y="80" width="120" height="44" rx="8" fill="#F26522"/>
+            <text x="160" y="100" text-anchor="middle" fill="white" font-size="11" font-weight="600" font-family="Poppins, sans-serif">Programme Manager</text>
+            <text x="160" y="114" text-anchor="middle" fill="white" font-size="9" font-family="Inter, sans-serif" opacity="0.85">Oversees Delivery</text>
+            <!-- Horizontal connector bar -->
+            <rect x="80" y="182" width="160" height="4" rx="2" fill="#F26522" fill-opacity="0.25"/>
+            <!-- Leaf nodes -->
+            <rect x="28" y="216" width="104" height="36" rx="6" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+            <text x="80" y="232" text-anchor="middle" fill="#191D26" font-size="10" font-weight="600" font-family="Inter, sans-serif">Programme Support</text>
+            <text x="80" y="244" text-anchor="middle" fill="#F26522" font-size="8" font-family="Inter, sans-serif">Admin &amp; Coordination</text>
+            <rect x="140" y="216" width="80" height="36" rx="6" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+            <text x="180" y="232" text-anchor="middle" fill="#191D26" font-size="10" font-weight="600" font-family="Inter, sans-serif">Finance</text>
+            <text x="180" y="244" text-anchor="middle" fill="#F26522" font-size="8" font-family="Inter, sans-serif">Budget &amp; Reporting</text>
+            <rect x="224" y="216" width="88" height="36" rx="6" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+            <text x="268" y="232" text-anchor="middle" fill="#191D26" font-size="10" font-weight="600" font-family="Inter, sans-serif">Project Mgrs</text>
+            <text x="268" y="244" text-anchor="middle" fill="#F26522" font-size="8" font-family="Inter, sans-serif">Per District</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECT LIFECYCLE ===== -->
+  <section id="lifecycle" class="bg-surface dark:bg-[#111318] py-16 md:py-28">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 text-center mb-12">
+      <span class="eyebrow">How We Deliver</span>
+      <h2 class="text-2xl md:text-3xl font-semibold font-heading text-secondary dark:text-white mb-4 tracking-tight">Project Lifecycle</h2>
+      <p class="text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        A phased delivery approach designed for compliance, quality, and measurable community impact.
+      </p>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 md:px-8">
+      <!-- Mobile: Vertical stacked list -->
+      <div class="md:hidden space-y-3 reveal" data-reveal role="list" aria-label="Project lifecycle phases">
+        <div class="bg-primary bg-opacity-10 rounded-lg p-3 border-l-4 border-primary" role="listitem" aria-label="Continuous Monitoring and Evaluation: runs throughout the 36-month project lifecycle">
+          <span class="text-sm font-semibold text-secondary dark:text-white">Continuous M&amp;E</span>
+          <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">36 months</span>
+          <p class="text-gray-600 dark:text-gray-300 text-xs mt-1">Runs throughout the entire project lifecycle.</p>
+        </div>
+        <div class="bg-white dark:bg-[#1a1d24] rounded-lg p-3 border-l-4 border-primary shadow-card" role="listitem" aria-label="Preparations: approximately 2 months — advertising, selection, recruitment, contracting">
+          <span class="text-sm font-semibold text-secondary dark:text-white">Preparations</span>
+          <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">~2 months</span>
+          <p class="text-gray-600 dark:text-gray-300 text-xs mt-1">Advertising, selection, recruitment, contracting.</p>
+        </div>
+        <div class="bg-white dark:bg-[#1a1d24] rounded-lg p-3 border-l-4 border-primary shadow-card" role="listitem" aria-label="Theory Training: approximately 4 months — induction, learnership agreements, institutional learning">
+          <span class="text-sm font-semibold text-secondary dark:text-white">Theory Training</span>
+          <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">~4 months</span>
+          <p class="text-gray-600 dark:text-gray-300 text-xs mt-1">Induction, learnership agreements, institutional learning.</p>
+        </div>
+        <div class="bg-white dark:bg-[#1a1d24] rounded-lg p-3 border-l-4 border-primary shadow-card" role="listitem" aria-label="Practical Training: approximately 8 months — workplace allocation, logbooks, practical assessment">
+          <span class="text-sm font-semibold text-secondary dark:text-white">Practical Training</span>
+          <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">~8 months</span>
+          <p class="text-gray-600 dark:text-gray-300 text-xs mt-1">Workplace allocation, logbooks, practical assessment.</p>
+        </div>
+        <div class="bg-white dark:bg-[#1a1d24] rounded-lg p-3 border-l-4 border-secondary shadow-card" role="listitem" aria-label="Workplace Placements: up to 24 months — structured internships and workplace-based learning">
+          <span class="text-sm font-semibold text-secondary dark:text-white">Workplace Placements</span>
+          <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">Up to 24 months</span>
+          <p class="text-gray-600 dark:text-gray-300 text-xs mt-1">Structured internships and workplace-based learning.</p>
+        </div>
+        <div class="bg-white dark:bg-[#1a1d24] rounded-lg p-3 border-l-4 border-primary shadow-card" role="listitem" aria-label="Assessment and Certification: approximately 2 months or more — QCTO moderation, exit strategy, graduation">
+          <span class="text-sm font-semibold text-secondary dark:text-white">Assessment &amp; Certification</span>
+          <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">~2+ months</span>
+          <p class="text-gray-600 dark:text-gray-300 text-xs mt-1">QCTO moderation, exit strategy, graduation.</p>
+        </div>
+      </div>
+
+      <!-- Desktop: Proportional bar chart -->
+      <div data-reveal class="reveal hidden md:block">
+        <!-- Continuous M&E background label -->
+        <div class="bg-primary bg-opacity-5 rounded-t-xl px-4 py-2 border-b border-primary border-opacity-20" role="img" aria-label="Continuous Monitoring and Evaluation spans the full 36-month project lifecycle">
+          <span class="text-xs font-semibold text-primary uppercase tracking-wide">Continuous M&amp;E — 36 months</span>
+        </div>
+        
+        <!-- Phase bars -->
+        <div class="bg-surface dark:bg-[#1a1d24] rounded-b-xl p-6">
+          <div class="flex gap-1" style="height: 120px;">
+            <!-- Preparations: 2/36 = 5.5% -->
+            <div class="timeline-bar flex-[0.055] bg-primary rounded-t-lg flex items-end justify-center pb-2 cursor-pointer hover:bg-accent transition-colors relative" role="img" aria-label="Preparations: approximately 2 months">
+              <span class="tooltip">Preparations: ~2 months</span>
+              <span class="text-xs font-semibold text-white" style="writing-mode: vertical-rl; text-orientation: mixed;">Prep</span>
+            </div>
+            <!-- Theory Training: 4/36 = 11% -->
+            <div class="timeline-bar flex-[0.11] bg-primary rounded-t-lg flex items-end justify-center pb-2 cursor-pointer hover:bg-accent transition-colors relative" role="img" aria-label="Theory Training: approximately 4 months">
+              <span class="tooltip">Theory Training: ~4 months</span>
+              <span class="text-xs font-semibold text-white" style="writing-mode: vertical-rl; text-orientation: mixed;">Theory</span>
+            </div>
+            <!-- Practical Training: 8/36 = 22% -->
+            <div class="timeline-bar flex-[0.22] bg-primary rounded-t-lg flex items-end justify-center pb-2 cursor-pointer hover:bg-accent transition-colors relative" role="img" aria-label="Practical Training: approximately 8 months">
+              <span class="tooltip">Practical Training: ~8 months</span>
+              <span class="text-xs font-semibold text-white" style="writing-mode: vertical-rl; text-orientation: mixed;">Practical</span>
+            </div>
+            <!-- Workplace Placements: 24/36 = 67% -->
+            <div class="timeline-bar flex-[0.55] bg-secondary rounded-t-lg flex items-end justify-center pb-2 cursor-pointer hover:bg-secondary/80 transition-colors relative" role="img" aria-label="Workplace Placements: up to 24 months">
+              <span class="tooltip">Workplace Placements: Up to 24 months</span>
+              <span class="text-xs font-semibold text-white">Workplace Placements — 24 months</span>
+            </div>
+            <!-- Assessment & Certification: 2/36 = 5.5% -->
+            <div class="timeline-bar flex-[0.055] bg-primary rounded-t-lg flex items-end justify-center pb-2 cursor-pointer hover:bg-accent transition-colors relative" role="img" aria-label="Assessment and Certification: approximately 2 months or more">
+              <span class="tooltip">Assessment &amp; Certification: ~2+ months</span>
+              <span class="text-xs font-semibold text-white" style="writing-mode: vertical-rl; text-orientation: mixed;">Assess</span>
+            </div>
+          </div>
+          
+          <!-- Phase labels below bars -->
+          <div class="flex gap-1 mt-3">
+            <div class="flex-[0.055] text-center">
+              <p class="text-xs font-semibold text-secondary dark:text-white">Prep</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">2 mo</p>
+            </div>
+            <div class="flex-[0.11] text-center">
+              <p class="text-xs font-semibold text-secondary dark:text-white">Theory</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">4 mo</p>
+            </div>
+            <div class="flex-[0.22] text-center">
+              <p class="text-xs font-semibold text-secondary dark:text-white">Practical</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">8 mo</p>
+            </div>
+            <div class="flex-[0.55] text-center">
+              <p class="text-xs font-semibold text-secondary dark:text-white">Workplace Placements</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">24 months</p>
+            </div>
+            <div class="flex-[0.055] text-center">
+              <p class="text-xs font-semibold text-secondary dark:text-white">Assess</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">2+ mo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STAKEHOLDERS ===== -->
+  <section id="stakeholders" class="relative bg-white dark:bg-[#111318] py-16 md:py-28">
+    <!-- Section divider: Lifecycle → Stakeholders -->
+    <div class="section-divider" aria-hidden="true">
+      <svg class="relative block w-full" style="height: 60px;" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 60V0C240 40 480 55 720 50C960 45 1200 20 1440 0V60H0Z" fill="#F26522" fill-opacity="0.18"/>
+      </svg>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 md:px-8 text-center mb-12">
+      <span class="eyebrow">Our Ecosystem</span>
+      <h2 class="text-2xl md:text-3xl font-semibold font-heading text-secondary dark:text-white mb-4 tracking-tight">Who We Work With</h2>
+      <p class="text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        A collaborative ecosystem of funders, government bodies, training providers, and workplace hosts.
+      </p>
+    </div>
+    <!-- Mobile: Simplified vertical flow -->
+    <div class="md:hidden max-w-md mx-auto px-4 space-y-4 reveal" data-reveal>
+      <!-- Koke Holdings (top) -->
+      <div class="bg-secondary rounded-lg p-4 text-center">
+        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-2">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <p class="text-white font-heading font-semibold">Koke Holdings</p>
+        <p class="text-primary text-xs">Project Execution</p>
+      </div>
+      <!-- Arrow down -->
+      <div class="text-center text-primary" aria-hidden="true">
+        <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+      </div>
+      <!-- Stakeholder rows -->
+      <div class="bg-surface dark:bg-[#1a1d24] rounded-lg p-3 border border-border dark:border-gray-700 flex items-center gap-3">
+        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-secondary dark:text-white">National Skills Fund</p>
+          <p class="text-xs text-primary">Funder</p>
+        </div>
+      </div>
+      <div class="bg-surface dark:bg-[#1a1d24] rounded-lg p-3 border border-border dark:border-gray-700 flex items-center gap-3">
+        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-secondary dark:text-white">Government Departments</p>
+          <p class="text-xs text-primary">Workplace Hosts</p>
+        </div>
+      </div>
+      <div class="bg-surface dark:bg-[#1a1d24] rounded-lg p-3 border border-border dark:border-gray-700 flex items-center gap-3">
+        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-secondary dark:text-white">State-Owned Entities</p>
+          <p class="text-xs text-primary">Workplace Hosts</p>
+        </div>
+      </div>
+      <div class="bg-surface dark:bg-[#1a1d24] rounded-lg p-3 border border-border dark:border-gray-700 flex items-center gap-3">
+        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-secondary dark:text-white">Accredited Training Providers</p>
+          <p class="text-xs text-primary">Training Partners</p>
+        </div>
+      </div>
+      <div class="bg-surface dark:bg-[#1a1d24] rounded-lg p-3 border border-border dark:border-gray-700 flex items-center gap-3">
+        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-secondary dark:text-white">Municipalities</p>
+          <p class="text-xs text-primary">Workplace Hosts</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop: Hub-and-spoke diagram -->
+    <div data-reveal class="reveal hidden md:block relative max-w-3xl mx-auto px-4" style="height: 420px;">
+      <!-- SVG connection lines -->
+      <svg class="absolute inset-0 w-full h-full" aria-hidden="true">
+        <!-- Koke → NSF (top) -->
+        <line x1="50%" y1="50%" x2="50%" y2="12%" stroke="#F26522" stroke-width="2" stroke-opacity="0.35"/>
+        <text x="52%" y="30%" fill="#F26522" font-size="9" font-family="Inter, sans-serif" font-weight="500">Funds</text>
+        <!-- Koke → Government Departments (left) -->
+        <line x1="50%" y1="50%" x2="12%" y2="38%" stroke="#F26522" stroke-width="2" stroke-opacity="0.35"/>
+        <text x="28%" y="42%" fill="#F26522" font-size="9" font-family="Inter, sans-serif" font-weight="500">Hosts</text>
+        <!-- Koke → ATPs (right) -->
+        <line x1="50%" y1="50%" x2="88%" y2="38%" stroke="#F26522" stroke-width="2" stroke-opacity="0.35"/>
+        <text x="70%" y="42%" fill="#F26522" font-size="9" font-family="Inter, sans-serif" font-weight="500">Trains</text>
+        <!-- Koke → State-Owned (bottom-left) -->
+        <line x1="50%" y1="50%" x2="22%" y2="82%" stroke="#F26522" stroke-width="2" stroke-opacity="0.35"/>
+        <text x="34%" y="68%" fill="#F26522" font-size="9" font-family="Inter, sans-serif" font-weight="500">Hosts</text>
+        <!-- Koke → Municipalities (bottom-right) -->
+        <line x1="50%" y1="50%" x2="78%" y2="82%" stroke="#F26522" stroke-width="2" stroke-opacity="0.35"/>
+        <text x="64%" y="68%" fill="#F26522" font-size="9" font-family="Inter, sans-serif" font-weight="500">Hosts</text>
+      </svg>
+
+      <!-- Central hub: Koke Holdings -->
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+        <div class="w-28 h-28 bg-secondary rounded-full border-4 border-primary flex flex-col items-center justify-center text-center shadow-elevated hub-pulse">
+          <svg class="w-7 h-7 text-primary mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          <span class="text-white font-heading font-bold text-sm leading-tight">Koke Holdings</span>
+          <span class="text-primary text-xs mt-0.5">Executor</span>
+        </div>
+      </div>
+
+      <!-- NSF (top center) -->
+      <div class="absolute left-1/2 top-2 -translate-x-1/2 z-10">
+        <div class="bg-white dark:bg-[#1a1d24] rounded-lg border border-border dark:border-gray-700 p-3 text-center shadow-card w-28">
+          <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mx-auto mb-2">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <p class="text-xs font-semibold text-secondary dark:text-white leading-tight">National Skills Fund</p>
+          <p class="text-xs text-primary mt-0.5">Funder</p>
+        </div>
+      </div>
+
+      <!-- Government Departments (left) -->
+      <div class="absolute left-0 top-1/3 z-10">
+        <div class="bg-white dark:bg-[#1a1d24] rounded-lg border border-border dark:border-gray-700 p-3 text-center shadow-card w-28">
+          <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mx-auto mb-2">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <p class="text-xs font-semibold text-secondary dark:text-white leading-tight">Government Departments</p>
+          <p class="text-xs text-primary mt-0.5">Workplace Hosts</p>
+        </div>
+      </div>
+
+      <!-- ATPs (right) -->
+      <div class="absolute right-0 top-1/3 z-10">
+        <div class="bg-white dark:bg-[#1a1d24] rounded-lg border border-border dark:border-gray-700 p-3 text-center shadow-card w-28">
+          <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mx-auto mb-2">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <p class="text-xs font-semibold text-secondary dark:text-white leading-tight">Accredited Training Providers</p>
+          <p class="text-xs text-primary mt-0.5">Training Partners</p>
+        </div>
+      </div>
+
+      <!-- State-Owned Entities (bottom-left) -->
+      <div class="absolute left-4 bottom-2 z-10">
+        <div class="bg-white dark:bg-[#1a1d24] rounded-lg border border-border dark:border-gray-700 p-3 text-center shadow-card w-28">
+          <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mx-auto mb-2">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <p class="text-xs font-semibold text-secondary dark:text-white leading-tight">State-Owned Entities</p>
+          <p class="text-xs text-primary mt-0.5">Workplace Hosts</p>
+        </div>
+      </div>
+
+      <!-- Municipalities (bottom-right) -->
+      <div class="absolute right-4 bottom-2 z-10">
+        <div class="bg-white dark:bg-[#1a1d24] rounded-lg border border-border dark:border-gray-700 p-3 text-center shadow-card w-28">
+          <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mx-auto mb-2">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <p class="text-xs font-semibold text-secondary dark:text-white leading-tight">Municipalities</p>
+          <p class="text-xs text-primary mt-0.5">Workplace Hosts</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="bg-surface dark:bg-[#111318] py-16 md:py-28">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 text-center">
+      <span class="eyebrow">What Partners Say</span>
+      <h2 class="text-2xl md:text-3xl font-semibold font-heading text-secondary dark:text-white mb-4 tracking-tight">Testimonials</h2>
+      <p class="text-base text-gray-500 dark:text-gray-400 max-w-xl mx-auto italic">
+        Coming soon — hear from the partners and stakeholders we've worked with.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="bg-white dark:bg-[#111318] py-16 md:py-28">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-12">
+      <!-- Left: Contact Info -->
+      <div data-reveal class="reveal">
+        <span class="eyebrow">Let's Talk</span>
+        <h2 class="text-2xl md:text-3xl font-semibold font-heading text-secondary dark:text-white mb-6 tracking-tight">Get in Touch</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          Ready to partner on a skills development initiative? We'd love to hear from you.
+        </p>
+        <div class="space-y-5">
+          <!-- Phone -->
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wide">Phone</p>
+              <a href="tel:+27810400918" class="text-secondary dark:text-gray-200 font-medium hover:text-primary transition-colors focus-ring">+27 81 040 0918</a>
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wide">Email</p>
+              <a href="mailto:kokeholdings@gmail.com" class="text-secondary dark:text-gray-200 font-medium hover:text-primary transition-colors focus-ring">kokeholdings@gmail.com</a>
+            </div>
+          </div>
+          <!-- Address -->
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wide">Address</p>
+              <p class="text-secondary dark:text-gray-200 font-medium">839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right: Contact Form -->
+      <div data-reveal class="reveal bg-surface dark:bg-[#1a1d24] rounded-lg p-6 md:p-8 border border-border dark:border-gray-700">
+        <form id="contact-form" action="mailto:kokeholdings@gmail.com" method="post" enctype="text/plain" class="space-y-5">
+          <div>
+            <label for="name" class="block text-sm font-semibold text-secondary dark:text-gray-200 mb-1">Name</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-2.5 rounded-lg border border-border dark:border-gray-700 bg-white dark:bg-[#111318] text-secondary dark:text-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your full name">
+            <p id="name-error" class="text-red-600 text-xs mt-1 hidden" role="alert"></p>
+          </div>
+          <div>
+            <label for="organization" class="block text-sm font-semibold text-secondary dark:text-gray-200 mb-1">Organization</label>
+            <input type="text" id="organization" name="organization" class="w-full px-4 py-2.5 rounded-lg border border-border dark:border-gray-700 bg-white dark:bg-[#111318] text-secondary dark:text-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your organization">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-semibold text-secondary dark:text-gray-200 mb-1">Email</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-2.5 rounded-lg border border-border dark:border-gray-700 bg-white dark:bg-[#111318] text-secondary dark:text-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="you@example.com">
+            <p id="email-error" class="text-red-600 text-xs mt-1 hidden" role="alert"></p>
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-semibold text-secondary dark:text-gray-200 mb-1">Message</label>
+            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2.5 rounded-lg border border-border dark:border-gray-700 bg-white dark:bg-[#111318] text-secondary dark:text-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-vertical" placeholder="Tell us about your project..."></textarea>
+            <p id="message-error" class="text-red-600 text-xs mt-1 hidden" role="alert"></p>
+          </div>
+          <button type="submit" class="w-full bg-primary hover:bg-accent text-white py-3 rounded-full font-semibold transition-colors focus-ring btn-active">
+            Send Message
+          </button>
+          <p class="text-xs text-gray-500 dark:text-gray-400 text-center">Or email us directly at <a href="mailto:kokeholdings@gmail.com" class="text-primary hover:underline">kokeholdings@gmail.com</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="relative bg-secondary text-white py-16 md:py-24 overflow-hidden grain-overlay">
+    <!-- Section divider: Contact → Footer -->
+    <div class="section-divider" aria-hidden="true">
+      <svg class="relative block w-full" style="height: 60px;" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 60V0C240 40 480 55 720 50C960 45 1200 20 1440 0V60H0Z" fill="#F26522" fill-opacity="0.18"/>
+      </svg>
+    </div>
+    <!-- Orange sweep SVG motif -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <svg class="absolute top-0 left-0 w-full" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height: 60px;">
+        <path d="M0 0V60C360 100 720 120 1080 80C1260 60 1380 30 1440 0H0Z" fill="#F26522" fill-opacity="0.2"/>
+      </svg>
+      <img src="assets/logo.svg" alt="" class="absolute right-8 bottom-8 h-32 w-auto opacity-5" aria-hidden="true">
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-4 md:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <!-- Col 1: Brand -->
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <img src="assets/logo.svg" alt="Koke Holdings logo" class="h-8 w-auto">
+            <span class="font-heading font-bold text-lg">Koke Holdings</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Project Management Unit for public-sector skills development initiatives across South African provinces.
+          </p>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="font-heading font-semibold mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#services" class="hover:text-primary transition-colors focus-ring">Services</a></li>
+            <li><a href="#about" class="hover:text-primary transition-colors focus-ring">About</a></li>
+            <li><a href="#lifecycle" class="hover:text-primary transition-colors focus-ring">Project Lifecycle</a></li>
+            <li><a href="#contact" class="hover:text-primary transition-colors focus-ring">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Contact -->
+        <div>
+          <h4 class="font-heading font-semibold mb-3">Contact</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="tel:+27810400918" class="hover:text-primary transition-colors focus-ring">+27 81 040 0918</a></li>
+            <li><a href="mailto:kokeholdings@gmail.com" class="hover:text-primary transition-colors focus-ring">kokeholdings@gmail.com</a></li>
+            <li>839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-gray-500">
+          &copy; 2026 Koke Holdings (Pty) Ltd. Reg: 2017/231296/07. All rights reserved.
+        </p>
+        <p class="text-xs text-gray-500">
+          Registered in South Africa
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
