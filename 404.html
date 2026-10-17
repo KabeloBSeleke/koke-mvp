@@ -4,11 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
-  <meta name="description" content="Page not found — Koke Holdings (Pty) Ltd">
   <meta name="theme-color" content="#191D26">
   <title>Page Not Found — Koke Holdings</title>
 
-  <!-- Theme detection (prevent FOUC) -->
   <script>
     (function() {
       var d = document.documentElement;
@@ -21,7 +19,6 @@
     })();
   </script>
 
-  <!-- Tailwind CSS CDN (Play CDN with JIT) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -38,142 +35,128 @@
             'text-inverse': '#FFFFFF',
           },
           fontFamily: {
-            heading: ['Poppins', 'sans-serif'],
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
             body: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
           },
         },
       },
     }
   </script>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="font-body text-text-primary bg-white dark:bg-[#111318] dark:text-gray-200 antialiased">
 
   <!-- ===== NAV ===== -->
-  <nav class="fixed top-0 left-0 w-full bg-secondary z-50">
+  <nav id="navbar" class="fixed top-0 left-0 w-full bg-secondary z-50">
     <div class="max-w-6xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
-      <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-2">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
         <img src="assets/logo.svg" alt="Koke Holdings logo" class="h-10 w-auto">
         <span class="text-white font-heading font-bold text-lg hidden sm:inline">Koke Holdings</span>
       </a>
 
-      <!-- Desktop links -->
-      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-        <li><a href="index.html#services" class="hover:text-primary transition-colors focus-ring">Services</a></li>
-        <li><a href="index.html#about" class="hover:text-primary transition-colors focus-ring">About</a></li>
-        <li><a href="index.html#contact" class="hover:text-primary transition-colors focus-ring">Contact</a></li>
-        <li>
-          <button id="theme-toggle" class="text-gray-300 hover:text-primary transition-colors focus-ring rounded p-1" aria-label="Toggle dark mode">
-            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-          </button>
-        </li>
-        <li>
-          <a href="index.html#contact" class="bg-primary hover:bg-accent text-white px-5 py-2 rounded-full text-sm font-semibold transition-colors focus-ring btn-active">
-            Partner With Us
-          </a>
-        </li>
+      <ul class="hidden lg:flex items-center gap-5 text-[13px] font-medium text-gray-300">
+        <li><a href="index.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Home</a></li>
+        <li><a href="about.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">About</a></li>
+        <li><a href="services.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Services</a></li>
+        <li><a href="how-we-work.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">How we work</a></li>
+        <li><a href="projects.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Projects</a></li>
+        <li><a href="team.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Team</a></li>
+        <li><a href="credentials.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Credentials</a></li>
       </ul>
 
-      <!-- Hamburger button (mobile) -->
-      <div class="md:hidden flex items-center gap-2">
-        <button id="theme-toggle-mobile" class="text-white focus-ring rounded p-1" aria-label="Toggle dark mode">
-          <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-          <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-        </button>
-        <button id="menu-toggle" class="text-white focus-ring rounded" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden lg:inline-flex items-center bg-primary hover:bg-accent text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors focus-ring">Partner With Us</a>
+        <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-lg text-gray-300 hover:text-primary transition-colors focus-ring">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
     </div>
 
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-secondary border-t border-gray-700" role="menu" aria-label="Mobile navigation">
-      <ul class="flex flex-col px-4 py-4 gap-3 text-sm font-medium text-gray-300">
-        <li><a href="index.html#services" class="block py-2 hover:text-primary transition-colors focus-ring">Services</a></li>
-        <li><a href="index.html#about" class="block py-2 hover:text-primary transition-colors focus-ring">About</a></li>
-        <li><a href="index.html#contact" class="block py-2 hover:text-primary transition-colors focus-ring">Contact</a></li>
-        <li>
-          <a href="index.html#contact" class="block text-center bg-primary hover:bg-accent text-white px-5 py-2 rounded-full font-semibold transition-colors mt-2 focus-ring btn-active">
-            Partner With Us
-          </a>
-        </li>
+    <div class="ticker" aria-label="Governance and compliance frameworks">
+      <div class="ticker-track">
+        <span class="ticker-item"><!-- slot:site.ticker.1 -->PFMA<!-- /slot:site.ticker.1 --></span>
+        <span class="ticker-item"><!-- slot:site.ticker.2 -->SAQA<!-- /slot:site.ticker.2 --></span>
+        <span class="ticker-item"><!-- slot:site.ticker.3 -->QCTO<!-- /slot:site.ticker.3 --></span>
+        <span class="ticker-item"><!-- slot:site.ticker.4 -->SETA / LMIS<!-- /slot:site.ticker.4 --></span>
+        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.1 -->PFMA<!-- /slot:site.ticker.1 --></span>
+        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.2 -->SAQA<!-- /slot:site.ticker.2 --></span>
+        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.3 -->QCTO<!-- /slot:site.ticker.3 --></span>
+        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.4 -->SETA / LMIS<!-- /slot:site.ticker.4 --></span>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-secondary border-t border-gray-700">
+      <ul class="px-4 py-4 space-y-1 text-sm font-medium text-gray-300">
+        <li><a href="index.html" class="block py-2 hover:text-primary focus-ring">Home</a></li>
+        <li><a href="about.html" class="block py-2 hover:text-primary focus-ring">About</a></li>
+        <li><a href="services.html" class="block py-2 hover:text-primary focus-ring">Services</a></li>
+        <li><a href="how-we-work.html" class="block py-2 hover:text-primary focus-ring">How we work</a></li>
+        <li><a href="projects.html" class="block py-2 hover:text-primary focus-ring">Projects</a></li>
+        <li><a href="team.html" class="block py-2 hover:text-primary focus-ring">Team</a></li>
+        <li><a href="credentials.html" class="block py-2 hover:text-primary focus-ring">Credentials</a></li>
+        <li><a href="contact.html" class="block py-2 hover:text-primary focus-ring">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <main class="min-h-screen flex items-center justify-center px-4">
-    <div class="text-center max-w-lg">
-      <p class="text-7xl md:text-8xl font-bold font-heading text-primary mb-4">404</p>
-      <h1 class="text-2xl md:text-3xl font-semibold font-heading text-secondary dark:text-white mb-4 tracking-tight">Page Not Found</h1>
-      <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-        The page you're looking for doesn't exist or has been moved. Let's get you back on track.
-      </p>
-      <a href="index.html" class="inline-block bg-primary hover:bg-accent text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors focus-ring btn-active">
-        Return Home
-      </a>
+  <main id="main-content" class="min-h-[70vh] flex items-center justify-center pt-32 pb-20">
+    <div class="max-w-xl mx-auto px-4 text-center">
+      <p class="display text-7xl md:text-8xl text-primary mb-4">404</p>
+      <h1 class="display text-2xl md:text-3xl text-secondary dark:text-white mb-4"><!-- slot:pages.notFound.title -->Page Not Found<!-- /slot:pages.notFound.title --></h1>
+      <p class="text-gray-600 dark:text-gray-400 mb-8"><!-- slot:pages.notFound.text -->The page you are looking for does not exist or has moved.<!-- /slot:pages.notFound.text --></p>
+      <a href="index.html" class="inline-flex items-center bg-primary hover:bg-accent text-white font-semibold px-6 py-3 rounded-md transition-colors focus-ring"><!-- slot:pages.notFound.button -->Back to home<!-- /slot:pages.notFound.button --></a>
     </div>
   </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="bg-secondary text-white py-8">
-    <div class="max-w-6xl mx-auto px-4 md:px-8 text-center">
-      <p class="text-xs text-gray-500">
-        &copy; 2026 Koke Holdings (Pty) Ltd. Reg: 2017/231296/07. All rights reserved.
-      </p>
+  <footer class="relative bg-secondary text-white py-16 overflow-hidden grain-overlay">
+    <div class="relative max-w-6xl mx-auto px-4 md:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <img src="assets/logo.svg" alt="Koke Holdings logo" class="h-8 w-auto">
+            <span class="font-heading font-bold text-lg"><!-- slot:company.shortName -->Koke Holdings<!-- /slot:company.shortName --></span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed"><!-- slot:site.footer.tagline -->Project management for publicly funded programmes, with a focus on skills development across South Africa.<!-- /slot:site.footer.tagline --></p>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold mb-3"><!-- slot:site.footer.quickLinks -->Quick Links<!-- /slot:site.footer.quickLinks --></h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="about.html" class="hover:text-primary transition-colors focus-ring">About</a></li>
+            <li><a href="services.html" class="hover:text-primary transition-colors focus-ring">Services</a></li>
+            <li><a href="how-we-work.html" class="hover:text-primary transition-colors focus-ring">How we work</a></li>
+            <li><a href="projects.html" class="hover:text-primary transition-colors focus-ring">Projects</a></li>
+            <li><a href="team.html" class="hover:text-primary transition-colors focus-ring">Team</a></li>
+            <li><a href="credentials.html" class="hover:text-primary transition-colors focus-ring">Credentials</a></li>
+            <li><a href="contact.html" class="hover:text-primary transition-colors focus-ring">Contact</a></li>
+            <li><a href="privacy.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.privacy -->Privacy<!-- /slot:site.nav.privacy --></a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold mb-3"><!-- slot:site.footer.contactHeading -->Contact<!-- /slot:site.footer.contactHeading --></h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="tel:+27810400918" class="hover:text-primary transition-colors focus-ring"><!-- slot:company.phone -->+27 81 040 0918<!-- /slot:company.phone --></a></li>
+            <li><a href="mailto:kokeholdings@gmail.com" class="hover:text-primary transition-colors focus-ring"><!-- slot:company.email -->kokeholdings@gmail.com<!-- /slot:company.email --></a></li>
+            <li><!-- slot:company.address -->839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660<!-- /slot:company.address --></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-gray-400"><!-- slot:site.footer.copyright -->© 2026 Koke Holdings (Pty) Ltd. Reg: 2017/231296/07. All rights reserved.<!-- /slot:site.footer.copyright --></p>
+        <p class="text-xs text-gray-400"><!-- slot:site.footer.registered -->Registered in South Africa<!-- /slot:site.footer.registered --></p>
+      </div>
     </div>
   </footer>
 
-  <script>
-    // Mobile menu toggle (minimal for 404)
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const hamburgerIcon = document.getElementById('hamburger-icon');
-    const closeIcon = document.getElementById('close-icon');
-
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('hidden') === false;
-      hamburgerIcon.classList.toggle('hidden', isOpen);
-      closeIcon.classList.toggle('hidden', !isOpen);
-      menuToggle.setAttribute('aria-expanded', isOpen);
-    });
-
-    // Theme toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-    const htmlEl = document.documentElement;
-
-    function setTheme(dark) {
-      htmlEl.classList.toggle('dark', dark);
-      localStorage.setItem('theme', dark ? 'dark' : 'light');
-    }
-
-    function toggleTheme() {
-      setTheme(!htmlEl.classList.contains('dark'));
-    }
-
-    themeToggle.addEventListener('click', toggleTheme);
-    themeToggleMobile.addEventListener('click', toggleTheme);
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      if (!localStorage.getItem('theme')) {
-        setTheme(e.matches);
-      }
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

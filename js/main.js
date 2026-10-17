@@ -4,32 +4,44 @@ const mobileMenu = document.getElementById('mobile-menu');
 const hamburgerIcon = document.getElementById('hamburger-icon');
 const closeIcon = document.getElementById('close-icon');
 
-menuToggle.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('hidden') === false;
-  hamburgerIcon.classList.toggle('hidden', isOpen);
-  closeIcon.classList.toggle('hidden', !isOpen);
-  menuToggle.setAttribute('aria-expanded', isOpen);
-});
+if (menuToggle && mobileMenu && hamburgerIcon && closeIcon) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('hidden') === false;
+    hamburgerIcon.classList.toggle('hidden', isOpen);
+    closeIcon.classList.toggle('hidden', !isOpen);
+    menuToggle.setAttribute('aria-expanded', isOpen);
 
-// Close mobile menu when a link is clicked
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
-    hamburgerIcon.classList.remove('hidden');
-    closeIcon.classList.add('hidden');
-    menuToggle.setAttribute('aria-expanded', 'false');
+    if (isOpen) {
+      const firstLink = mobileMenu.querySelector('a');
+      if (firstLink) firstLink.focus();
+    } else {
+      menuToggle.focus();
+    }
   });
-});
+
+  // Close mobile menu when a link is clicked
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      hamburgerIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.focus();
+    });
+  });
+}
 
 // ===== Navbar background on scroll =====
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    navbar.classList.add('shadow-lg', 'bg-secondary/95', 'backdrop-blur-sm');
-  } else {
-    navbar.classList.remove('shadow-lg', 'bg-secondary/95', 'backdrop-blur-sm');
-  }
-});
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('shadow-lg', 'bg-secondary/95', 'backdrop-blur-sm');
+    } else {
+      navbar.classList.remove('shadow-lg', 'bg-secondary/95', 'backdrop-blur-sm');
+    }
+  });
+}
 
 // ===== Basic Form Validation (mailto fallback) =====
 const contactForm = document.getElementById('contact-form');
@@ -56,45 +68,47 @@ function clearError(fieldId) {
   }
   if (input) {
     input.classList.remove('border-red-500');
-    input.setAttribute('aria-invalid', 'false');
+    input.removeAttribute('aria-invalid');
   }
 }
 
-contactForm.addEventListener('submit', (e) => {
-  let valid = true;
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    let valid = true;
 
-  clearError('name');
-  clearError('email');
-  clearError('message');
+    clearError('name');
+    clearError('email');
+    clearError('message');
 
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-  if (!name) {
-    showError('name', 'Please enter your name.');
-    valid = false;
-  }
+    if (!name) {
+      showError('name', 'Please enter your name.');
+      valid = false;
+    }
 
-  if (!email) {
-    showError('email', 'Please enter your email address.');
-    valid = false;
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    showError('email', 'Please enter a valid email address.');
-    valid = false;
-  }
+    if (!email) {
+      showError('email', 'Please enter your email address.');
+      valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showError('email', 'Please enter a valid email address.');
+      valid = false;
+    }
 
-  if (!message) {
-    showError('message', 'Please enter a message.');
-    valid = false;
-  }
+    if (!message) {
+      showError('message', 'Please enter a message.');
+      valid = false;
+    }
 
-  if (!valid) {
-    e.preventDefault();
-    const firstError = contactForm.querySelector('[aria-invalid="true"]');
-    if (firstError) firstError.focus();
-  }
-});
+    if (!valid) {
+      e.preventDefault();
+      const firstError = contactForm.querySelector('[aria-invalid="true"]');
+      if (firstError) firstError.focus();
+    }
+  });
+}
 
 // ===== Active nav link highlighting =====
 const sections = document.querySelectorAll('section[id], header[id]');
@@ -167,7 +181,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 const lifecycleSection = document.getElementById('lifecycle');
 
 if (lifecycleSection) {
-  const timelineBars = lifecycleSection.querySelectorAll('.timeline-bar');
+  const timelineBars = lifecycleSection.querySelectorAll('.timeline-bar, .gantt-bar');
 
   const timelineObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -203,8 +217,8 @@ function toggleTheme() {
   setTheme(!htmlEl.classList.contains('dark'));
 }
 
-themeToggle.addEventListener('click', toggleTheme);
-themeToggleMobile.addEventListener('click', toggleTheme);
+if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
   if (!localStorage.getItem('theme')) {

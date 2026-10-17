@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<!-- slot:pages.projects.meta.description -->Past projects, case studies and partner testimonials from Koke Holdings.<!-- /slot:pages.projects.meta.description -->">
+  <meta name="theme-color" content="#191D26">
+  <title><!-- slot:pages.projects.meta.title -->Projects — Koke Holdings<!-- /slot:pages.projects.meta.title --></title>
+
+  <script>
+    (function() {
+      var d = document.documentElement;
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || t === 'light') {
+        d.classList.toggle('dark', t === 'dark');
+      } else {
+        d.classList.toggle('dark', window.matchMedia('(prefers-color-scheme: dark)').matches);
+      }
+    })();
+  </script>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<!-- slot:site.meta.siteName -->Koke Holdings<!-- /slot:site.meta.siteName -->">
+  <meta property="og:description" content="<!-- slot:site.meta.defaultDescription -->Koke Holdings is a South African project management company delivering publicly funded programmes, with a focus on skills development.<!-- /slot:site.meta.defaultDescription -->">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://kokeholdings.co.za/projects.html">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#F26522',
+            secondary: '#191D26',
+            surface: '#F5F5F5',
+            accent: '#FF8A4C',
+            border: '#E0E0E0',
+            'text-primary': '#1A1A1A',
+            'text-inverse': '#FFFFFF',
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Koke Holdings (Pty) Ltd",
+    "url": "https://kokeholdings.co.za",
+    "logo": "assets/logo.svg",
+    "telephone": "+27-81-040-0918",
+    "email": "kokeholdings@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "839 Ntlole Street, Boitumelong",
+      "addressLocality": "Bloemhof",
+      "addressRegion": "North West",
+      "postalCode": "2660",
+      "addressCountry": "ZA"
+    }
+  }
+  </script>
+</head>
+<body class="font-body text-text-primary bg-white dark:bg-[#111318] dark:text-gray-200 antialiased">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold focus:outline-none">
+    Skip to main content
+  </a>
+
+  <!-- ===== NAV ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full bg-secondary z-50">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <img src="assets/logo.svg" alt="Koke Holdings logo" class="h-10 w-auto">
+        <span class="text-white font-heading font-bold text-lg hidden sm:inline">Koke Holdings</span>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-5 text-[13px] font-medium text-gray-300">
+        <li><a href="index.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Home</a></li>
+        <li><a href="about.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">About</a></li>
+        <li><a href="services.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Services</a></li>
+        <li><a href="how-we-work.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">How we work</a></li>
+        <li><a href="projects.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Projects</a></li>
+        <li><a href="team.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Team</a></li>
+        <li><a href="credentials.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Credentials</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="hidden lg:flex p-2 rounded-lg text-gray-300 hover:text-primary transition-colors focus-ring">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <a href="contact.html" class="hidden lg:inline-flex items-center bg-primary hover:bg-accent text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors focus-ring">Partner With Us</a>
+        <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-lg text-gray-300 hover:text-primary transition-colors focus-ring">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="ticker" aria-label="Governance and compliance frameworks">
+      <div class="ticker-track">
+        <span class="ticker-item"><!-- slot:site.ticker.1 -->PFMA<!-- /slot:site.ticker.1 --></span>
+        <span class="ticker-item"><!-- slot:site.ticker.2 -->SAQA<!-- /slot:site.ticker.2 --></span>
+        <span class="ticker-item"><!-- slot:site.ticker.3 -->QCTO<!-- /slot:site.ticker.3 --></span>
+        <span class="ticker-item"><!-- slot:site.ticker.4 -->SETA / LMIS<!-- /slot:site.ticker.4 --></span>
+        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.1 -->PFMA<!-- /slot:site.ticker.1 --></span>
+        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.2 -->SAQA<!-- /slot:site.ticker.2 --></span>
+        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.3 -->QCTO<!-- /slot:site.ticker.3 --></span>
+        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.4 -->SETA / LMIS<!-- /slot:site.ticker.4 --></span>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-secondary border-t border-gray-700">
+      <ul class="px-4 py-4 space-y-1 text-sm font-medium text-gray-300">
+        <li><a href="index.html" class="block py-2 hover:text-primary focus-ring">Home</a></li>
+        <li><a href="about.html" class="block py-2 hover:text-primary focus-ring">About</a></li>
+        <li><a href="services.html" class="block py-2 hover:text-primary focus-ring">Services</a></li>
+        <li><a href="how-we-work.html" class="block py-2 hover:text-primary focus-ring">How we work</a></li>
+        <li><a href="projects.html" class="block py-2 hover:text-primary focus-ring">Projects</a></li>
+        <li><a href="team.html" class="block py-2 hover:text-primary focus-ring">Team</a></li>
+        <li><a href="credentials.html" class="block py-2 hover:text-primary focus-ring">Credentials</a></li>
+        <li><a href="contact.html" class="block py-2 hover:text-primary focus-ring">Contact</a></li>
+        <li><button id="theme-toggle-mobile" type="button" class="py-2 text-left hover:text-primary focus-ring">Toggle theme</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="bg-secondary text-white pt-28 pb-14 md:pt-36 md:pb-20 relative overflow-hidden grain-overlay">
+      <div class="absolute inset-0 grid-bg opacity-10" aria-hidden="true"></div>
+      <div class="relative max-w-6xl mx-auto px-4 md:px-8">
+        <span class="eyebrow"><!-- slot:pages.projects.hero.badge -->Projects<!-- /slot:pages.projects.hero.badge --></span>
+        <h1 class="display text-3xl md:text-5xl text-white mt-4 mb-6"><!-- slot:pages.projects.hero.title -->Our track record<!-- /slot:pages.projects.hero.title --></h1>
+        <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl"><!-- slot:pages.projects.hero.intro -->Evidence of how we work — past programmes and the results our partners have seen.<!-- /slot:pages.projects.hero.intro --></p>
+      </div>
+    </section>
+
+    <section class="bg-white dark:bg-[#111318] py-16 md:py-24">
+      <div class="max-w-6xl mx-auto px-4 md:px-8">
+        <h2 data-reveal class="reveal display text-2xl md:text-3xl text-secondary dark:text-white mb-4"><!-- slot:pages.projects.past.title -->Past projects<!-- /slot:pages.projects.past.title --></h2>
+        <p data-reveal class="reveal text-gray-600 dark:text-gray-300 max-w-2xl"><!-- slot:pages.projects.past.text --><span class="ph-flag" data-q="Q7.1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam — project list pending.</span><!-- /slot:pages.projects.past.text --></p>
+      </div>
+    </section>
+
+    <!-- if:caseStudy.featured.published --><template data-if="caseStudy.featured.published">
+    <section class="bg-surface dark:bg-[#111318] py-16 md:py-24">
+      <div class="max-w-6xl mx-auto px-4 md:px-8 bento-card p-8">
+        <span class="eyebrow">Featured case study</span>
+        <h2 class="display text-2xl md:text-3xl text-secondary dark:text-white mt-2 mb-4"><!-- slot:caseStudy.featured.title -->Skills development programme for a provincial government office<!-- /slot:caseStudy.featured.title --></h2>
+        <h3 class="font-heading font-semibold text-secondary dark:text-white mb-1">Challenge</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4"><!-- slot:caseStudy.featured.challenge --><span class="ph-flag" data-q="Q7.2">Lorem ipsum dolor sit amet — challenge pending.</span><!-- /slot:caseStudy.featured.challenge --></p>
+        <h3 class="font-heading font-semibold text-secondary dark:text-white mb-1">Approach</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4"><!-- slot:caseStudy.featured.approach --><span class="ph-flag" data-q="Q7.3">Lorem ipsum dolor sit amet — approach pending.</span><!-- /slot:caseStudy.featured.approach --></p>
+        <h3 class="font-heading font-semibold text-secondary dark:text-white mb-1">Results</h3>
+        <p class="text-gray-600 dark:text-gray-300"><!-- slot:caseStudy.featured.results --><span class="ph-flag" data-q="Q7.1">Lorem ipsum dolor sit amet — results pending.</span><!-- /slot:caseStudy.featured.results --></p>
+      </div>
+    </section>
+    </template><!-- /if:caseStudy.featured.published -->
+
+    <section class="bg-white dark:bg-[#111318] py-16 md:py-24">
+      <div class="max-w-3xl mx-auto px-4 md:px-8 text-center">
+        <h2 class="display text-2xl md:text-3xl text-secondary dark:text-white mb-8"><!-- slot:pages.projects.testimonials.title -->What partners say<!-- /slot:pages.projects.testimonials.title --></h2>
+        <blockquote class="pull-quote text-lg italic text-secondary dark:text-gray-200 mb-6">“<!-- slot:pages.projects.testimonials.quote --><span class="ph-flag" data-q="Q9.1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><!-- /slot:pages.projects.testimonials.quote -->”</blockquote>
+        <p class="font-heading font-semibold text-secondary dark:text-white"><!-- slot:pages.projects.testimonials.author --><span class="ph-flag" data-q="Q9.2">Lorem Ipsum</span><!-- /slot:pages.projects.testimonials.author --></p>
+        <p class="text-sm text-gray-500 dark:text-gray-400"><!-- slot:pages.projects.testimonials.role --><span class="ph-flag" data-q="Q9.2">Placeholder role, organisation</span><!-- /slot:pages.projects.testimonials.role --></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="relative bg-secondary text-white py-16 overflow-hidden grain-overlay">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <svg class="absolute top-0 left-0 w-full" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height: 60px;">
+        <path d="M0 0V60C360 100 720 120 1080 80C1260 60 1380 30 1440 0H0Z" fill="#F26522" fill-opacity="0.2"/>
+      </svg>
+      <img src="assets/logo.svg" alt="" class="absolute right-8 bottom-8 h-32 w-auto opacity-5" aria-hidden="true">
+    </div>
+    <div class="relative max-w-6xl mx-auto px-4 md:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <img src="assets/logo.svg" alt="Koke Holdings logo" class="h-8 w-auto">
+            <span class="font-heading font-bold text-lg"><!-- slot:company.shortName -->Koke Holdings<!-- /slot:company.shortName --></span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed"><!-- slot:site.footer.tagline -->Project management for publicly funded programmes, with a focus on skills development across South Africa.<!-- /slot:site.footer.tagline --></p>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold mb-3"><!-- slot:site.footer.quickLinks -->Quick Links<!-- /slot:site.footer.quickLinks --></h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="about.html" class="hover:text-primary transition-colors focus-ring">About</a></li>
+            <li><a href="services.html" class="hover:text-primary transition-colors focus-ring">Services</a></li>
+            <li><a href="how-we-work.html" class="hover:text-primary transition-colors focus-ring">How we work</a></li>
+            <li><a href="projects.html" class="hover:text-primary transition-colors focus-ring">Projects</a></li>
+            <li><a href="team.html" class="hover:text-primary transition-colors focus-ring">Team</a></li>
+            <li><a href="credentials.html" class="hover:text-primary transition-colors focus-ring">Credentials</a></li>
+            <li><a href="contact.html" class="hover:text-primary transition-colors focus-ring">Contact</a></li>
+            <li><a href="privacy.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.privacy -->Privacy<!-- /slot:site.nav.privacy --></a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold mb-3"><!-- slot:site.footer.contactHeading -->Contact<!-- /slot:site.footer.contactHeading --></h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="tel:+27810400918" class="hover:text-primary transition-colors focus-ring"><!-- slot:company.phone -->+27 81 040 0918<!-- /slot:company.phone --></a></li>
+            <li><a href="mailto:kokeholdings@gmail.com" class="hover:text-primary transition-colors focus-ring"><!-- slot:company.email -->kokeholdings@gmail.com<!-- /slot:company.email --></a></li>
+            <li><!-- slot:company.address -->839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660<!-- /slot:company.address --></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-gray-400"><!-- slot:site.footer.copyright -->© 2026 Koke Holdings (Pty) Ltd. Reg: 2017/231296/07. All rights reserved.<!-- /slot:site.footer.copyright --></p>
+        <p class="text-xs text-gray-400"><!-- slot:site.footer.registered -->Registered in South Africa<!-- /slot:site.footer.registered --></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

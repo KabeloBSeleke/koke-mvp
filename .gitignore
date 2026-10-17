@@ -1,6 +1,11 @@
+# Local agent/resource docs
 CLAUDE.md
+.additional_resources/
 
+# Restructure process docs (regenerable via check_content --register)
+docs/
+
+# Legacy direct references (pre-move, harmless)
 Company_profile.md
-
+threemix.md
 NWOP-KOKE_IMPLIMENTATION PLAN (1).pdf
- .gitignore
