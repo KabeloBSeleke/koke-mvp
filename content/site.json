@@ -151,27 +151,66 @@
       }
     },
     "images": {
-      "mining1": {
-        "label": {
-          "value": "Mining image — placeholder (Q-MINING)",
-          "status": "placeholder",
-          "source": "Q-MINING"
-        },
+      "workersOverlook": {
         "alt": {
-          "value": "Learners in a mining-related skills development programme",
-          "status": "placeholder",
+          "value": "Two site supervisors in hard hats overlooking an open-pit mine",
+          "status": "derived",
+          "source": "Q-MINING"
+        }
+      },
+      "mining1": {
+        "alt": {
+          "value": "Large yellow haul truck reflected in a puddle on a mine access road",
+          "status": "derived",
           "source": "Q-MINING"
         }
       },
       "mining2": {
-        "label": {
-          "value": "Mining community image — placeholder (Q-MINING)",
-          "status": "placeholder",
-          "source": "Q-MINING"
-        },
         "alt": {
-          "value": "Community skills training in a mining-affected district",
-          "status": "placeholder",
+          "value": "Drill rig and excavator loading a haul truck at a limestone quarry",
+          "status": "derived",
+          "source": "Q-MINING"
+        }
+      },
+      "excavatorBreaker": {
+        "alt": {
+          "value": "Hydraulic excavator with rock breaker working on a quarry bench",
+          "status": "derived",
+          "source": "Q-MINING"
+        }
+      },
+      "aerialExcavator": {
+        "alt": {
+          "value": "Aerial view of an excavator working on a dark mineral stockpile",
+          "status": "derived",
+          "source": "Q-MINING"
+        }
+      },
+      "trainingRoom": {
+        "alt": {
+          "value": "Empty training room with desks, chairs and a large display screen",
+          "status": "derived",
+          "source": "Q6.1"
+        }
+      },
+      "committeeMeeting": {
+        "alt": {
+          "value": "Team members in a meeting around a conference table with laptops",
+          "status": "derived",
+          "source": "Q4.1"
+        }
+      },
+      "limestoneStockpile": {
+        "alt": {
+          "value": "White limestone stockpile rising above green fields under a blue sky",
+          "status": "derived",
+          "source": "Q-MINING"
+        }
+      },
+      "haulTruck": {
+        "alt": {
+          "value": "Yellow haul truck parked against a rock face in an open-pit mine",
+          "status": "derived",
           "source": "Q-MINING"
         }
       }
