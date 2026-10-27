@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<!-- slot:pages.sectors.meta.description -->Skills development programmes for mining and the public sector, including Social and Labour Plan (SLP) programme management, learnerships in the North West, and mining community development across South Africa.<!-- /slot:pages.sectors.meta.description -->">
+  <meta name="theme-color" content="#191D26">
+  <title><!-- slot:pages.sectors.meta.title -->Sectors — Koke Holdings<!-- /slot:pages.sectors.meta.title --></title>
+
+  <script>
+    (function() {
+      var d = document.documentElement;
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || t === 'light') {
+        d.classList.toggle('dark', t === 'dark');
+      } else {
+        d.classList.toggle('dark', window.matchMedia('(prefers-color-scheme: dark)').matches);
+      }
+    })();
+  </script>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<!-- slot:site.meta.siteName -->Koke Holdings<!-- /slot:site.meta.siteName -->">
+  <meta property="og:description" content="<!-- slot:site.meta.defaultDescription -->Koke Holdings is a South African project management company delivering publicly funded programmes, with a focus on skills development.<!-- /slot:site.meta.defaultDescription -->">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://kokeholdings.co.za/sectors.html">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#F26522',
+            secondary: '#191D26',
+            surface: '#F5F5F5',
+            accent: '#FF8A4C',
+            border: '#E0E0E0',
+            'text-primary': '#1A1A1A',
+            'text-inverse': '#FFFFFF',
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Koke Holdings (Pty) Ltd",
+    "url": "https://kokeholdings.co.za",
+    "logo": "assets/logo.svg",
+    "telephone": "+27-81-040-0918",
+    "email": "kokeholdings@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "839 Ntlole Street, Boitumelong",
+      "addressLocality": "Bloemhof",
+      "addressRegion": "North West",
+      "postalCode": "2660",
+      "addressCountry": "ZA"
+    }
+  }
+  </script>
+</head>
+<body class="font-body text-text-primary bg-white dark:bg-[#111318] dark:text-gray-200 antialiased">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold focus:outline-none">
+    Skip to main content
+  </a>
+
+  <!-- ===== NAV ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full bg-secondary z-50">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <img src="assets/logo.svg" alt="Koke Holdings logo" class="h-10 w-auto">
+        <span class="text-white font-heading font-bold text-lg hidden sm:inline">Koke Holdings</span>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-5 text-[13px] font-medium text-gray-300">
+        <li><a href="index.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Home</a></li>
+        <li><a href="about.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">About</a></li>
+        <li><a href="services.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Services</a></li>
+        <li><a href="sectors.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Sectors</a></li>
+        <li><a href="how-we-work.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">How we work</a></li>
+        <li><a href="projects.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Projects</a></li>
+        <li><a href="team.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Team</a></li>
+        <li><a href="credentials.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Credentials</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="hidden lg:flex p-2 rounded-lg text-gray-300 hover:text-primary transition-colors focus-ring">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <a href="contact.html" class="hidden lg:inline-flex items-center bg-primary hover:bg-accent text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors focus-ring">Partner With Us</a>
+        <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-lg text-gray-300 hover:text-primary transition-colors focus-ring">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="ticker" aria-label="Governance and compliance frameworks">
+      <div class="ticker-track">
+        <span class="ticker-item"><!-- slot:site.ticker.1 -->PFMA<!-- /slot:site.ticker.1 --></span>
+        <span class="ticker-item"><!-- slot:site.ticker.2 -->SAQA<!-- /slot:site.ticker.2 --></span>
+        <span class="ticker-item"><!-- slot:site.ticker.3 -->QCTO<!-- /slot:site.ticker.3 --></span>
+        <span class="ticker-item"><!-- slot:site.ticker.4 -->SETA / LMIS<!-- /slot:site.ticker.4 --></span>
+        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.1 -->PFMA<!-- /slot:site.ticker.1 --></span>
+        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.2 -->SAQA<!-- /slot:site.ticker.2 --></span>
+        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.3 -->QCTO<!-- /slot:site.ticker.3 --></span>
+        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.4 -->SETA / LMIS<!-- /slot:site.ticker.4 --></span>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-secondary border-t border-gray-700">
+      <ul class="px-4 py-4 space-y-1 text-sm font-medium text-gray-300">
+        <li><a href="index.html" class="block py-2 hover:text-primary focus-ring">Home</a></li>
+        <li><a href="about.html" class="block py-2 hover:text-primary focus-ring">About</a></li>
+        <li><a href="services.html" class="block py-2 hover:text-primary focus-ring">Services</a></li>
+        <li><a href="sectors.html" class="block py-2 hover:text-primary focus-ring">Sectors</a></li>
+        <li><a href="how-we-work.html" class="block py-2 hover:text-primary focus-ring">How we work</a></li>
+        <li><a href="projects.html" class="block py-2 hover:text-primary focus-ring">Projects</a></li>
+        <li><a href="team.html" class="block py-2 hover:text-primary focus-ring">Team</a></li>
+        <li><a href="credentials.html" class="block py-2 hover:text-primary focus-ring">Credentials</a></li>
+        <li><a href="contact.html" class="block py-2 hover:text-primary focus-ring">Contact</a></li>
+        <li><button id="theme-toggle-mobile" type="button" class="py-2 text-left hover:text-primary focus-ring">Toggle theme</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="bg-secondary text-white pt-28 pb-14 md:pt-36 md:pb-20 relative overflow-hidden grain-overlay">
+      <div class="absolute inset-0 grid-bg opacity-10" aria-hidden="true"></div>
+      <div class="relative max-w-6xl mx-auto px-4 md:px-8">
+        <span class="eyebrow"><!-- slot:pages.sectors.hero.badge -->Sectors<!-- /slot:pages.sectors.hero.badge --></span>
+        <h1 class="display text-3xl md:text-5xl text-white mt-4 mb-6"><!-- slot:pages.sectors.hero.title -->Sectors we serve<!-- /slot:pages.sectors.hero.title --></h1>
+        <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl"><!-- slot:pages.sectors.hero.intro -->Rooted in public-sector skills development, and positioned to serve mining and industry with the same programme management discipline.<!-- /slot:pages.sectors.hero.intro --></p>
+      </div>
+    </section>
+
+    <section class="bg-white dark:bg-[#111318] py-16 md:py-24">
+      <div class="max-w-6xl mx-auto px-4 md:px-8">
+        <span class="eyebrow">Target market</span>
+        <h2 class="display text-3xl md:text-4xl text-secondary dark:text-white mt-2 mb-4"><!-- slot:pages.sectors.mining.title -->Mining<!-- /slot:pages.sectors.mining.title --></h2>
+        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mb-10"><!-- slot:pages.sectors.mining.intro -->A target market for Koke Holdings. Our documented experience is public-sector skills development programme management; mining is where we are positioned to apply it.<!-- /slot:pages.sectors.mining.intro --></p>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-10">
+          <div class="bento-card p-6">
+            <h3 class="font-heading font-semibold text-lg text-secondary dark:text-white mb-2"><!-- slot:pages.sectors.mining.challengeTitle -->The challenge<!-- /slot:pages.sectors.mining.challengeTitle --></h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300"><!-- slot:pages.sectors.mining.challenge -->Mining right holders balance Social and Labour Plan (SLP) commitments, Mining Charter obligations, local skills needs and community expectations — and must be able to evidence results to auditors and regulators.<!-- /slot:pages.sectors.mining.challenge --></p>
+          </div>
+          <div class="bento-card p-6">
+            <h3 class="font-heading font-semibold text-lg text-secondary dark:text-white mb-2"><!-- slot:pages.sectors.mining.helpTitle -->How Koke helps<!-- /slot:pages.sectors.mining.helpTitle --></h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-3"><!-- slot:pages.sectors.mining.helpIntro -->Our six-phase approach — define, mobilise, procure and contract, implement, build capacity, monitor and evaluate — applies to mining and industry programmes as it does to public-sector work.<!-- /slot:pages.sectors.mining.helpIntro --></p>
+            <a href="how-we-work.html" class="text-primary font-semibold text-sm hover:underline focus-ring">See the six-phase approach →</a>
+          </div>
+        </div>
+
+        <ul class="space-y-3 max-w-3xl mb-12">
+          <li class="bento-card p-4 flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.sectors.mining.p1 -->Skills development programmes that support Social and Labour Plan (SLP) commitments<!-- /slot:pages.sectors.mining.p1 --></span></li>
+          <li class="bento-card p-4 flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.sectors.mining.p2 -->Learnerships, internships and artisan pathways aligned to Mining Qualifications Authority (MQA) accredited training<!-- /slot:pages.sectors.mining.p2 --></span></li>
+          <li class="bento-card p-4 flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.sectors.mining.p3 -->Community and portable-skills programmes in mining-affected districts<!-- /slot:pages.sectors.mining.p3 --></span></li>
+          <li class="bento-card p-4 flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.sectors.mining.p4 -->Compliance, quality management, monitoring and reporting suitable for audit by mining right holders and the Department of Mineral and Petroleum Resources<!-- /slot:pages.sectors.mining.p4 --></span></li>
+          <li class="bento-card p-4 flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.sectors.mining.p5 -->Stakeholder coordination between mines, municipalities, training providers and communities<!-- /slot:pages.sectors.mining.p5 --></span></li>
+        </ul>
+
+        <div class="grid sm:grid-cols-2 gap-4 mb-12" aria-label="Mining imagery placeholders">
+          <div class="bento-card p-6 flex flex-col items-center justify-center text-center min-h-[160px] border-dashed" role="img" aria-label="<!-- slot:site.images.mining1.alt -->Learners in a mining-related skills development programme<!-- /slot:site.images.mining1.alt -->">
+            <span class="mono-badge"><!-- slot:site.images.mining1.label --><span class="ph-flag" data-q="Q-MINING">Mining image — placeholder (Q-MINING)</span><!-- /slot:site.images.mining1.label --></span>
+          </div>
+          <div class="bento-card p-6 flex flex-col items-center justify-center text-center min-h-[160px] border-dashed" role="img" aria-label="<!-- slot:site.images.mining2.alt -->Community skills training in a mining-affected district<!-- /slot:site.images.mining2.alt -->">
+            <span class="mono-badge"><!-- slot:site.images.mining2.label --><span class="ph-flag" data-q="Q-MINING">Mining community image — placeholder (Q-MINING)</span><!-- /slot:site.images.mining2.label --></span>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bento-card p-6">
+            <h3 class="font-heading font-semibold text-lg text-secondary dark:text-white mb-2"><!-- slot:pages.sectors.mining.experienceTitle -->Our experience in mining<!-- /slot:pages.sectors.mining.experienceTitle --></h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300"><!-- slot:pages.sectors.mining.experience --><span class="ph-flag" data-q="Q4.2">Lorem ipsum dolor sit amet, consectetur adipiscing elit — mining experience statement pending client confirmation.</span><!-- /slot:pages.sectors.mining.experience --></p>
+          </div>
+          <div class="bento-card p-6">
+            <h3 class="font-heading font-semibold text-lg text-secondary dark:text-white mb-2"><!-- slot:pages.sectors.mining.caseStudyTitle -->Mining case study<!-- /slot:pages.sectors.mining.caseStudyTitle --></h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300"><!-- slot:pages.sectors.mining.caseStudy --><span class="ph-flag" data-q="Q7.1">Lorem ipsum dolor sit amet — mining case study pending. No mining project is presented until the client confirms one.</span><!-- /slot:pages.sectors.mining.caseStudy --></p>
+          </div>
+          <div class="bento-card p-6">
+            <h3 class="font-heading font-semibold text-lg text-secondary dark:text-white mb-2"><!-- slot:pages.sectors.mining.testimonialTitle -->From the mining sector<!-- /slot:pages.sectors.mining.testimonialTitle --></h3>
+            <p class="text-sm italic text-gray-600 dark:text-gray-300 mb-3">“<!-- slot:pages.sectors.mining.testimonial --><span class="ph-flag" data-q="Q7.4">Lorem ipsum dolor sit amet, consectetur adipiscing elit — mining-sector testimonial pending.</span><!-- /slot:pages.sectors.mining.testimonial -->”</p>
+            <p class="text-sm font-heading font-semibold text-secondary dark:text-white"><!-- slot:pages.sectors.mining.testimonialAuthor --><span class="ph-flag" data-q="Q7.4">Lorem Ipsum</span><!-- /slot:pages.sectors.mining.testimonialAuthor --></p>
+          </div>
+          <div class="bento-card p-6">
+            <h3 class="font-heading font-semibold text-lg text-secondary dark:text-white mb-2"><!-- slot:pages.sectors.mining.mqaTitle -->Accreditation and partnerships<!-- /slot:pages.sectors.mining.mqaTitle --></h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300"><!-- slot:pages.sectors.mining.mqa --><span class="ph-flag" data-q="Q8.1">Lorem ipsum dolor sit amet — Mining Qualifications Authority (MQA) accreditation status and training-provider partnerships pending.</span><!-- /slot:pages.sectors.mining.mqa --></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-surface dark:bg-[#111318] py-16 md:py-20">
+      <div class="max-w-6xl mx-auto px-4 md:px-8 bento-card p-8">
+        <h2 class="display text-2xl text-secondary dark:text-white mb-3"><!-- slot:pages.sectors.other.title -->Public sector and beyond<!-- /slot:pages.sectors.other.title --></h2>
+        <p class="text-gray-600 dark:text-gray-300"><!-- slot:pages.sectors.other.text -->Government departments, municipalities, state-owned entities, accredited training providers and host workplaces remain our core client base.<!-- /slot:pages.sectors.other.text --></p>
+      </div>
+    </section>
+
+    <section class="bg-secondary text-white py-16">
+      <div class="max-w-6xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <h2 class="display text-2xl text-white">Talk to us about your sector</h2>
+        <a href="contact.html" class="inline-flex items-center bg-primary hover:bg-accent text-white font-semibold px-6 py-3 rounded-md transition-colors focus-ring shrink-0">Partner With Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="relative bg-secondary text-white py-16 overflow-hidden grain-overlay">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <svg class="absolute top-0 left-0 w-full" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height: 60px;">
+        <path d="M0 0V60C360 100 720 120 1080 80C1260 60 1380 30 1440 0H0Z" fill="#F26522" fill-opacity="0.2"/>
+      </svg>
+      <img src="assets/logo.svg" alt="" class="absolute right-8 bottom-8 h-32 w-auto opacity-5" aria-hidden="true">
+    </div>
+    <div class="relative max-w-6xl mx-auto px-4 md:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <img src="assets/logo.svg" alt="Koke Holdings logo" class="h-8 w-auto">
+            <span class="font-heading font-bold text-lg"><!-- slot:company.shortName -->Koke Holdings<!-- /slot:company.shortName --></span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed"><!-- slot:site.footer.tagline -->Project management for publicly funded programmes, with a focus on skills development across South Africa.<!-- /slot:site.footer.tagline --></p>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold mb-3"><!-- slot:site.footer.quickLinks -->Quick Links<!-- /slot:site.footer.quickLinks --></h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="about.html" class="hover:text-primary transition-colors focus-ring">About</a></li>
+            <li><a href="services.html" class="hover:text-primary transition-colors focus-ring">Services</a></li>
+            <li><a href="sectors.html" class="hover:text-primary transition-colors focus-ring">Sectors</a></li>
+            <li><a href="how-we-work.html" class="hover:text-primary transition-colors focus-ring">How we work</a></li>
+            <li><a href="projects.html" class="hover:text-primary transition-colors focus-ring">Projects</a></li>
+            <li><a href="team.html" class="hover:text-primary transition-colors focus-ring">Team</a></li>
+            <li><a href="credentials.html" class="hover:text-primary transition-colors focus-ring">Credentials</a></li>
+            <li><a href="contact.html" class="hover:text-primary transition-colors focus-ring">Contact</a></li>
+            <li><a href="privacy.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.privacy -->Privacy<!-- /slot:site.nav.privacy --></a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold mb-3"><!-- slot:site.footer.contactHeading -->Contact<!-- /slot:site.footer.contactHeading --></h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="tel:+27810400918" class="hover:text-primary transition-colors focus-ring"><!-- slot:company.phone -->+27 81 040 0918<!-- /slot:company.phone --></a></li>
+            <li><a href="mailto:kokeholdings@gmail.com" class="hover:text-primary transition-colors focus-ring"><!-- slot:company.email -->kokeholdings@gmail.com<!-- /slot:company.email --></a></li>
+            <li><!-- slot:company.address -->839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660<!-- /slot:company.address --></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-gray-400"><!-- slot:site.footer.copyright -->© 2026 Koke Holdings (Pty) Ltd. Reg: 2017/231296/07. All rights reserved.<!-- /slot:site.footer.copyright --></p>
+        <p class="text-xs text-gray-400"><!-- slot:site.footer.registered -->Registered in South Africa<!-- /slot:site.footer.registered --></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

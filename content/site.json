@@ -130,7 +130,7 @@
         "needsReview": true
       },
       "copyright": {
-        "value": "\u00a9 2026 Koke Holdings (Pty) Ltd. Reg: 2017/231296/07. All rights reserved.",
+        "value": "© 2026 Koke Holdings (Pty) Ltd. Reg: 2017/231296/07. All rights reserved.",
         "status": "derived",
         "source": "4.1"
       },
@@ -149,22 +149,49 @@
         "status": "derived",
         "source": "4.1"
       }
+    },
+    "images": {
+      "mining1": {
+        "label": {
+          "value": "Mining image — placeholder (Q-MINING)",
+          "status": "placeholder",
+          "source": "Q-MINING"
+        },
+        "alt": {
+          "value": "Learners in a mining-related skills development programme",
+          "status": "placeholder",
+          "source": "Q-MINING"
+        }
+      },
+      "mining2": {
+        "label": {
+          "value": "Mining community image — placeholder (Q-MINING)",
+          "status": "placeholder",
+          "source": "Q-MINING"
+        },
+        "alt": {
+          "value": "Community skills training in a mining-affected district",
+          "status": "placeholder",
+          "source": "Q-MINING"
+        }
+      }
     }
   },
   "pages": {
     "home": {
       "meta": {
         "title": {
-          "value": "Koke Holdings \u2014 Programme management that delivers",
+          "value": "Koke Holdings — Programme management that delivers",
           "status": "derived",
           "source": "4.2",
           "needsReview": true
         },
         "description": {
-          "value": "Koke Holdings is a South African project management company delivering publicly funded skills development programmes on time, on budget and compliant.",
+          "value": "Koke Holdings is a South African project management company delivering publicly funded skills development programmes, and is positioned to support mining-sector skills development and Social and Labour Plan (SLP) programme management.",
           "status": "derived",
-          "source": "4.2",
-          "needsReview": true
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
         }
       },
       "hero": {
@@ -180,7 +207,7 @@
           "needsReview": true
         },
         "subtitle": {
-          "value": "Well-planned, well-governed programmes that deliver clear, measurable benefits to communities \u2014 on time, on budget, and in line with South African laws and policies.",
+          "value": "Well-planned, well-governed programmes that deliver clear, measurable benefits to communities — on time, on budget, and in line with South African laws and policies.",
           "status": "derived",
           "source": "4.2",
           "needsReview": true
@@ -271,7 +298,7 @@
           "source": "Q1.6"
         },
         "frameworks": {
-          "value": "PFMA \u00b7 SAQA \u00b7 QCTO \u00b7 SETA / LMIS",
+          "value": "PFMA · SAQA · QCTO · SETA / LMIS",
           "status": "derived",
           "source": "4.7"
         }
@@ -283,7 +310,7 @@
           "source": "4.3"
         },
         "intro": {
-          "value": "We run the management unit behind publicly funded programmes \u2014 from set-up and procurement to delivery, quality and reporting.",
+          "value": "We run the management unit behind publicly funded programmes — from set-up and procurement to delivery, quality and reporting.",
           "status": "derived",
           "source": "4.2",
           "needsReview": true
@@ -371,7 +398,7 @@
           "source": "4.4"
         },
         "intro": {
-          "value": "A simple, repeatable approach \u2014 from defining the programme to a documented close-out.",
+          "value": "A simple, repeatable approach — from defining the programme to a documented close-out.",
           "status": "derived",
           "source": "4.4",
           "needsReview": true
@@ -543,12 +570,58 @@
           "status": "derived",
           "source": "4.1"
         }
+      },
+      "sectors": {
+        "title": {
+          "value": "Sectors we serve",
+          "status": "derived",
+          "source": "4.5"
+        },
+        "intro": {
+          "value": "Skills development is our core; we are positioned to extend our programme management approach into mining and industry.",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "link": {
+          "value": "Explore sectors",
+          "status": "derived",
+          "source": "4.5"
+        },
+        "mining": {
+          "value": "Mining — skills development and Social and Labour Plan (SLP) programme support",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "s2": {
+          "value": "Provincial and national government departments",
+          "status": "derived",
+          "source": "4.5"
+        },
+        "s3": {
+          "value": "Municipalities and state-owned entities",
+          "status": "derived",
+          "source": "4.5"
+        },
+        "s4": {
+          "value": "Accredited training providers",
+          "status": "derived",
+          "source": "4.5"
+        },
+        "s5": {
+          "value": "Host workplaces, including private sector partners",
+          "status": "derived",
+          "source": "4.5"
+        }
       }
     },
     "services": {
       "meta": {
         "title": {
-          "value": "Services \u2014 Koke Holdings",
+          "value": "Services — Koke Holdings",
           "status": "derived",
           "source": "4.3"
         },
@@ -572,7 +645,7 @@
           "needsReview": true
         },
         "intro": {
-          "value": "Seven service lines covering the full life of a publicly funded programme \u2014 from set-up and procurement to certification and close-out.",
+          "value": "Seven service lines covering the full life of a publicly funded programme — from set-up and procurement to certification and close-out.",
           "status": "derived",
           "source": "4.3",
           "needsReview": true
@@ -704,12 +777,68 @@
           "source": "4.2",
           "needsReview": true
         }
+      },
+      "mining": {
+        "title": {
+          "value": "Skills development for mining and industry",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "intro": {
+          "value": "Koke Holdings is positioned to support mining right holders and industry clients with skills development programme management, building on our public-sector delivery approach.",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "p1": {
+          "value": "Skills development programmes that support Social and Labour Plan (SLP) commitments",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "p2": {
+          "value": "Learnerships, internships and artisan pathways aligned to Mining Qualifications Authority (MQA) accredited training",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "p3": {
+          "value": "Community and portable-skills programmes in mining-affected districts",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "p4": {
+          "value": "Compliance, quality management, monitoring and reporting suitable for audit by mining right holders and the Department of Mineral and Petroleum Resources",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "p5": {
+          "value": "Stakeholder coordination between mines, municipalities, training providers and communities",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "link": {
+          "value": "Mining sector detail",
+          "status": "derived",
+          "source": "Q4.2"
+        }
       }
     },
     "howWeWork": {
       "meta": {
         "title": {
-          "value": "How we work \u2014 Koke Holdings",
+          "value": "How we work — Koke Holdings",
           "status": "derived",
           "source": "4.4"
         },
@@ -732,7 +861,7 @@
           "source": "4.4"
         },
         "intro": {
-          "value": "Six phases that take a programme from scope to documented close-out \u2014 with quality and compliance built in at every step.",
+          "value": "Six phases that take a programme from scope to documented close-out — with quality and compliance built in at every step.",
           "status": "derived",
           "source": "4.4",
           "needsReview": true
@@ -852,7 +981,7 @@
     "about": {
       "meta": {
         "title": {
-          "value": "About \u2014 Koke Holdings",
+          "value": "About — Koke Holdings",
           "status": "derived",
           "source": "4.2"
         },
@@ -901,17 +1030,17 @@
           "source": "Q2.1"
         },
         "mission": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit \u2014 mission statement pending.",
+          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit — mission statement pending.",
           "status": "placeholder",
           "source": "Q2.1"
         },
         "vision": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit \u2014 vision statement pending.",
+          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit — vision statement pending.",
           "status": "placeholder",
           "source": "Q2.2"
         },
         "values": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit \u2014 values list pending.",
+          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit — values list pending.",
           "status": "placeholder",
           "source": "Q2.3"
         }
@@ -945,7 +1074,7 @@
           "source": "4.6"
         },
         "other": {
-          "value": "Lorem ipsum dolor sit amet \u2014 other offices and expansion plans pending.",
+          "value": "Lorem ipsum dolor sit amet — other offices and expansion plans pending.",
           "status": "placeholder",
           "source": "Q5.2-Q5.3"
         }
@@ -972,7 +1101,7 @@
     "projects": {
       "meta": {
         "title": {
-          "value": "Projects \u2014 Koke Holdings",
+          "value": "Projects — Koke Holdings",
           "status": "derived",
           "source": "4.9"
         },
@@ -996,7 +1125,7 @@
           "needsReview": true
         },
         "intro": {
-          "value": "Evidence of how we work \u2014 past programmes and the results our partners have seen.",
+          "value": "Evidence of how we work — past programmes and the results our partners have seen.",
           "status": "derived",
           "source": "4.9",
           "needsReview": true
@@ -1009,7 +1138,7 @@
           "source": "Q7.1"
         },
         "text": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam \u2014 project list pending.",
+          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam — project list pending.",
           "status": "placeholder",
           "source": "Q7.1"
         }
@@ -1040,7 +1169,7 @@
     "team": {
       "meta": {
         "title": {
-          "value": "Team \u2014 Koke Holdings",
+          "value": "Team — Koke Holdings",
           "status": "derived",
           "source": "4.8"
         },
@@ -1071,7 +1200,7 @@
         }
       },
       "intro": {
-        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit \u2014 team introduction pending.",
+        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit — team introduction pending.",
         "status": "placeholder",
         "source": "Q6.1"
       },
@@ -1161,7 +1290,7 @@
     "credentials": {
       "meta": {
         "title": {
-          "value": "Credentials \u2014 Koke Holdings",
+          "value": "Credentials — Koke Holdings",
           "status": "derived",
           "source": "4.10"
         },
@@ -1287,7 +1416,7 @@
           "source": "Q8.1"
         },
         "text": {
-          "value": "Lorem ipsum dolor sit amet \u2014 downloadable documents pending.",
+          "value": "Lorem ipsum dolor sit amet — downloadable documents pending.",
           "status": "placeholder",
           "source": "Q8.1"
         }
@@ -1296,7 +1425,7 @@
     "contact": {
       "meta": {
         "title": {
-          "value": "Contact \u2014 Koke Holdings",
+          "value": "Contact — Koke Holdings",
           "status": "derived",
           "source": "4.1"
         },
@@ -1354,7 +1483,7 @@
           "source": "Q10.3"
         },
         "value": {
-          "value": "Lorem ipsum \u2014 business hours pending.",
+          "value": "Lorem ipsum — business hours pending.",
           "status": "placeholder",
           "source": "Q10.3"
         }
@@ -1366,7 +1495,7 @@
           "source": "Q10.4"
         },
         "value": {
-          "value": "Lorem Ipsum \u2014 contact person pending.",
+          "value": "Lorem Ipsum — contact person pending.",
           "status": "placeholder",
           "source": "Q10.4"
         }
@@ -1396,13 +1525,35 @@
           "value": "By submitting this form you agree to our privacy notice.",
           "status": "derived",
           "source": "7"
+        },
+        "topicLabel": {
+          "value": "Enquiry topic",
+          "status": "derived",
+          "source": "4.1"
+        },
+        "topicMining": {
+          "value": "Mining / SLP programmes",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "topicProgramme": {
+          "value": "Programme management",
+          "status": "derived",
+          "source": "4.3"
+        },
+        "topicGeneral": {
+          "value": "General enquiry",
+          "status": "derived",
+          "source": "4.1"
         }
       }
     },
     "privacy": {
       "meta": {
         "title": {
-          "value": "Privacy \u2014 Koke Holdings",
+          "value": "Privacy — Koke Holdings",
           "status": "derived",
           "source": "7"
         },
@@ -1435,7 +1586,7 @@
         "source": "Q12.5"
       },
       "officerValue": {
-        "value": "Lorem ipsum \u2014 Information Officer details pending.",
+        "value": "Lorem ipsum — Information Officer details pending.",
         "status": "placeholder",
         "source": "Q12.5"
       }
@@ -1456,6 +1607,170 @@
         "status": "derived",
         "source": "7"
       }
+    },
+    "sectors": {
+      "meta": {
+        "title": {
+          "value": "Sectors — Koke Holdings",
+          "status": "derived",
+          "source": "4.5"
+        },
+        "description": {
+          "value": "Skills development programmes for mining and the public sector, including Social and Labour Plan (SLP) programme management, learnerships in the North West, and mining community development across South Africa.",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        }
+      },
+      "hero": {
+        "badge": {
+          "value": "Sectors",
+          "status": "derived",
+          "source": "4.5"
+        },
+        "title": {
+          "value": "Sectors we serve",
+          "status": "derived",
+          "source": "4.5",
+          "needsReview": true
+        },
+        "intro": {
+          "value": "Rooted in public-sector skills development, and positioned to serve mining and industry with the same programme management discipline.",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        }
+      },
+      "mining": {
+        "title": {
+          "value": "Mining",
+          "status": "derived",
+          "source": "Q4.2"
+        },
+        "intro": {
+          "value": "A target market for Koke Holdings. Our documented experience is public-sector skills development programme management; mining is where we are positioned to apply it.",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true
+        },
+        "challengeTitle": {
+          "value": "The challenge",
+          "status": "derived",
+          "source": "Q4.2"
+        },
+        "challenge": {
+          "value": "Mining right holders balance Social and Labour Plan (SLP) commitments, Mining Charter obligations, local skills needs and community expectations — and must be able to evidence results to auditors and regulators.",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "helpTitle": {
+          "value": "How Koke helps",
+          "status": "derived",
+          "source": "4.4"
+        },
+        "helpIntro": {
+          "value": "Our six-phase approach — define, mobilise, procure and contract, implement, build capacity, monitor and evaluate — applies to mining and industry programmes as it does to public-sector work.",
+          "status": "derived",
+          "source": "4.4",
+          "needsReview": true
+        },
+        "p1": {
+          "value": "Skills development programmes that support Social and Labour Plan (SLP) commitments",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "p2": {
+          "value": "Learnerships, internships and artisan pathways aligned to Mining Qualifications Authority (MQA) accredited training",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "p3": {
+          "value": "Community and portable-skills programmes in mining-affected districts",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "p4": {
+          "value": "Compliance, quality management, monitoring and reporting suitable for audit by mining right holders and the Department of Mineral and Petroleum Resources",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "p5": {
+          "value": "Stakeholder coordination between mines, municipalities, training providers and communities",
+          "status": "derived",
+          "source": "Q4.2",
+          "needsReview": true,
+          "note": "Verify regulatory wording with client"
+        },
+        "experienceTitle": {
+          "value": "Our experience in mining",
+          "status": "derived",
+          "source": "Q4.2"
+        },
+        "experience": {
+          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit — mining experience statement pending client confirmation.",
+          "status": "placeholder",
+          "source": "Q4.2"
+        },
+        "caseStudyTitle": {
+          "value": "Mining case study",
+          "status": "derived",
+          "source": "Q7.1"
+        },
+        "caseStudy": {
+          "value": "Lorem ipsum dolor sit amet — mining case study pending. No mining project is presented until the client confirms one.",
+          "status": "placeholder",
+          "source": "Q7.1"
+        },
+        "testimonialTitle": {
+          "value": "From the mining sector",
+          "status": "derived",
+          "source": "Q7.4"
+        },
+        "testimonial": {
+          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit — mining-sector testimonial pending.",
+          "status": "placeholder",
+          "source": "Q7.4"
+        },
+        "testimonialAuthor": {
+          "value": "Lorem Ipsum",
+          "status": "placeholder",
+          "source": "Q7.4"
+        },
+        "mqaTitle": {
+          "value": "Accreditation and partnerships",
+          "status": "derived",
+          "source": "Q8.1"
+        },
+        "mqa": {
+          "value": "Lorem ipsum dolor sit amet — Mining Qualifications Authority (MQA) accreditation status and training-provider partnerships pending.",
+          "status": "placeholder",
+          "source": "Q8.1"
+        }
+      },
+      "other": {
+        "title": {
+          "value": "Public sector and beyond",
+          "status": "derived",
+          "source": "4.5"
+        },
+        "text": {
+          "value": "Government departments, municipalities, state-owned entities, accredited training providers and host workplaces remain our core client base.",
+          "status": "derived",
+          "source": "4.5"
+        }
+      }
     }
   },
   "caseStudy": {
@@ -1468,17 +1783,17 @@
         "needsReview": true
       },
       "challenge": {
-        "value": "Lorem ipsum dolor sit amet \u2014 challenge pending.",
+        "value": "Lorem ipsum dolor sit amet — challenge pending.",
         "status": "placeholder",
         "source": "Q7.2"
       },
       "approach": {
-        "value": "Lorem ipsum dolor sit amet \u2014 approach pending.",
+        "value": "Lorem ipsum dolor sit amet — approach pending.",
         "status": "placeholder",
         "source": "Q7.3"
       },
       "results": {
-        "value": "Lorem ipsum dolor sit amet \u2014 results pending.",
+        "value": "Lorem ipsum dolor sit amet — results pending.",
         "status": "placeholder",
         "source": "Q7.1"
       }

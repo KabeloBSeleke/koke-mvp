@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "site.json"
 REGISTER = ROOT / "docs" / "content-restructure" / "PLACEHOLDERS.md"
 HTML_PAGES = [
-    "index.html", "services.html", "how-we-work.html", "about.html",
+    "index.html", "services.html", "sectors.html", "how-we-work.html", "about.html",
     "projects.html", "team.html", "credentials.html", "contact.html",
     "privacy.html", "404.html",
 ]
@@ -61,6 +61,12 @@ def main():
             item = placeholders[key]
             print(f"  {key}  [{item.get('source', '?')}]  via {slot_pages(key)}")
 
+    noted = {k: v for k, v in slots.items() if v.get("note")}
+    if noted:
+        print(f"\nReview notes ({len(noted)}):")
+        for key in sorted(noted):
+            print(f"  {key}: {noted[key]['note']}")
+
     if "--register" in sys.argv:
         REGISTER.parent.mkdir(parents=True, exist_ok=True)
         lines = [
@@ -79,6 +85,14 @@ def main():
                 f"{item.get('source', '?')} | value: “{item['value'][:60]}” |"
             )
         lines.append("")
+        if noted:
+            lines.append("## Review notes (non-placeholder slots)")
+            lines.append("")
+            lines.append("| Content key | Note |")
+            lines.append("|---|---|")
+            for key in sorted(noted):
+                lines.append(f"| `{key}` | {noted[key]['note']} |")
+            lines.append("")
         REGISTER.write_text("\n".join(lines), encoding="utf-8")
         print(f"\nregister written: {REGISTER.relative_to(ROOT)} ({len(placeholders)} entries)")
 

@@ -18,7 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "site.json"
 PAGES = [
-    "index.html", "services.html", "how-we-work.html", "about.html",
+    "index.html", "services.html", "sectors.html", "how-we-work.html", "about.html",
     "projects.html", "team.html", "credentials.html", "contact.html",
     "privacy.html", "404.html",
 ]
@@ -60,6 +60,9 @@ def render_html(text, slots, production):
     def slot_sub(m):
         key = m.group(2)
         item = resolve(slots, key)
+        # alt-text slots are injected into HTML attributes — never wrap them
+        if key.endswith(".alt"):
+            return f"{m.group(1)}{item['value']}{m.group(3)}"
         return f"{m.group(1)}{render_value(item, production)}{m.group(3)}"
 
     def if_sub(m):

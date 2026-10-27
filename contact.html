@@ -97,6 +97,7 @@
         <li><a href="index.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Home</a></li>
         <li><a href="about.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">About</a></li>
         <li><a href="services.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Services</a></li>
+        <li><a href="sectors.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Sectors</a></li>
         <li><a href="how-we-work.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">How we work</a></li>
         <li><a href="projects.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Projects</a></li>
         <li><a href="team.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Team</a></li>
@@ -133,6 +134,7 @@
         <li><a href="index.html" class="block py-2 hover:text-primary focus-ring">Home</a></li>
         <li><a href="about.html" class="block py-2 hover:text-primary focus-ring">About</a></li>
         <li><a href="services.html" class="block py-2 hover:text-primary focus-ring">Services</a></li>
+        <li><a href="sectors.html" class="block py-2 hover:text-primary focus-ring">Sectors</a></li>
         <li><a href="how-we-work.html" class="block py-2 hover:text-primary focus-ring">How we work</a></li>
         <li><a href="projects.html" class="block py-2 hover:text-primary focus-ring">Projects</a></li>
         <li><a href="team.html" class="block py-2 hover:text-primary focus-ring">Team</a></li>
@@ -186,6 +188,14 @@
               <p id="email-error" class="hidden text-xs text-red-600 mt-1" role="alert"></p>
             </div>
             <div>
+              <label for="topic" class="block text-sm font-medium text-secondary dark:text-gray-200 mb-1"><!-- slot:pages.contact.form.topicLabel -->Enquiry topic<!-- /slot:pages.contact.form.topicLabel --></label>
+              <select id="topic" name="topic" class="w-full border border-border dark:border-gray-600 rounded-md px-3 py-2 bg-white dark:bg-[#1a1d24] text-secondary dark:text-gray-200 focus-ring">
+                <option><!-- slot:pages.contact.form.topicGeneral -->General enquiry<!-- /slot:pages.contact.form.topicGeneral --></option>
+                <option><!-- slot:pages.contact.form.topicProgramme -->Programme management<!-- /slot:pages.contact.form.topicProgramme --></option>
+                <option><!-- slot:pages.contact.form.topicMining -->Mining / SLP programmes<!-- /slot:pages.contact.form.topicMining --></option>
+              </select>
+            </div>
+            <div>
               <label for="message" class="block text-sm font-medium text-secondary dark:text-gray-200 mb-1"><!-- slot:pages.contact.form.messageLabel -->Message<!-- /slot:pages.contact.form.messageLabel --></label>
               <textarea id="message" name="message" rows="5" required class="w-full border border-border dark:border-gray-600 rounded-md px-3 py-2 bg-white dark:bg-[#1a1d24] text-secondary dark:text-gray-200 focus-ring"></textarea>
               <p id="message-error" class="hidden text-xs text-red-600 mt-1" role="alert"></p>
@@ -221,6 +231,7 @@
           <ul class="space-y-2 text-sm text-gray-400">
             <li><a href="about.html" class="hover:text-primary transition-colors focus-ring">About</a></li>
             <li><a href="services.html" class="hover:text-primary transition-colors focus-ring">Services</a></li>
+            <li><a href="sectors.html" class="hover:text-primary transition-colors focus-ring">Sectors</a></li>
             <li><a href="how-we-work.html" class="hover:text-primary transition-colors focus-ring">How we work</a></li>
             <li><a href="projects.html" class="hover:text-primary transition-colors focus-ring">Projects</a></li>
             <li><a href="team.html" class="hover:text-primary transition-colors focus-ring">Team</a></li>
