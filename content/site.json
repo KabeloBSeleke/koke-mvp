@@ -2,216 +2,172 @@
   "company": {
     "legalName": {
       "value": "Koke Holdings (Pty) Ltd",
-      "status": "confirmed",
-      "source": "4.1"
+      "status": "confirmed"
     },
     "shortName": {
       "value": "Koke Holdings",
-      "status": "confirmed",
-      "source": "4.1"
+      "status": "confirmed"
     },
     "regNumber": {
       "value": "2017/231296/07",
-      "status": "confirmed",
-      "source": "4.1"
+      "status": "confirmed"
     },
     "address": {
       "value": "839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660",
-      "status": "confirmed",
-      "source": "4.1"
+      "status": "confirmed"
     },
     "phone": {
       "value": "+27 81 040 0918",
-      "status": "confirmed",
-      "source": "4.1"
+      "status": "confirmed"
     },
     "email": {
       "value": "kokeholdings@gmail.com",
-      "status": "confirmed",
-      "source": "4.1"
+      "status": "confirmed"
     }
   },
   "site": {
     "meta": {
       "siteName": {
         "value": "Koke Holdings",
-        "status": "confirmed",
-        "source": "4.1"
+        "status": "confirmed"
       },
       "defaultDescription": {
         "value": "Koke Holdings is a South African project management company delivering publicly funded programmes, with a focus on skills development.",
         "status": "derived",
-        "source": "4.2",
         "needsReview": true
       }
     },
     "nav": {
       "home": {
         "value": "Home",
-        "status": "derived",
-        "source": "5.2"
+        "status": "derived"
       },
       "about": {
         "value": "About",
-        "status": "derived",
-        "source": "5.2"
+        "status": "derived"
       },
       "services": {
         "value": "Services",
-        "status": "derived",
-        "source": "5.2"
+        "status": "derived"
       },
       "howWeWork": {
         "value": "How we work",
-        "status": "derived",
-        "source": "5.2"
-      },
-      "projects": {
-        "value": "Projects",
-        "status": "derived",
-        "source": "5.2"
-      },
-      "team": {
-        "value": "Team",
-        "status": "derived",
-        "source": "5.2"
-      },
-      "credentials": {
-        "value": "Credentials",
-        "status": "derived",
-        "source": "5.2"
+        "status": "derived"
       },
       "contact": {
         "value": "Contact",
-        "status": "derived",
-        "source": "5.2"
+        "status": "derived"
       },
       "privacy": {
         "value": "Privacy",
-        "status": "derived",
-        "source": "7"
+        "status": "derived"
+      },
+      "sectors": {
+        "value": "Sectors",
+        "status": "derived"
       }
     },
     "cta": {
       "partner": {
         "value": "Partner With Us",
         "status": "derived",
-        "source": "4.2",
         "needsReview": true
       }
     },
     "ticker": {
       "1": {
         "value": "PFMA",
-        "status": "derived",
-        "source": "4.7"
+        "status": "derived"
       },
       "2": {
         "value": "SAQA",
-        "status": "derived",
-        "source": "4.7"
+        "status": "derived"
       },
       "3": {
         "value": "QCTO",
-        "status": "derived",
-        "source": "4.7"
+        "status": "derived"
       },
       "4": {
         "value": "SETA / LMIS",
-        "status": "derived",
-        "source": "4.7"
+        "status": "derived"
       }
     },
     "footer": {
       "tagline": {
         "value": "Project management for publicly funded programmes, with a focus on skills development across South Africa.",
         "status": "derived",
-        "source": "4.2",
         "needsReview": true
       },
       "copyright": {
         "value": "© 2026 Koke Holdings (Pty) Ltd. Reg: 2017/231296/07. All rights reserved.",
-        "status": "derived",
-        "source": "4.1"
+        "status": "derived"
       },
       "registered": {
         "value": "Registered in South Africa",
-        "status": "derived",
-        "source": "4.1"
+        "status": "derived"
       },
       "quickLinks": {
         "value": "Quick Links",
-        "status": "derived",
-        "source": "5.2"
+        "status": "derived"
       },
       "contactHeading": {
         "value": "Contact",
-        "status": "derived",
-        "source": "4.1"
+        "status": "derived"
       }
     },
     "images": {
       "workersOverlook": {
         "alt": {
           "value": "Two site supervisors in hard hats overlooking an open-pit mine",
-          "status": "derived",
-          "source": "Q-MINING"
+          "status": "derived"
         }
       },
       "mining1": {
         "alt": {
           "value": "Large yellow haul truck reflected in a puddle on a mine access road",
-          "status": "derived",
-          "source": "Q-MINING"
+          "status": "derived"
         }
       },
       "mining2": {
         "alt": {
           "value": "Drill rig and excavator loading a haul truck at a limestone quarry",
-          "status": "derived",
-          "source": "Q-MINING"
+          "status": "derived"
         }
       },
       "excavatorBreaker": {
         "alt": {
           "value": "Hydraulic excavator with rock breaker working on a quarry bench",
-          "status": "derived",
-          "source": "Q-MINING"
+          "status": "derived"
         }
       },
       "aerialExcavator": {
         "alt": {
           "value": "Aerial view of an excavator working on a dark mineral stockpile",
-          "status": "derived",
-          "source": "Q-MINING"
+          "status": "derived"
         }
       },
       "trainingRoom": {
         "alt": {
           "value": "Empty training room with desks, chairs and a large display screen",
-          "status": "derived",
-          "source": "Q6.1"
+          "status": "derived"
         }
       },
       "committeeMeeting": {
         "alt": {
           "value": "Team members in a meeting around a conference table with laptops",
-          "status": "derived",
-          "source": "Q4.1"
+          "status": "derived"
         }
       },
       "limestoneStockpile": {
         "alt": {
           "value": "White limestone stockpile rising above green fields under a blue sky",
-          "status": "derived",
-          "source": "Q-MINING"
+          "status": "derived"
         }
       },
       "haulTruck": {
         "alt": {
           "value": "Yellow haul truck parked against a rock face in an open-pit mine",
-          "status": "derived",
-          "source": "Q-MINING"
+          "status": "derived"
         }
       }
     }
@@ -222,13 +178,11 @@
         "title": {
           "value": "Koke Holdings — Programme management that delivers",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         },
         "description": {
           "value": "Koke Holdings is a South African project management company delivering publicly funded skills development programmes, and is positioned to support mining-sector skills development and Social and Labour Plan (SLP) programme management.",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         }
@@ -236,424 +190,288 @@
       "hero": {
         "badge": {
           "value": "Project Management Unit",
-          "status": "derived",
-          "source": "4.2"
+          "status": "derived"
         },
         "title": {
           "value": "Programme management that delivers.",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         },
         "subtitle": {
           "value": "Well-planned, well-governed programmes that deliver clear, measurable benefits to communities — on time, on budget, and in line with South African laws and policies.",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         },
         "ctaPrimary": {
           "value": "Partner With Us",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         },
         "ctaSecondary": {
           "value": "View Capabilities",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "chip1": {
           "value": "Public programmes",
-          "status": "derived",
-          "source": "4.2"
+          "status": "derived"
         },
         "chip2": {
           "value": "Skills development",
-          "status": "derived",
-          "source": "4.2"
+          "status": "derived"
         },
         "chip3": {
           "value": "Quality assured",
-          "status": "derived",
-          "source": "4.7"
+          "status": "derived"
         },
         "chip4": {
           "value": "South African based",
-          "status": "derived",
-          "source": "4.6"
+          "status": "derived"
         }
       },
       "dashboard": {
         "title": {
-          "value": "Delivery at a glance",
+          "value": "At a glance",
           "status": "derived",
-          "source": "4.2",
-          "needsReview": true
-        },
-        "status": {
-          "value": "Live",
-          "status": "derived",
-          "source": "4.2",
           "needsReview": true
         },
         "m1Label": {
-          "value": "Learners supported",
-          "status": "derived",
-          "source": "4.2"
+          "value": "Service lines",
+          "status": "derived"
         },
         "m1Value": {
-          "value": "00+",
-          "status": "placeholder",
-          "source": "Q1.6"
+          "value": "7",
+          "status": "derived"
         },
         "m2Label": {
-          "value": "Districts covered",
-          "status": "derived",
-          "source": "4.6"
+          "value": "Delivery phases",
+          "status": "derived"
         },
         "m2Value": {
-          "value": "00+",
-          "status": "placeholder",
-          "source": "Q1.6"
+          "value": "6",
+          "status": "derived"
         },
         "m3Label": {
-          "value": "Service lines",
-          "status": "derived",
-          "source": "4.3"
+          "value": "Registered",
+          "status": "derived"
         },
         "m3Value": {
-          "value": "00+",
-          "status": "placeholder",
-          "source": "Q3.2"
+          "value": "2017",
+          "status": "derived"
         },
         "m4Label": {
-          "value": "Years operating",
-          "status": "derived",
-          "source": "4.2"
+          "value": "Based in",
+          "status": "derived"
         },
         "m4Value": {
-          "value": "00+",
-          "status": "placeholder",
-          "source": "Q1.6"
+          "value": "North West",
+          "status": "derived"
         },
         "frameworks": {
           "value": "PFMA · SAQA · QCTO · SETA / LMIS",
-          "status": "derived",
-          "source": "4.7"
+          "status": "derived"
         }
       },
       "servicesTeaser": {
         "title": {
           "value": "What we do",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "intro": {
           "value": "We run the management unit behind publicly funded programmes — from set-up and procurement to delivery, quality and reporting.",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         },
         "link": {
           "value": "All capabilities",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "c1Title": {
           "value": "Programme and project management",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "c1Desc": {
           "value": "Project office set-up, governance structures, communications, and coordination from kick-off to closure.",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "c2Title": {
           "value": "Skills development programme management",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "c2Desc": {
           "value": "End-to-end management of learnerships, internships and artisan pathways, from recruitment to certification.",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "c3Title": {
           "value": "Procurement and contracting support",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "c3Desc": {
           "value": "Helping clients appoint accredited training providers and other service providers in line with public finance rules.",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "c4Title": {
           "value": "Stakeholder engagement",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "c4Desc": {
           "value": "Identifying stakeholders, clarifying roles and coordinating host workplaces such as departments, municipalities and private sector partners.",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "c5Title": {
           "value": "Quality management and compliance",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "c5Desc": {
           "value": "Quality management systems, training venue readiness, health and safety checks, SETA registration and QCTO evidence submission.",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "c6Title": {
           "value": "Monitoring, evaluation and reporting",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "c6Desc": {
           "value": "Continuous monitoring, site inspections, learner feedback, and narrative and evaluation reporting for clients and funders.",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "c7Title": {
           "value": "Capacity building and exit strategy",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "c7Desc": {
           "value": "Training client staff and local partners for continuity, capturing lessons learned and structured close-out.",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         }
       },
       "howWeWorkTeaser": {
         "title": {
           "value": "How we work",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "intro": {
           "value": "A simple, repeatable approach — from defining the programme to a documented close-out.",
           "status": "derived",
-          "source": "4.4",
           "needsReview": true
         },
         "link": {
           "value": "Our full approach",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "s1Name": {
           "value": "Define",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "s1Desc": {
           "value": "Confirm scope and targets: what will be delivered, where and by when.",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "s2Name": {
           "value": "Mobilise",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "s2Desc": {
           "value": "Set up the management unit, roles, governance and reporting lines.",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "s3Name": {
           "value": "Procure and contract",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "s3Desc": {
           "value": "Appoint service providers in line with public finance rules and sign agreements.",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "s4Name": {
           "value": "Implement",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "s4Desc": {
           "value": "Coordinate design, delivery and quality checks across all sites.",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "s5Name": {
           "value": "Build capacity",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "s5Desc": {
           "value": "Train client staff and local partners so the work continues after the project.",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "s6Name": {
           "value": "Monitor and evaluate",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "s6Desc": {
           "value": "Track progress continuously, report regularly and close out with a documented evaluation.",
-          "status": "derived",
-          "source": "4.4"
-        }
-      },
-      "numbers": {
-        "title": {
-          "value": "By the numbers",
-          "status": "derived",
-          "source": "4.2",
-          "needsReview": true
-        },
-        "l1Label": {
-          "value": "Years in operation",
-          "status": "derived",
-          "source": "Q1.6"
-        },
-        "l1Value": {
-          "value": "00+",
-          "status": "placeholder",
-          "source": "Q1.6"
-        },
-        "l2Label": {
-          "value": "Projects delivered",
-          "status": "derived",
-          "source": "Q1.6"
-        },
-        "l2Value": {
-          "value": "00+",
-          "status": "placeholder",
-          "source": "Q1.6"
-        },
-        "l3Label": {
-          "value": "Learners supported",
-          "status": "derived",
-          "source": "Q1.6"
-        },
-        "l3Value": {
-          "value": "00+",
-          "status": "placeholder",
-          "source": "Q1.6"
-        },
-        "l4Label": {
-          "value": "Districts covered",
-          "status": "derived",
-          "source": "4.6"
-        },
-        "l4Value": {
-          "value": "00+",
-          "status": "placeholder",
-          "source": "Q1.6"
+          "status": "derived"
         }
       },
       "credentialsTeaser": {
         "title": {
           "value": "Registered and accountable",
           "status": "derived",
-          "source": "4.10",
           "needsReview": true
         },
         "text": {
-          "value": "Company registration confirmed. Further credentials available on request.",
+          "value": "Koke Holdings (Pty) Ltd is a registered South African company, number 2017/231296/07. Contact us for company documents.",
           "status": "derived",
-          "source": "4.10",
           "needsReview": true
         },
         "link": {
-          "value": "View credentials",
-          "status": "derived",
-          "source": "4.10"
-        }
-      },
-      "testimonial": {
-        "quote": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-          "status": "placeholder",
-          "source": "Q9.1"
-        },
-        "author": {
-          "value": "Lorem Ipsum",
-          "status": "placeholder",
-          "source": "Q9.2"
-        },
-        "role": {
-          "value": "Placeholder role, organisation",
-          "status": "placeholder",
-          "source": "Q9.2"
+          "value": "Company details",
+          "status": "derived"
         }
       },
       "contactCta": {
         "title": {
           "value": "Get in touch",
-          "status": "derived",
-          "source": "4.1"
+          "status": "derived"
         },
         "text": {
           "value": "Ready to partner on a skills development initiative? We would like to hear from you.",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         },
         "button": {
           "value": "Contact us",
-          "status": "derived",
-          "source": "4.1"
+          "status": "derived"
         }
       },
       "sectors": {
         "title": {
           "value": "Sectors we serve",
-          "status": "derived",
-          "source": "4.5"
+          "status": "derived"
         },
         "intro": {
           "value": "Skills development is our core; we are positioned to extend our programme management approach into mining and industry.",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "link": {
           "value": "Explore sectors",
-          "status": "derived",
-          "source": "4.5"
+          "status": "derived"
         },
         "mining": {
           "value": "Mining — skills development and Social and Labour Plan (SLP) programme support",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "s2": {
           "value": "Provincial and national government departments",
-          "status": "derived",
-          "source": "4.5"
+          "status": "derived"
         },
         "s3": {
           "value": "Municipalities and state-owned entities",
-          "status": "derived",
-          "source": "4.5"
+          "status": "derived"
         },
         "s4": {
           "value": "Accredited training providers",
-          "status": "derived",
-          "source": "4.5"
+          "status": "derived"
         },
         "s5": {
           "value": "Host workplaces, including private sector partners",
-          "status": "derived",
-          "source": "4.5"
+          "status": "derived"
         }
       }
     },
@@ -661,159 +479,123 @@
       "meta": {
         "title": {
           "value": "Services — Koke Holdings",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "description": {
           "value": "Programme management, skills development delivery, procurement support, stakeholder engagement, quality compliance, monitoring and reporting.",
           "status": "derived",
-          "source": "4.3",
           "needsReview": true
         }
       },
       "hero": {
         "badge": {
           "value": "Services",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "title": {
           "value": "Capabilities that deliver programmes",
           "status": "derived",
-          "source": "4.3",
           "needsReview": true
         },
         "intro": {
           "value": "Seven service lines covering the full life of a publicly funded programme — from set-up and procurement to certification and close-out.",
           "status": "derived",
-          "source": "4.3",
           "needsReview": true
         },
         "cta1": {
           "value": "Partner With Us",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         },
         "cta2": {
           "value": "See how we work",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         }
       },
       "cap1": {
         "title": {
           "value": "Programme and project management",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "desc": {
           "value": "Project office set-up, governance structures, communications, and coordination from kick-off to closure.",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         }
       },
       "cap2": {
         "title": {
           "value": "Skills development programme management",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "desc": {
           "value": "End-to-end management of learnerships, internships and artisan pathways, from recruitment to certification.",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         }
       },
       "cap3": {
         "title": {
           "value": "Procurement and contracting support",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "desc": {
           "value": "Helping clients appoint accredited training providers and other service providers in line with public finance rules.",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         }
       },
       "cap4": {
         "title": {
           "value": "Stakeholder engagement",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "desc": {
           "value": "Identifying stakeholders, clarifying roles and coordinating host workplaces such as departments, municipalities and private sector partners.",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         }
       },
       "cap5": {
         "title": {
           "value": "Quality management and compliance",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "desc": {
           "value": "Quality management systems, training venue readiness, health and safety checks, SETA registration and QCTO evidence submission.",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         }
       },
       "cap6": {
         "title": {
           "value": "Monitoring, evaluation and reporting",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "desc": {
           "value": "Continuous monitoring, site inspections, learner feedback, and narrative and evaluation reporting for clients and funders.",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         }
       },
       "cap7": {
         "title": {
           "value": "Capacity building and exit strategy",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "desc": {
           "value": "Training client staff and local partners for continuity, capturing lessons learned and structured close-out.",
-          "status": "derived",
-          "source": "4.3"
-        }
-      },
-      "additional": {
-        "title": {
-          "value": "Additional services",
-          "status": "derived",
-          "source": "4.3"
-        },
-        "text": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "status": "placeholder",
-          "source": "Q3.2"
+          "status": "derived"
         }
       },
       "cta": {
         "title": {
           "value": "Let's plan your programme",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         },
         "text": {
           "value": "Talk to us about your next skills development or public-sector programme.",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         },
         "button": {
           "value": "Partner With Us",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         }
       },
@@ -821,56 +603,48 @@
         "title": {
           "value": "Skills development for mining and industry",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "intro": {
           "value": "Koke Holdings is positioned to support mining right holders and industry clients with skills development programme management, building on our public-sector delivery approach.",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "p1": {
           "value": "Skills development programmes that support Social and Labour Plan (SLP) commitments",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "p2": {
           "value": "Learnerships, internships and artisan pathways aligned to Mining Qualifications Authority (MQA) accredited training",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "p3": {
           "value": "Community and portable-skills programmes in mining-affected districts",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "p4": {
           "value": "Compliance, quality management, monitoring and reporting suitable for audit by mining right holders and the Department of Mineral and Petroleum Resources",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "p5": {
           "value": "Stakeholder coordination between mines, municipalities, training providers and communities",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "link": {
           "value": "Mining sector detail",
-          "status": "derived",
-          "source": "Q4.2"
+          "status": "derived"
         }
       }
     },
@@ -878,142 +652,118 @@
       "meta": {
         "title": {
           "value": "How we work — Koke Holdings",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "description": {
           "value": "A simple, repeatable delivery approach: define, mobilise, procure, implement, build capacity, and monitor and evaluate.",
           "status": "derived",
-          "source": "4.4",
           "needsReview": true
         }
       },
       "hero": {
         "badge": {
           "value": "Method",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "title": {
           "value": "How we work",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "intro": {
           "value": "Six phases that take a programme from scope to documented close-out — with quality and compliance built in at every step.",
           "status": "derived",
-          "source": "4.4",
           "needsReview": true
         }
       },
       "phase1": {
         "name": {
           "value": "Define",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "desc": {
           "value": "Confirm scope and targets: what will be delivered, where and by when.",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         }
       },
       "phase2": {
         "name": {
           "value": "Mobilise",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "desc": {
           "value": "Set up the management unit, roles, governance and reporting lines.",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         }
       },
       "phase3": {
         "name": {
           "value": "Procure and contract",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "desc": {
           "value": "Appoint service providers in line with public finance rules and sign agreements.",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         }
       },
       "phase4": {
         "name": {
           "value": "Implement",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "desc": {
           "value": "Coordinate design, delivery and quality checks across all sites.",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         }
       },
       "phase5": {
         "name": {
           "value": "Build capacity",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "desc": {
           "value": "Train client staff and local partners so the work continues after the project.",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         }
       },
       "phase6": {
         "name": {
           "value": "Monitor and evaluate",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "desc": {
           "value": "Track progress continuously, report regularly and close out with a documented evaluation.",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         }
       },
       "quality": {
         "title": {
           "value": "Quality and compliance",
-          "status": "derived",
-          "source": "4.7"
+          "status": "derived"
         },
         "intro": {
           "value": "Applied across every project we run.",
           "status": "derived",
-          "source": "4.7",
           "needsReview": true
         },
         "s1": {
           "value": "Service providers appointed in line with public finance supply chain procedures.",
-          "status": "derived",
-          "source": "4.7"
+          "status": "derived"
         },
         "s2": {
           "value": "Quality management system applied across projects.",
-          "status": "derived",
-          "source": "4.7"
+          "status": "derived"
         },
         "s3": {
           "value": "Health and safety checks on training venues before learners start.",
-          "status": "derived",
-          "source": "4.7"
+          "status": "derived"
         },
         "s4": {
           "value": "Learner records registered on SETA systems, with internal and external moderation and QCTO submission.",
-          "status": "derived",
-          "source": "4.7"
+          "status": "derived"
         },
         "s5": {
           "value": "Ongoing monitoring and evaluation with site inspections and learner feedback.",
-          "status": "derived",
-          "source": "4.7"
+          "status": "derived"
         }
       }
     },
@@ -1021,443 +771,115 @@
       "meta": {
         "title": {
           "value": "About — Koke Holdings",
-          "status": "derived",
-          "source": "4.2"
+          "status": "derived"
         },
         "description": {
           "value": "Koke Holdings is a South African project management company, based in Boitumelong, Bloemhof, North West.",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         }
       },
       "hero": {
         "badge": {
           "value": "About",
-          "status": "derived",
-          "source": "4.2"
+          "status": "derived"
         },
         "title": {
           "value": "Who we are",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         },
         "intro": {
           "value": "A project management company that acts as the management unit on publicly funded programmes, with a focus on skills development.",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         }
       },
       "story": {
         "title": {
           "value": "Our story",
-          "status": "derived",
-          "source": "Q1.2"
+          "status": "derived"
         },
         "text": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "status": "placeholder",
-          "source": "Q1.2-Q1.4"
+          "value": "Koke Holdings (Pty) Ltd was registered in 2017 and is based in Boitumelong, Bloemhof, in the North West. We are a project management company that acts as the management unit on publicly funded programmes, with a focus on skills development: learnerships, internships and artisan pathways. Our role is to bring structure to complex programmes. We mobilise teams, coordinate service providers, uphold quality standards and report clearly on results, so our clients always know what is being delivered, where and by when.",
+          "status": "derived",
+          "needsReview": true
         }
       },
       "mvv": {
         "title": {
           "value": "Mission, vision and values",
-          "status": "derived",
-          "source": "Q2.1"
+          "status": "derived"
         },
         "mission": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit — mission statement pending.",
-          "status": "placeholder",
-          "source": "Q2.1"
+          "value": "To plan, govern and deliver publicly funded programmes that create clear, measurable benefits for communities: on time, on budget and in line with South African laws and policies.",
+          "status": "derived",
+          "needsReview": true
         },
         "vision": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit — vision statement pending.",
-          "status": "placeholder",
-          "source": "Q2.2"
+          "value": "Programmes that leave lasting skills and capacity in the communities they serve.",
+          "status": "derived",
+          "needsReview": true
         },
         "values": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit — values list pending.",
-          "status": "placeholder",
-          "source": "Q2.3"
+          "value": "Accountability to our clients, compliance with public finance and quality standards, transparent reporting, and building capacity that lasts beyond the project.",
+          "status": "derived",
+          "needsReview": true
         }
       },
       "differentiators": {
         "title": {
           "value": "What makes us different",
-          "status": "derived",
-          "source": "Q1.5"
+          "status": "derived"
         },
         "text": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-          "status": "placeholder",
-          "source": "Q1.5"
+          "value": "We work as the management unit, not as one more service provider: a single point of coordination across clients, training providers and host workplaces. Compliance is built in from the start, from procurement in line with public finance rules to SETA registration and QCTO evidence. And we plan for close-out from day one, training client staff and local partners so the work continues after we leave.",
+          "status": "derived",
+          "needsReview": true
         }
       },
       "operate": {
         "title": {
           "value": "Where we operate",
-          "status": "derived",
-          "source": "4.6"
+          "status": "derived"
         },
         "hq": {
           "value": "Headquartered in Boitumelong, Bloemhof, North West.",
-          "status": "derived",
-          "source": "4.6"
+          "status": "derived"
         },
         "districts": {
           "value": "Dr Ruth Segomotsi Mompati, Dr Kenneth Kaunda, Ngaka Modiri Molema, Bojanala",
-          "status": "derived",
-          "source": "4.6"
-        },
-        "other": {
-          "value": "Lorem ipsum dolor sit amet — other offices and expansion plans pending.",
-          "status": "placeholder",
-          "source": "Q5.2-Q5.3"
+          "status": "derived"
         }
       },
-      "credentialsTeaser": {
+      "company": {
         "title": {
-          "value": "Credentials",
-          "status": "derived",
-          "source": "4.10"
+          "value": "Company details",
+          "status": "derived"
         },
-        "text": {
-          "value": "Company registration confirmed; further credentials available on request.",
-          "status": "derived",
-          "source": "4.10",
-          "needsReview": true
+        "legalNameLabel": {
+          "value": "Registered name",
+          "status": "derived"
         },
-        "link": {
-          "value": "View credentials",
-          "status": "derived",
-          "source": "4.10"
-        }
-      }
-    },
-    "projects": {
-      "meta": {
-        "title": {
-          "value": "Projects — Koke Holdings",
-          "status": "derived",
-          "source": "4.9"
+        "regNumberLabel": {
+          "value": "Registration number",
+          "status": "derived"
         },
-        "description": {
-          "value": "Past projects, case studies and partner testimonials from Koke Holdings.",
-          "status": "derived",
-          "source": "4.9",
-          "needsReview": true
-        }
-      },
-      "hero": {
-        "badge": {
-          "value": "Projects",
-          "status": "derived",
-          "source": "4.9"
-        },
-        "title": {
-          "value": "Our track record",
-          "status": "derived",
-          "source": "4.9",
-          "needsReview": true
-        },
-        "intro": {
-          "value": "Evidence of how we work — past programmes and the results our partners have seen.",
-          "status": "derived",
-          "source": "4.9",
-          "needsReview": true
-        }
-      },
-      "past": {
-        "title": {
-          "value": "Past projects",
-          "status": "derived",
-          "source": "Q7.1"
-        },
-        "text": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam — project list pending.",
-          "status": "placeholder",
-          "source": "Q7.1"
-        }
-      },
-      "testimonials": {
-        "title": {
-          "value": "What partners say",
-          "status": "derived",
-          "source": "Q9.1"
-        },
-        "quote": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "status": "placeholder",
-          "source": "Q9.1"
-        },
-        "author": {
-          "value": "Lorem Ipsum",
-          "status": "placeholder",
-          "source": "Q9.2"
-        },
-        "role": {
-          "value": "Placeholder role, organisation",
-          "status": "placeholder",
-          "source": "Q9.2"
-        }
-      }
-    },
-    "team": {
-      "meta": {
-        "title": {
-          "value": "Team — Koke Holdings",
-          "status": "derived",
-          "source": "4.8"
-        },
-        "description": {
-          "value": "The people behind our programmes.",
-          "status": "derived",
-          "source": "4.8",
-          "needsReview": true
-        }
-      },
-      "hero": {
-        "badge": {
-          "value": "Team",
-          "status": "derived",
-          "source": "4.8"
-        },
-        "title": {
-          "value": "The people behind our programmes",
-          "status": "derived",
-          "source": "4.8",
-          "needsReview": true
-        },
-        "intro": {
-          "value": "A delivery team built around clear roles and local knowledge.",
-          "status": "derived",
-          "source": "4.8",
-          "needsReview": true
-        }
-      },
-      "intro": {
-        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit — team introduction pending.",
-        "status": "placeholder",
-        "source": "Q6.1"
-      },
-      "member1": {
-        "name": {
-          "value": "Team Member One",
-          "status": "placeholder",
-          "source": "Q6.2"
-        },
-        "title": {
-          "value": "Role title pending",
-          "status": "placeholder",
-          "source": "Q6.1"
-        },
-        "bio": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "status": "placeholder",
-          "source": "Q6.3"
-        }
-      },
-      "member2": {
-        "name": {
-          "value": "Team Member Two",
-          "status": "placeholder",
-          "source": "Q6.2"
-        },
-        "title": {
-          "value": "Role title pending",
-          "status": "placeholder",
-          "source": "Q6.1"
-        },
-        "bio": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "status": "placeholder",
-          "source": "Q6.3"
-        }
-      },
-      "member3": {
-        "name": {
-          "value": "Team Member Three",
-          "status": "placeholder",
-          "source": "Q6.2"
-        },
-        "title": {
-          "value": "Role title pending",
-          "status": "placeholder",
-          "source": "Q6.1"
-        },
-        "bio": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "status": "placeholder",
-          "source": "Q6.3"
-        }
-      },
-      "member4": {
-        "name": {
-          "value": "Team Member Four",
-          "status": "placeholder",
-          "source": "Q6.2"
-        },
-        "title": {
-          "value": "Role title pending",
-          "status": "placeholder",
-          "source": "Q6.1"
-        },
-        "bio": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "status": "placeholder",
-          "source": "Q6.3"
+        "addressLabel": {
+          "value": "Registered address",
+          "status": "derived"
         }
       },
       "structure": {
         "title": {
           "value": "How our delivery team is structured",
           "status": "derived",
-          "source": "Q6.1",
           "needsReview": true
         },
         "text": {
           "value": "Delivery teams are formed around the programme, combining central programme management with district-level coordination.",
           "status": "derived",
-          "source": "4.8",
           "needsReview": true
-        }
-      }
-    },
-    "credentials": {
-      "meta": {
-        "title": {
-          "value": "Credentials — Koke Holdings",
-          "status": "derived",
-          "source": "4.10"
-        },
-        "description": {
-          "value": "Company registration and procurement credentials for Koke Holdings (Pty) Ltd.",
-          "status": "derived",
-          "source": "4.10",
-          "needsReview": true
-        }
-      },
-      "hero": {
-        "badge": {
-          "value": "Credentials",
-          "status": "derived",
-          "source": "4.10"
-        },
-        "title": {
-          "value": "Registered and accountable",
-          "status": "derived",
-          "source": "4.10",
-          "needsReview": true
-        },
-        "intro": {
-          "value": "What procurement teams need to know before appointing us.",
-          "status": "derived",
-          "source": "4.10",
-          "needsReview": true
-        }
-      },
-      "reg": {
-        "legalName": {
-          "value": "Koke Holdings (Pty) Ltd",
-          "status": "confirmed",
-          "source": "4.1"
-        },
-        "regNumber": {
-          "value": "2017/231296/07",
-          "status": "confirmed",
-          "source": "4.1"
-        },
-        "address": {
-          "value": "839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660",
-          "status": "confirmed",
-          "source": "4.1"
-        }
-      },
-      "items": {
-        "bbeeLabel": {
-          "value": "B-BBEE level",
-          "status": "derived",
-          "source": "Q8.1"
-        },
-        "bbeeValue": {
-          "value": "Pending",
-          "status": "placeholder",
-          "source": "Q8.1"
-        },
-        "csdLabel": {
-          "value": "CSD registration",
-          "status": "derived",
-          "source": "Q8.1"
-        },
-        "csdValue": {
-          "value": "Pending",
-          "status": "placeholder",
-          "source": "Q8.1"
-        },
-        "taxLabel": {
-          "value": "Tax compliance status",
-          "status": "derived",
-          "source": "Q8.1"
-        },
-        "taxValue": {
-          "value": "Pending",
-          "status": "placeholder",
-          "source": "Q8.1"
-        },
-        "cidbLabel": {
-          "value": "CIDB grading",
-          "status": "derived",
-          "source": "Q8.1"
-        },
-        "cidbValue": {
-          "value": "Pending",
-          "status": "placeholder",
-          "source": "Q8.1"
-        },
-        "membershipLabel": {
-          "value": "Professional memberships",
-          "status": "derived",
-          "source": "Q8.1"
-        },
-        "membershipValue": {
-          "value": "Pending",
-          "status": "placeholder",
-          "source": "Q8.1"
-        },
-        "certLabel": {
-          "value": "Certifications",
-          "status": "derived",
-          "source": "Q8.1"
-        },
-        "certValue": {
-          "value": "Pending",
-          "status": "placeholder",
-          "source": "Q8.1"
-        },
-        "insuranceLabel": {
-          "value": "Insurance",
-          "status": "derived",
-          "source": "Q8.1"
-        },
-        "insuranceValue": {
-          "value": "Pending",
-          "status": "placeholder",
-          "source": "Q8.1"
-        }
-      },
-      "documents": {
-        "title": {
-          "value": "Documents",
-          "status": "derived",
-          "source": "Q8.1"
-        },
-        "text": {
-          "value": "Lorem ipsum dolor sit amet — downloadable documents pending.",
-          "status": "placeholder",
-          "source": "Q8.1"
         }
       }
     },
@@ -1465,127 +887,97 @@
       "meta": {
         "title": {
           "value": "Contact — Koke Holdings",
-          "status": "derived",
-          "source": "4.1"
+          "status": "derived"
         },
         "description": {
           "value": "Contact Koke Holdings (Pty) Ltd in Bloemhof, North West. Phone +27 81 040 0918.",
-          "status": "derived",
-          "source": "4.1"
+          "status": "derived"
         }
       },
       "hero": {
         "badge": {
           "value": "Contact",
-          "status": "derived",
-          "source": "4.1"
+          "status": "derived"
         },
         "title": {
           "value": "Talk to us",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         },
         "intro": {
           "value": "Ready to partner on a skills development or public-sector programme? We would like to hear from you.",
           "status": "derived",
-          "source": "4.2",
           "needsReview": true
         }
       },
       "details": {
         "phoneLabel": {
           "value": "Phone",
-          "status": "derived",
-          "source": "4.1"
+          "status": "derived"
         },
         "emailLabel": {
           "value": "Email",
-          "status": "derived",
-          "source": "4.1"
+          "status": "derived"
         },
         "addressLabel": {
           "value": "Address",
-          "status": "derived",
-          "source": "4.1"
+          "status": "derived"
         },
         "addressValue": {
           "value": "839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660",
-          "status": "confirmed",
-          "source": "4.1"
-        }
-      },
-      "hours": {
-        "label": {
-          "value": "Business hours",
-          "status": "derived",
-          "source": "Q10.3"
-        },
-        "value": {
-          "value": "Lorem ipsum — business hours pending.",
-          "status": "placeholder",
-          "source": "Q10.3"
-        }
-      },
-      "person": {
-        "label": {
-          "value": "Contact person",
-          "status": "derived",
-          "source": "Q10.4"
-        },
-        "value": {
-          "value": "Lorem Ipsum — contact person pending.",
-          "status": "placeholder",
-          "source": "Q10.4"
+          "status": "confirmed"
         }
       },
       "form": {
         "nameLabel": {
           "value": "Name",
-          "status": "derived",
-          "source": "4.1"
+          "status": "derived"
         },
         "emailLabel": {
           "value": "Email",
-          "status": "derived",
-          "source": "4.1"
+          "status": "derived"
         },
         "messageLabel": {
           "value": "Message",
-          "status": "derived",
-          "source": "4.1"
+          "status": "derived"
         },
         "submit": {
           "value": "Send message",
-          "status": "derived",
-          "source": "4.1"
+          "status": "derived"
         },
         "privacyNote": {
           "value": "By submitting this form you agree to our privacy notice.",
-          "status": "derived",
-          "source": "7"
+          "status": "derived"
         },
         "topicLabel": {
           "value": "Enquiry topic",
-          "status": "derived",
-          "source": "4.1"
+          "status": "derived"
         },
         "topicMining": {
           "value": "Mining / SLP programmes",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "topicProgramme": {
           "value": "Programme management",
-          "status": "derived",
-          "source": "4.3"
+          "status": "derived"
         },
         "topicGeneral": {
           "value": "General enquiry",
-          "status": "derived",
-          "source": "4.1"
+          "status": "derived"
+        },
+        "mailtoNote": {
+          "value": "Sending opens your email app with your message ready to go.",
+          "status": "derived"
+        },
+        "status": {
+          "value": "Your email app should now open. If it doesn't, email us directly at kokeholdings@gmail.com.",
+          "status": "derived"
+        },
+        "privacyLink": {
+          "value": "Privacy notice",
+          "status": "derived"
         }
       }
     },
@@ -1593,71 +985,60 @@
       "meta": {
         "title": {
           "value": "Privacy — Koke Holdings",
-          "status": "derived",
-          "source": "7"
+          "status": "derived"
         },
         "description": {
           "value": "Privacy notice for the Koke Holdings website.",
-          "status": "derived",
-          "source": "7"
+          "status": "derived"
         }
       },
       "title": {
         "value": "Privacy notice",
-        "status": "derived",
-        "source": "7"
+        "status": "derived"
       },
       "intro": {
         "value": "This notice explains how we handle personal information collected through this website, in line with South Africa's Protection of Personal Information Act (POPIA).",
         "status": "derived",
-        "source": "7",
         "needsReview": true
       },
       "collect": {
-        "value": "We collect only the information you send us through the contact form (name, email address and message). We use it to respond to your enquiry and for no other purpose.",
+        "value": "We collect only the information you send us by email, including through the contact form, which opens your own email app (name, email address, enquiry topic and message). We use it to respond to your enquiry and for no other purpose.",
         "status": "derived",
-        "source": "7",
         "needsReview": true
       },
       "officerLabel": {
         "value": "Information Officer",
-        "status": "derived",
-        "source": "Q12.5"
+        "status": "derived"
       },
       "officerValue": {
-        "value": "Lorem ipsum — Information Officer details pending.",
-        "status": "placeholder",
-        "source": "Q12.5"
+        "value": "Our Information Officer can be contacted at kokeholdings@gmail.com or +27 81 040 0918.",
+        "status": "derived",
+        "needsReview": true
       }
     },
     "notFound": {
       "title": {
         "value": "Page Not Found",
-        "status": "derived",
-        "source": "7"
+        "status": "derived"
       },
       "text": {
         "value": "The page you are looking for does not exist or has moved.",
-        "status": "derived",
-        "source": "7"
+        "status": "derived"
       },
       "button": {
         "value": "Back to home",
-        "status": "derived",
-        "source": "7"
+        "status": "derived"
       }
     },
     "sectors": {
       "meta": {
         "title": {
           "value": "Sectors — Koke Holdings",
-          "status": "derived",
-          "source": "4.5"
+          "status": "derived"
         },
         "description": {
           "value": "Skills development programmes for mining and the public sector, including Social and Labour Plan (SLP) programme management, learnerships in the North West, and mining community development across South Africa.",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         }
@@ -1665,19 +1046,16 @@
       "hero": {
         "badge": {
           "value": "Sectors",
-          "status": "derived",
-          "source": "4.5"
+          "status": "derived"
         },
         "title": {
           "value": "Sectors we serve",
           "status": "derived",
-          "source": "4.5",
           "needsReview": true
         },
         "intro": {
           "value": "Rooted in public-sector skills development, and positioned to serve mining and industry with the same programme management discipline.",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         }
@@ -1685,156 +1063,72 @@
       "mining": {
         "title": {
           "value": "Mining",
-          "status": "derived",
-          "source": "Q4.2"
+          "status": "derived"
         },
         "intro": {
           "value": "A target market for Koke Holdings. Our documented experience is public-sector skills development programme management; mining is where we are positioned to apply it.",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true
         },
         "challengeTitle": {
           "value": "The challenge",
-          "status": "derived",
-          "source": "Q4.2"
+          "status": "derived"
         },
         "challenge": {
           "value": "Mining right holders balance Social and Labour Plan (SLP) commitments, Mining Charter obligations, local skills needs and community expectations — and must be able to evidence results to auditors and regulators.",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "helpTitle": {
           "value": "How Koke helps",
-          "status": "derived",
-          "source": "4.4"
+          "status": "derived"
         },
         "helpIntro": {
           "value": "Our six-phase approach — define, mobilise, procure and contract, implement, build capacity, monitor and evaluate — applies to mining and industry programmes as it does to public-sector work.",
           "status": "derived",
-          "source": "4.4",
           "needsReview": true
         },
         "p1": {
           "value": "Skills development programmes that support Social and Labour Plan (SLP) commitments",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "p2": {
           "value": "Learnerships, internships and artisan pathways aligned to Mining Qualifications Authority (MQA) accredited training",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "p3": {
           "value": "Community and portable-skills programmes in mining-affected districts",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "p4": {
           "value": "Compliance, quality management, monitoring and reporting suitable for audit by mining right holders and the Department of Mineral and Petroleum Resources",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
         },
         "p5": {
           "value": "Stakeholder coordination between mines, municipalities, training providers and communities",
           "status": "derived",
-          "source": "Q4.2",
           "needsReview": true,
           "note": "Verify regulatory wording with client"
-        },
-        "experienceTitle": {
-          "value": "Our experience in mining",
-          "status": "derived",
-          "source": "Q4.2"
-        },
-        "experience": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit — mining experience statement pending client confirmation.",
-          "status": "placeholder",
-          "source": "Q4.2"
-        },
-        "caseStudyTitle": {
-          "value": "Mining case study",
-          "status": "derived",
-          "source": "Q7.1"
-        },
-        "caseStudy": {
-          "value": "Lorem ipsum dolor sit amet — mining case study pending. No mining project is presented until the client confirms one.",
-          "status": "placeholder",
-          "source": "Q7.1"
-        },
-        "testimonialTitle": {
-          "value": "From the mining sector",
-          "status": "derived",
-          "source": "Q7.4"
-        },
-        "testimonial": {
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit — mining-sector testimonial pending.",
-          "status": "placeholder",
-          "source": "Q7.4"
-        },
-        "testimonialAuthor": {
-          "value": "Lorem Ipsum",
-          "status": "placeholder",
-          "source": "Q7.4"
-        },
-        "mqaTitle": {
-          "value": "Accreditation and partnerships",
-          "status": "derived",
-          "source": "Q8.1"
-        },
-        "mqa": {
-          "value": "Lorem ipsum dolor sit amet — Mining Qualifications Authority (MQA) accreditation status and training-provider partnerships pending.",
-          "status": "placeholder",
-          "source": "Q8.1"
         }
       },
       "other": {
         "title": {
           "value": "Public sector and beyond",
-          "status": "derived",
-          "source": "4.5"
+          "status": "derived"
         },
         "text": {
           "value": "Government departments, municipalities, state-owned entities, accredited training providers and host workplaces remain our core client base.",
-          "status": "derived",
-          "source": "4.5"
+          "status": "derived"
         }
-      }
-    }
-  },
-  "caseStudy": {
-    "featured": {
-      "published": false,
-      "title": {
-        "value": "Skills development programme for a provincial government office",
-        "status": "derived",
-        "source": "Q7.2-Q7.3",
-        "needsReview": true
-      },
-      "challenge": {
-        "value": "Lorem ipsum dolor sit amet — challenge pending.",
-        "status": "placeholder",
-        "source": "Q7.2"
-      },
-      "approach": {
-        "value": "Lorem ipsum dolor sit amet — approach pending.",
-        "status": "placeholder",
-        "source": "Q7.3"
-      },
-      "results": {
-        "value": "Lorem ipsum dolor sit amet — results pending.",
-        "status": "placeholder",
-        "source": "Q7.1"
       }
     }
   }

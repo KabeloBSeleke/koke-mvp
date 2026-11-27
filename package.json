@@ -1,0 +1,14 @@
+{
+  "name": "koke-holdings-site",
+  "private": true,
+  "description": "Koke Holdings static site — Tailwind CSS compilation only (no runtime build).",
+  "scripts": {
+    "build": "tailwindcss -i src/site.css -o css/site.css --minify",
+    "watch": "tailwindcss -i src/site.css -o css/site.css --watch",
+    "images": "node tools/optimise_images.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5",
+    "tailwindcss": "^3.4.17"
+  }
+}

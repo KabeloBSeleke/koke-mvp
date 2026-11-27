@@ -20,36 +20,14 @@
   </script>
 
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kokeholdings.co.za/privacy.html">
   <meta property="og:title" content="<!-- slot:site.meta.siteName -->Koke Holdings<!-- /slot:site.meta.siteName -->">
   <meta property="og:description" content="<!-- slot:site.meta.defaultDescription -->Koke Holdings is a South African project management company delivering publicly funded programmes, with a focus on skills development.<!-- /slot:site.meta.defaultDescription -->">
-  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:image" content="https://kokeholdings.co.za/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://kokeholdings.co.za/privacy.html">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: '#F26522',
-            secondary: '#191D26',
-            surface: '#F5F5F5',
-            accent: '#FF8A4C',
-            border: '#E0E0E0',
-            'text-primary': '#1A1A1A',
-            'text-inverse': '#FFFFFF',
-          },
-          fontFamily: {
-            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
-            body: ['Inter', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          },
-        },
-      },
-    }
-  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +35,7 @@
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/site.css">
 
   <script type="application/ld+json">
   {
@@ -65,7 +43,7 @@
     "@type": "Organization",
     "name": "Koke Holdings (Pty) Ltd",
     "url": "https://kokeholdings.co.za",
-    "logo": "assets/logo.svg",
+    "logo": "https://kokeholdings.co.za/assets/logo.svg",
     "telephone": "+27-81-040-0918",
     "email": "kokeholdings@gmail.com",
     "address": {
@@ -94,21 +72,20 @@
       </a>
 
       <ul class="hidden lg:flex items-center gap-5 text-[13px] font-medium text-gray-300">
-        <li><a href="index.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Home</a></li>
-        <li><a href="about.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">About</a></li>
-        <li><a href="services.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Services</a></li>
-        <li><a href="sectors.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Sectors</a></li>
-        <li><a href="how-we-work.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">How we work</a></li>
-        <li><a href="projects.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Projects</a></li>
-        <li><a href="team.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Team</a></li>
-        <li><a href="credentials.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Credentials</a></li>
+        <li><a href="index.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.home -->Home<!-- /slot:site.nav.home --></a></li>
+        <li><a href="about.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+        <li><a href="services.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+        <li><a href="sectors.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+        <li><a href="how-we-work.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
       </ul>
 
       <div class="flex items-center gap-3">
-        <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="hidden lg:flex p-2 rounded-lg text-gray-300 hover:text-primary transition-colors focus-ring">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode" class="relative inline-flex items-center justify-between h-8 w-[3.75rem] px-2 shrink-0 rounded-full border border-gray-600 bg-white/5 hover:border-primary transition-colors focus-ring">
+          <span class="absolute left-1 top-1 h-6 w-6 rounded-full bg-primary shadow transition-transform duration-300 motion-reduce:transition-none dark:translate-x-[1.625rem]" aria-hidden="true"></span>
+          <svg class="relative w-4 h-4 text-white dark:text-gray-400 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+          <svg class="relative w-4 h-4 text-gray-400 dark:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
         </button>
-        <a href="contact.html" class="hidden lg:inline-flex items-center bg-primary hover:bg-accent text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors focus-ring">Partner With Us</a>
+        <a href="contact.html" class="hidden lg:inline-flex items-center bg-primary hover:bg-accent text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors focus-ring"><!-- slot:site.cta.partner -->Partner With Us<!-- /slot:site.cta.partner --></a>
         <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-lg text-gray-300 hover:text-primary transition-colors focus-ring">
           <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -131,16 +108,12 @@
 
     <div id="mobile-menu" class="hidden lg:hidden bg-secondary border-t border-gray-700">
       <ul class="px-4 py-4 space-y-1 text-sm font-medium text-gray-300">
-        <li><a href="index.html" class="block py-2 hover:text-primary focus-ring">Home</a></li>
-        <li><a href="about.html" class="block py-2 hover:text-primary focus-ring">About</a></li>
-        <li><a href="services.html" class="block py-2 hover:text-primary focus-ring">Services</a></li>
-        <li><a href="sectors.html" class="block py-2 hover:text-primary focus-ring">Sectors</a></li>
-        <li><a href="how-we-work.html" class="block py-2 hover:text-primary focus-ring">How we work</a></li>
-        <li><a href="projects.html" class="block py-2 hover:text-primary focus-ring">Projects</a></li>
-        <li><a href="team.html" class="block py-2 hover:text-primary focus-ring">Team</a></li>
-        <li><a href="credentials.html" class="block py-2 hover:text-primary focus-ring">Credentials</a></li>
-        <li><a href="contact.html" class="block py-2 hover:text-primary focus-ring">Contact</a></li>
-        <li><button id="theme-toggle-mobile" type="button" class="py-2 text-left hover:text-primary focus-ring">Toggle theme</button></li>
+        <li><a href="index.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.home -->Home<!-- /slot:site.nav.home --></a></li>
+        <li><a href="about.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+        <li><a href="services.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+        <li><a href="sectors.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+        <li><a href="how-we-work.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
+        <li><a href="contact.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.contact -->Contact<!-- /slot:site.nav.contact --></a></li>
       </ul>
     </div>
   </nav>
@@ -161,11 +134,11 @@
         <p class="text-gray-600 dark:text-gray-300 leading-relaxed"><!-- slot:pages.privacy.intro -->This notice explains how we handle personal information collected through this website, in line with South Africa's Protection of Personal Information Act (POPIA).<!-- /slot:pages.privacy.intro --></p>
         <div class="bento-card p-6">
           <h2 class="font-heading font-semibold text-lg text-secondary dark:text-white mb-3">Information we collect</h2>
-          <p class="text-sm text-gray-600 dark:text-gray-300"><!-- slot:pages.privacy.collect -->We collect only the information you send us through the contact form (name, email address and message). We use it to respond to your enquiry and for no other purpose.<!-- /slot:pages.privacy.collect --></p>
+          <p class="text-sm text-gray-600 dark:text-gray-300"><!-- slot:pages.privacy.collect -->We collect only the information you send us by email, including through the contact form, which opens your own email app (name, email address, enquiry topic and message). We use it to respond to your enquiry and for no other purpose.<!-- /slot:pages.privacy.collect --></p>
         </div>
         <div class="bento-card p-6">
           <h2 class="font-heading font-semibold text-lg text-secondary dark:text-white mb-3"><!-- slot:pages.privacy.officerLabel -->Information Officer<!-- /slot:pages.privacy.officerLabel --></h2>
-          <p class="text-sm text-gray-600 dark:text-gray-300"><!-- slot:pages.privacy.officerValue --><span class="ph-flag" data-q="Q12.5">Lorem ipsum — Information Officer details pending.</span><!-- /slot:pages.privacy.officerValue --></p>
+          <p class="text-sm text-gray-600 dark:text-gray-300"><!-- slot:pages.privacy.officerValue -->Our Information Officer can be contacted at kokeholdings@gmail.com or +27 81 040 0918.<!-- /slot:pages.privacy.officerValue --></p>
         </div>
       </div>
     </section>
@@ -192,14 +165,11 @@
         <div>
           <h4 class="font-heading font-semibold mb-3"><!-- slot:site.footer.quickLinks -->Quick Links<!-- /slot:site.footer.quickLinks --></h4>
           <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="about.html" class="hover:text-primary transition-colors focus-ring">About</a></li>
-            <li><a href="services.html" class="hover:text-primary transition-colors focus-ring">Services</a></li>
-            <li><a href="sectors.html" class="hover:text-primary transition-colors focus-ring">Sectors</a></li>
-            <li><a href="how-we-work.html" class="hover:text-primary transition-colors focus-ring">How we work</a></li>
-            <li><a href="projects.html" class="hover:text-primary transition-colors focus-ring">Projects</a></li>
-            <li><a href="team.html" class="hover:text-primary transition-colors focus-ring">Team</a></li>
-            <li><a href="credentials.html" class="hover:text-primary transition-colors focus-ring">Credentials</a></li>
-            <li><a href="contact.html" class="hover:text-primary transition-colors focus-ring">Contact</a></li>
+            <li><a href="about.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+            <li><a href="services.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+            <li><a href="sectors.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+            <li><a href="how-we-work.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
+            <li><a href="contact.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.contact -->Contact<!-- /slot:site.nav.contact --></a></li>
             <li><a href="privacy.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.privacy -->Privacy<!-- /slot:site.nav.privacy --></a></li>
           </ul>
         </div>

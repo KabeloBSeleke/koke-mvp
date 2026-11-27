@@ -20,36 +20,14 @@
   </script>
 
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kokeholdings.co.za/">
   <meta property="og:title" content="<!-- slot:site.meta.siteName -->Koke Holdings<!-- /slot:site.meta.siteName -->">
   <meta property="og:description" content="<!-- slot:site.meta.defaultDescription -->Koke Holdings is a South African project management company delivering publicly funded programmes, with a focus on skills development.<!-- /slot:site.meta.defaultDescription -->">
-  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:image" content="https://kokeholdings.co.za/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://kokeholdings.co.za/">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: '#F26522',
-            secondary: '#191D26',
-            surface: '#F5F5F5',
-            accent: '#FF8A4C',
-            border: '#E0E0E0',
-            'text-primary': '#1A1A1A',
-            'text-inverse': '#FFFFFF',
-          },
-          fontFamily: {
-            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
-            body: ['Inter', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          },
-        },
-      },
-    }
-  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +35,7 @@
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/site.css">
 
   <script type="application/ld+json">
   {
@@ -65,7 +43,7 @@
     "@type": "Organization",
     "name": "Koke Holdings (Pty) Ltd",
     "url": "https://kokeholdings.co.za",
-    "logo": "assets/logo.svg",
+    "logo": "https://kokeholdings.co.za/assets/logo.svg",
     "telephone": "+27-81-040-0918",
     "email": "kokeholdings@gmail.com",
     "address": {
@@ -94,21 +72,20 @@
       </a>
 
       <ul class="hidden lg:flex items-center gap-5 text-[13px] font-medium text-gray-300">
-        <li><a href="index.html" aria-current="page" class="py-2 px-1 text-primary hover:text-primary transition-colors focus-ring">Home</a></li>
-        <li><a href="about.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">About</a></li>
-        <li><a href="services.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Services</a></li>
-        <li><a href="sectors.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Sectors</a></li>
-        <li><a href="how-we-work.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">How we work</a></li>
-        <li><a href="projects.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Projects</a></li>
-        <li><a href="team.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Team</a></li>
-        <li><a href="credentials.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Credentials</a></li>
+        <li><a href="index.html" aria-current="page" class="py-2 px-1 text-primary hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.home -->Home<!-- /slot:site.nav.home --></a></li>
+        <li><a href="about.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+        <li><a href="services.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+        <li><a href="sectors.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+        <li><a href="how-we-work.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
       </ul>
 
       <div class="flex items-center gap-3">
-        <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="hidden lg:flex p-2 rounded-lg text-gray-300 hover:text-primary transition-colors focus-ring">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode" class="relative inline-flex items-center justify-between h-8 w-[3.75rem] px-2 shrink-0 rounded-full border border-gray-600 bg-white/5 hover:border-primary transition-colors focus-ring">
+          <span class="absolute left-1 top-1 h-6 w-6 rounded-full bg-primary shadow transition-transform duration-300 motion-reduce:transition-none dark:translate-x-[1.625rem]" aria-hidden="true"></span>
+          <svg class="relative w-4 h-4 text-white dark:text-gray-400 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+          <svg class="relative w-4 h-4 text-gray-400 dark:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
         </button>
-        <a href="contact.html" class="hidden lg:inline-flex items-center bg-primary hover:bg-accent text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors focus-ring">Partner With Us</a>
+        <a href="contact.html" class="hidden lg:inline-flex items-center bg-primary hover:bg-accent text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors focus-ring"><!-- slot:site.cta.partner -->Partner With Us<!-- /slot:site.cta.partner --></a>
         <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-lg text-gray-300 hover:text-primary transition-colors focus-ring">
           <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -131,16 +108,12 @@
 
     <div id="mobile-menu" class="hidden lg:hidden bg-secondary border-t border-gray-700">
       <ul class="px-4 py-4 space-y-1 text-sm font-medium text-gray-300">
-        <li><a href="index.html" aria-current="page" class="block py-2 text-primary hover:text-primary focus-ring">Home</a></li>
-        <li><a href="about.html" class="block py-2 hover:text-primary focus-ring">About</a></li>
-        <li><a href="services.html" class="block py-2 hover:text-primary focus-ring">Services</a></li>
-        <li><a href="sectors.html" class="block py-2 hover:text-primary focus-ring">Sectors</a></li>
-        <li><a href="how-we-work.html" class="block py-2 hover:text-primary focus-ring">How we work</a></li>
-        <li><a href="projects.html" class="block py-2 hover:text-primary focus-ring">Projects</a></li>
-        <li><a href="team.html" class="block py-2 hover:text-primary focus-ring">Team</a></li>
-        <li><a href="credentials.html" class="block py-2 hover:text-primary focus-ring">Credentials</a></li>
-        <li><a href="contact.html" class="block py-2 hover:text-primary focus-ring">Contact</a></li>
-        <li><button id="theme-toggle-mobile" type="button" class="py-2 text-left hover:text-primary focus-ring">Toggle theme</button></li>
+        <li><a href="index.html" aria-current="page" class="block py-2 text-primary hover:text-primary focus-ring"><!-- slot:site.nav.home -->Home<!-- /slot:site.nav.home --></a></li>
+        <li><a href="about.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+        <li><a href="services.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+        <li><a href="sectors.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+        <li><a href="how-we-work.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
+        <li><a href="contact.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.contact -->Contact<!-- /slot:site.nav.contact --></a></li>
       </ul>
     </div>
   </nav>
@@ -148,7 +121,7 @@
   <main id="main-content">
     <!-- ===== HERO ===== -->
     <section id="hero" class="relative bg-secondary text-white pt-28 pb-16 md:pt-36 md:py-24 overflow-hidden grain-overlay">
-      <img src="assets/img/mine-sunrise-panorama.jpg" alt="" width="1920" height="656" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true">
+      <img src="assets/img/mine-sunrise-panorama-1600.webp" srcset="assets/img/mine-sunrise-panorama-800.webp 800w, assets/img/mine-sunrise-panorama-1600.webp 1600w" sizes="100vw" alt="" width="1600" height="547" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true">
       <div class="absolute inset-0 bg-secondary/85" aria-hidden="true"></div>
       <div class="absolute inset-0 grid-bg opacity-10" aria-hidden="true"></div>
       <div class="relative max-w-6xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-10 items-center">
@@ -171,25 +144,24 @@
         <div data-reveal class="reveal">
           <div class="bg-[#14171e] border border-gray-700 rounded-xl p-6 shadow-elevated">
             <div class="flex items-center justify-between mb-6">
-              <h2 class="font-heading font-semibold text-white text-lg"><!-- slot:pages.home.dashboard.title -->Delivery at a glance<!-- /slot:pages.home.dashboard.title --></h2>
-              <span class="mono-badge flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><!-- slot:pages.home.dashboard.status -->Live<!-- /slot:pages.home.dashboard.status --></span>
+              <h2 class="font-heading font-semibold text-white text-lg"><!-- slot:pages.home.dashboard.title -->At a glance<!-- /slot:pages.home.dashboard.title --></h2>
             </div>
             <div class="grid grid-cols-2 gap-4 mb-6">
               <div class="bg-[#1a1d24] rounded-lg p-4">
-                <p class="text-xs text-gray-400 mb-1"><!-- slot:pages.home.dashboard.m1Label -->Learners supported<!-- /slot:pages.home.dashboard.m1Label --></p>
-                <p class="font-heading font-bold text-2xl text-primary"><!-- slot:pages.home.dashboard.m1Value --><span class="ph-flag" data-q="Q1.6">00+</span><!-- /slot:pages.home.dashboard.m1Value --></p>
+                <p class="text-xs text-gray-400 mb-1"><!-- slot:pages.home.dashboard.m1Label -->Service lines<!-- /slot:pages.home.dashboard.m1Label --></p>
+                <p class="font-heading font-bold text-2xl text-primary"><!-- slot:pages.home.dashboard.m1Value -->7<!-- /slot:pages.home.dashboard.m1Value --></p>
               </div>
               <div class="bg-[#1a1d24] rounded-lg p-4">
-                <p class="text-xs text-gray-400 mb-1"><!-- slot:pages.home.dashboard.m2Label -->Districts covered<!-- /slot:pages.home.dashboard.m2Label --></p>
-                <p class="font-heading font-bold text-2xl text-primary"><!-- slot:pages.home.dashboard.m2Value --><span class="ph-flag" data-q="Q1.6">00+</span><!-- /slot:pages.home.dashboard.m2Value --></p>
+                <p class="text-xs text-gray-400 mb-1"><!-- slot:pages.home.dashboard.m2Label -->Delivery phases<!-- /slot:pages.home.dashboard.m2Label --></p>
+                <p class="font-heading font-bold text-2xl text-primary"><!-- slot:pages.home.dashboard.m2Value -->6<!-- /slot:pages.home.dashboard.m2Value --></p>
               </div>
               <div class="bg-[#1a1d24] rounded-lg p-4">
-                <p class="text-xs text-gray-400 mb-1"><!-- slot:pages.home.dashboard.m3Label -->Service lines<!-- /slot:pages.home.dashboard.m3Label --></p>
-                <p class="font-heading font-bold text-2xl text-primary"><!-- slot:pages.home.dashboard.m3Value --><span class="ph-flag" data-q="Q3.2">00+</span><!-- /slot:pages.home.dashboard.m3Value --></p>
+                <p class="text-xs text-gray-400 mb-1"><!-- slot:pages.home.dashboard.m3Label -->Registered<!-- /slot:pages.home.dashboard.m3Label --></p>
+                <p class="font-heading font-bold text-2xl text-primary"><!-- slot:pages.home.dashboard.m3Value -->2017<!-- /slot:pages.home.dashboard.m3Value --></p>
               </div>
               <div class="bg-[#1a1d24] rounded-lg p-4">
-                <p class="text-xs text-gray-400 mb-1"><!-- slot:pages.home.dashboard.m4Label -->Years operating<!-- /slot:pages.home.dashboard.m4Label --></p>
-                <p class="font-heading font-bold text-2xl text-primary"><!-- slot:pages.home.dashboard.m4Value --><span class="ph-flag" data-q="Q1.6">00+</span><!-- /slot:pages.home.dashboard.m4Value --></p>
+                <p class="text-xs text-gray-400 mb-1"><!-- slot:pages.home.dashboard.m4Label -->Based in<!-- /slot:pages.home.dashboard.m4Label --></p>
+                <p class="font-heading font-bold text-2xl text-primary"><!-- slot:pages.home.dashboard.m4Value -->North West<!-- /slot:pages.home.dashboard.m4Value --></p>
               </div>
             </div>
             <div class="border-t border-gray-700 pt-4 flex flex-wrap items-center gap-2 text-xs text-gray-400">
@@ -247,7 +219,7 @@
           </div>
         </div>
         <figure data-reveal class="reveal mb-8 rounded-xl overflow-hidden border border-neutral-200/80 dark:border-neutral-800">
-          <img src="assets/img/training-room.jpg" alt="<!-- slot:site.images.trainingRoom.alt -->Empty training room with desks, chairs and a large display screen<!-- /slot:site.images.trainingRoom.alt -->" width="1600" height="1066" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover">
+          <img src="assets/img/training-room-1600.webp" srcset="assets/img/training-room-800.webp 800w, assets/img/training-room-1600.webp 1600w" sizes="(min-width: 72rem) 72rem, 100vw" alt="<!-- slot:site.images.trainingRoom.alt -->Empty training room with desks, chairs and a large display screen<!-- /slot:site.images.trainingRoom.alt -->" width="1600" height="1066" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover">
         </figure>
         <a href="services.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline focus-ring"><!-- slot:pages.home.servicesTeaser.link -->All capabilities<!-- /slot:pages.home.servicesTeaser.link --> <span aria-hidden="true">→</span></a>
       </div>
@@ -270,7 +242,7 @@
           <li data-reveal class="reveal bento-card p-6"><span class="mono-badge mb-3 inline-block">06</span><h3 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.home.howWeWorkTeaser.s6Name -->Monitor and evaluate<!-- /slot:pages.home.howWeWorkTeaser.s6Name --></h3><p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.home.howWeWorkTeaser.s6Desc -->Track progress continuously, report regularly and close out with a documented evaluation.<!-- /slot:pages.home.howWeWorkTeaser.s6Desc --></p></li>
         </ol>
         <figure data-reveal class="reveal mb-8 rounded-xl overflow-hidden border border-neutral-200/80 dark:border-neutral-800">
-          <img src="assets/img/mine-workers-overlook.jpg" alt="<!-- slot:site.images.workersOverlook.alt -->Two site supervisors in hard hats overlooking an open-pit mine<!-- /slot:site.images.workersOverlook.alt -->" width="1600" height="546" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover">
+          <img src="assets/img/mine-workers-overlook-1600.webp" srcset="assets/img/mine-workers-overlook-800.webp 800w, assets/img/mine-workers-overlook-1600.webp 1600w" sizes="(min-width: 72rem) 72rem, 100vw" alt="<!-- slot:site.images.workersOverlook.alt -->Two site supervisors in hard hats overlooking an open-pit mine<!-- /slot:site.images.workersOverlook.alt -->" width="1600" height="546" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover">
         </figure>
         <a href="how-we-work.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline focus-ring"><!-- slot:pages.home.howWeWorkTeaser.link -->Our full approach<!-- /slot:pages.home.howWeWorkTeaser.link --> <span aria-hidden="true">→</span></a>
       </div>
@@ -310,36 +282,14 @@
       </div>
     </section>
 
-    <!-- ===== KEY NUMBERS ===== -->
-    <section id="numbers" class="bg-surface dark:bg-[#111318] py-16 md:py-20">
-      <div class="max-w-6xl mx-auto px-4 md:px-8">
-        <h2 data-reveal class="reveal display text-2xl md:text-3xl text-secondary dark:text-white mb-8"><!-- slot:pages.home.numbers.title -->By the numbers<!-- /slot:pages.home.numbers.title --></h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div data-reveal class="reveal bento-card p-6 text-center"><p class="font-heading font-bold text-3xl text-primary mb-1"><!-- slot:pages.home.numbers.l1Value --><span class="ph-flag" data-q="Q1.6">00+</span><!-- /slot:pages.home.numbers.l1Value --></p><p class="text-sm text-gray-600 dark:text-gray-400"><!-- slot:pages.home.numbers.l1Label -->Years in operation<!-- /slot:pages.home.numbers.l1Label --></p></div>
-          <div data-reveal class="reveal bento-card p-6 text-center"><p class="font-heading font-bold text-3xl text-primary mb-1"><!-- slot:pages.home.numbers.l2Value --><span class="ph-flag" data-q="Q1.6">00+</span><!-- /slot:pages.home.numbers.l2Value --></p><p class="text-sm text-gray-600 dark:text-gray-400"><!-- slot:pages.home.numbers.l2Label -->Projects delivered<!-- /slot:pages.home.numbers.l2Label --></p></div>
-          <div data-reveal class="reveal bento-card p-6 text-center"><p class="font-heading font-bold text-3xl text-primary mb-1"><!-- slot:pages.home.numbers.l3Value --><span class="ph-flag" data-q="Q1.6">00+</span><!-- /slot:pages.home.numbers.l3Value --></p><p class="text-sm text-gray-600 dark:text-gray-400"><!-- slot:pages.home.numbers.l3Label -->Learners supported<!-- /slot:pages.home.numbers.l3Label --></p></div>
-          <div data-reveal class="reveal bento-card p-6 text-center"><p class="font-heading font-bold text-3xl text-primary mb-1"><!-- slot:pages.home.numbers.l4Value --><span class="ph-flag" data-q="Q1.6">00+</span><!-- /slot:pages.home.numbers.l4Value --></p><p class="text-sm text-gray-600 dark:text-gray-400"><!-- slot:pages.home.numbers.l4Label -->Districts covered<!-- /slot:pages.home.numbers.l4Label --></p></div>
-        </div>
-      </div>
-    </section>
-
     <!-- ===== CREDENTIALS TEASER ===== -->
     <section id="credentials-teaser" class="bg-white dark:bg-[#111318] py-16 md:py-20">
       <div class="max-w-6xl mx-auto px-4 md:px-8 bento-card p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-6 justify-between">
         <div>
           <h2 class="display text-2xl md:text-3xl text-secondary dark:text-white mb-3"><!-- slot:pages.home.credentialsTeaser.title -->Registered and accountable<!-- /slot:pages.home.credentialsTeaser.title --></h2>
-          <p class="text-gray-600 dark:text-gray-300 max-w-2xl"><!-- slot:pages.home.credentialsTeaser.text -->Company registration confirmed. Further credentials available on request.<!-- /slot:pages.home.credentialsTeaser.text --></p>
+          <p class="text-gray-600 dark:text-gray-300 max-w-2xl"><!-- slot:pages.home.credentialsTeaser.text -->Koke Holdings (Pty) Ltd is a registered South African company, number 2017/231296/07. Contact us for company documents.<!-- /slot:pages.home.credentialsTeaser.text --></p>
         </div>
-        <a href="credentials.html" class="inline-flex items-center gap-2 bg-primary hover:bg-accent text-white font-semibold px-6 py-3 rounded-md transition-colors focus-ring shrink-0"><!-- slot:pages.home.credentialsTeaser.link -->View credentials<!-- /slot:pages.home.credentialsTeaser.link --> <span aria-hidden="true">→</span></a>
-      </div>
-    </section>
-
-    <!-- ===== TESTIMONIAL ===== -->
-    <section id="testimonial" class="bg-surface dark:bg-[#111318] py-16 md:py-20">
-      <div class="max-w-3xl mx-auto px-4 md:px-8 text-center">
-        <blockquote class="pull-quote text-lg md:text-xl italic text-secondary dark:text-gray-200 mb-6">“<!-- slot:pages.home.testimonial.quote --><span class="ph-flag" data-q="Q9.1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span><!-- /slot:pages.home.testimonial.quote -->”</blockquote>
-        <p class="font-heading font-semibold text-secondary dark:text-white"><!-- slot:pages.home.testimonial.author --><span class="ph-flag" data-q="Q9.2">Lorem Ipsum</span><!-- /slot:pages.home.testimonial.author --></p>
-        <p class="text-sm text-gray-500 dark:text-gray-400"><!-- slot:pages.home.testimonial.role --><span class="ph-flag" data-q="Q9.2">Placeholder role, organisation</span><!-- /slot:pages.home.testimonial.role --></p>
+        <a href="about.html#company" class="inline-flex items-center gap-2 bg-primary hover:bg-accent text-white font-semibold px-6 py-3 rounded-md transition-colors focus-ring shrink-0"><!-- slot:pages.home.credentialsTeaser.link -->Company details<!-- /slot:pages.home.credentialsTeaser.link --> <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
@@ -375,14 +325,11 @@
         <div>
           <h4 class="font-heading font-semibold mb-3"><!-- slot:site.footer.quickLinks -->Quick Links<!-- /slot:site.footer.quickLinks --></h4>
           <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="about.html" class="hover:text-primary transition-colors focus-ring">About</a></li>
-            <li><a href="services.html" class="hover:text-primary transition-colors focus-ring">Services</a></li>
-            <li><a href="sectors.html" class="hover:text-primary transition-colors focus-ring">Sectors</a></li>
-            <li><a href="how-we-work.html" class="hover:text-primary transition-colors focus-ring">How we work</a></li>
-            <li><a href="projects.html" class="hover:text-primary transition-colors focus-ring">Projects</a></li>
-            <li><a href="team.html" class="hover:text-primary transition-colors focus-ring">Team</a></li>
-            <li><a href="credentials.html" class="hover:text-primary transition-colors focus-ring">Credentials</a></li>
-            <li><a href="contact.html" class="hover:text-primary transition-colors focus-ring">Contact</a></li>
+            <li><a href="about.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+            <li><a href="services.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+            <li><a href="sectors.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+            <li><a href="how-we-work.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
+            <li><a href="contact.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.contact -->Contact<!-- /slot:site.nav.contact --></a></li>
             <li><a href="privacy.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.privacy -->Privacy<!-- /slot:site.nav.privacy --></a></li>
           </ul>
         </div>

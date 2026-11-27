@@ -3,7 +3,7 @@
 
 Checks per HTML file:
   1. Tag well-formedness (balance / stray / implicit closes)
-  2. Local href/src targets exist on disk (GitHub Pages base-path safety)
+  2. Local href/src/srcset targets exist on disk (GitHub Pages base-path safety)
   3. Fragment anchors (#id) resolve within the target file
   4. <img> elements have alt attributes
   5. Landmark elements: nav, main, footer
@@ -67,6 +67,9 @@ class Doc(HTMLParser):
         for key in ("href", "src"):
             if key in a and a[key]:
                 self.links.append((a[key], self._line()))
+        for candidate in (a.get("srcset") or "").split(","):
+            if candidate.strip():
+                self.links.append((candidate.split()[0], self._line()))
 
     def handle_startendtag(self, tag: str, attrs: list) -> None:
         a = dict(attrs)
@@ -78,6 +81,9 @@ class Doc(HTMLParser):
         for key in ("href", "src"):
             if key in a and a[key]:
                 self.links.append((a[key], self._line()))
+        for candidate in (a.get("srcset") or "").split(","):
+            if candidate.strip():
+                self.links.append((candidate.split()[0], self._line()))
 
     def handle_endtag(self, tag: str) -> None:
         if tag in VOID_ELEMENTS:
@@ -138,7 +144,9 @@ def check_file(path: Path, all_ids: dict[Path, set[str]]) -> tuple[list[str], li
             if parsed.fragment:
                 fragment = unquote(parsed.fragment)
             rel = unquote(parsed.path)
-            if rel:
+            if rel.startswith("/"):
+                target_path = (ROOT / rel.lstrip("/")).resolve()
+            elif rel:
                 target_path = (path.parent / rel).resolve()
         if kind != "fragment":
             if not target_path.exists():

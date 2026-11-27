@@ -20,36 +20,14 @@
   </script>
 
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kokeholdings.co.za/services.html">
   <meta property="og:title" content="<!-- slot:site.meta.siteName -->Koke Holdings<!-- /slot:site.meta.siteName -->">
   <meta property="og:description" content="<!-- slot:site.meta.defaultDescription -->Koke Holdings is a South African project management company delivering publicly funded programmes, with a focus on skills development.<!-- /slot:site.meta.defaultDescription -->">
-  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:image" content="https://kokeholdings.co.za/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://kokeholdings.co.za/services.html">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: '#F26522',
-            secondary: '#191D26',
-            surface: '#F5F5F5',
-            accent: '#FF8A4C',
-            border: '#E0E0E0',
-            'text-primary': '#1A1A1A',
-            'text-inverse': '#FFFFFF',
-          },
-          fontFamily: {
-            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
-            body: ['Inter', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          },
-        },
-      },
-    }
-  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +35,7 @@
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/site.css">
 
   <script type="application/ld+json">
   {
@@ -65,7 +43,7 @@
     "@type": "Organization",
     "name": "Koke Holdings (Pty) Ltd",
     "url": "https://kokeholdings.co.za",
-    "logo": "assets/logo.svg",
+    "logo": "https://kokeholdings.co.za/assets/logo.svg",
     "telephone": "+27-81-040-0918",
     "email": "kokeholdings@gmail.com",
     "address": {
@@ -94,21 +72,20 @@
       </a>
 
       <ul class="hidden lg:flex items-center gap-5 text-[13px] font-medium text-gray-300">
-        <li><a href="index.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Home</a></li>
-        <li><a href="about.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">About</a></li>
-        <li><a href="services.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Services</a></li>
-        <li><a href="sectors.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Sectors</a></li>
-        <li><a href="how-we-work.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">How we work</a></li>
-        <li><a href="projects.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Projects</a></li>
-        <li><a href="team.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Team</a></li>
-        <li><a href="credentials.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring">Credentials</a></li>
+        <li><a href="index.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.home -->Home<!-- /slot:site.nav.home --></a></li>
+        <li><a href="about.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+        <li><a href="services.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+        <li><a href="sectors.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+        <li><a href="how-we-work.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
       </ul>
 
       <div class="flex items-center gap-3">
-        <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="hidden lg:flex p-2 rounded-lg text-gray-300 hover:text-primary transition-colors focus-ring">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode" class="relative inline-flex items-center justify-between h-8 w-[3.75rem] px-2 shrink-0 rounded-full border border-gray-600 bg-white/5 hover:border-primary transition-colors focus-ring">
+          <span class="absolute left-1 top-1 h-6 w-6 rounded-full bg-primary shadow transition-transform duration-300 motion-reduce:transition-none dark:translate-x-[1.625rem]" aria-hidden="true"></span>
+          <svg class="relative w-4 h-4 text-white dark:text-gray-400 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+          <svg class="relative w-4 h-4 text-gray-400 dark:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
         </button>
-        <a href="contact.html" class="hidden lg:inline-flex items-center bg-primary hover:bg-accent text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors focus-ring">Partner With Us</a>
+        <a href="contact.html" class="hidden lg:inline-flex items-center bg-primary hover:bg-accent text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors focus-ring"><!-- slot:site.cta.partner -->Partner With Us<!-- /slot:site.cta.partner --></a>
         <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-lg text-gray-300 hover:text-primary transition-colors focus-ring">
           <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -131,16 +108,12 @@
 
     <div id="mobile-menu" class="hidden lg:hidden bg-secondary border-t border-gray-700">
       <ul class="px-4 py-4 space-y-1 text-sm font-medium text-gray-300">
-        <li><a href="index.html" class="block py-2 hover:text-primary focus-ring">Home</a></li>
-        <li><a href="about.html" class="block py-2 hover:text-primary focus-ring">About</a></li>
-        <li><a href="services.html" class="block py-2 hover:text-primary focus-ring">Services</a></li>
-        <li><a href="sectors.html" class="block py-2 hover:text-primary focus-ring">Sectors</a></li>
-        <li><a href="how-we-work.html" class="block py-2 hover:text-primary focus-ring">How we work</a></li>
-        <li><a href="projects.html" class="block py-2 hover:text-primary focus-ring">Projects</a></li>
-        <li><a href="team.html" class="block py-2 hover:text-primary focus-ring">Team</a></li>
-        <li><a href="credentials.html" class="block py-2 hover:text-primary focus-ring">Credentials</a></li>
-        <li><a href="contact.html" class="block py-2 hover:text-primary focus-ring">Contact</a></li>
-        <li><button id="theme-toggle-mobile" type="button" class="py-2 text-left hover:text-primary focus-ring">Toggle theme</button></li>
+        <li><a href="index.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.home -->Home<!-- /slot:site.nav.home --></a></li>
+        <li><a href="about.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+        <li><a href="services.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+        <li><a href="sectors.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+        <li><a href="how-we-work.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
+        <li><a href="contact.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.contact -->Contact<!-- /slot:site.nav.contact --></a></li>
       </ul>
     </div>
   </nav>
@@ -149,7 +122,7 @@
 
     <!-- ===== PAGE HERO ===== -->
     <section class="bg-secondary text-white pt-28 pb-14 md:pt-36 md:pb-20 relative overflow-hidden grain-overlay">
-      <img src="assets/img/lecture-hall.jpg" alt="" width="1920" height="1280" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true">
+      <img src="assets/img/lecture-hall-1600.webp" srcset="assets/img/lecture-hall-800.webp 800w, assets/img/lecture-hall-1600.webp 1600w" sizes="100vw" alt="" width="1600" height="1067" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true">
       <div class="absolute inset-0 bg-secondary/85" aria-hidden="true"></div>
       <div class="absolute inset-0 grid-bg opacity-10" aria-hidden="true"></div>
       <div class="relative max-w-6xl mx-auto px-4 md:px-8">
@@ -186,7 +159,7 @@
               <h2 class="display text-xl md:text-2xl text-secondary dark:text-white mb-2"><!-- slot:pages.services.cap2.title -->Skills development programme management<!-- /slot:pages.services.cap2.title --></h2>
               <p class="text-gray-600 dark:text-gray-300 leading-relaxed"><!-- slot:pages.services.cap2.desc -->End-to-end management of learnerships, internships and artisan pathways, from recruitment to certification.<!-- /slot:pages.services.cap2.desc --></p>
             </div>
-            <img src="assets/img/training-room.jpg" alt="<!-- slot:site.images.trainingRoom.alt -->Empty training room with desks, chairs and a large display screen<!-- /slot:site.images.trainingRoom.alt -->" width="1600" height="1066" loading="lazy" decoding="async" class="w-full h-40 md:h-44 object-cover rounded-xl border border-neutral-200/80 dark:border-neutral-800">
+            <img src="assets/img/training-room-1600.webp" srcset="assets/img/training-room-800.webp 800w, assets/img/training-room-1600.webp 1600w" sizes="(min-width: 768px) 50vw, 100vw" alt="<!-- slot:site.images.trainingRoom.alt -->Empty training room with desks, chairs and a large display screen<!-- /slot:site.images.trainingRoom.alt -->" width="1600" height="1066" loading="lazy" decoding="async" class="w-full h-40 md:h-44 object-cover rounded-xl border border-neutral-200/80 dark:border-neutral-800">
           </div>
         </article>
         <article data-reveal class="reveal bento-card p-6 md:p-8 grid md:grid-cols-12 gap-4 items-start">
@@ -225,7 +198,7 @@
               <h2 class="display text-xl md:text-2xl text-secondary dark:text-white mb-2"><!-- slot:pages.services.cap6.title -->Monitoring, evaluation and reporting<!-- /slot:pages.services.cap6.title --></h2>
               <p class="text-gray-600 dark:text-gray-300 leading-relaxed"><!-- slot:pages.services.cap6.desc -->Continuous monitoring, site inspections, learner feedback, and narrative and evaluation reporting for clients and funders.<!-- /slot:pages.services.cap6.desc --></p>
             </div>
-            <img src="assets/img/mine-aerial-excavator.jpg" alt="<!-- slot:site.images.aerialExcavator.alt -->Aerial view of an excavator working on a dark mineral stockpile<!-- /slot:site.images.aerialExcavator.alt -->" width="1600" height="949" loading="lazy" decoding="async" class="w-full h-40 md:h-44 object-cover rounded-xl border border-neutral-200/80 dark:border-neutral-800">
+            <img src="assets/img/mine-aerial-excavator-1600.webp" srcset="assets/img/mine-aerial-excavator-800.webp 800w, assets/img/mine-aerial-excavator-1600.webp 1600w" sizes="(min-width: 768px) 50vw, 100vw" alt="<!-- slot:site.images.aerialExcavator.alt -->Aerial view of an excavator working on a dark mineral stockpile<!-- /slot:site.images.aerialExcavator.alt -->" width="1600" height="949" loading="lazy" decoding="async" class="w-full h-40 md:h-44 object-cover rounded-xl border border-neutral-200/80 dark:border-neutral-800">
           </div>
         </article>
         <article data-reveal class="reveal bento-card p-6 md:p-8 grid md:grid-cols-12 gap-4 items-start">
@@ -236,10 +209,6 @@
             <h2 class="display text-xl md:text-2xl text-secondary dark:text-white mb-2"><!-- slot:pages.services.cap7.title -->Capacity building and exit strategy<!-- /slot:pages.services.cap7.title --></h2>
             <p class="text-gray-600 dark:text-gray-300 leading-relaxed"><!-- slot:pages.services.cap7.desc -->Training client staff and local partners for continuity, capturing lessons learned and structured close-out.<!-- /slot:pages.services.cap7.desc --></p>
           </div>
-        </article>
-        <article data-reveal class="reveal bento-card p-6 md:p-8 border-dashed">
-          <h2 class="display text-xl md:text-2xl text-secondary dark:text-white mb-2"><!-- slot:pages.services.additional.title -->Additional services<!-- /slot:pages.services.additional.title --></h2>
-          <p class="text-gray-600 dark:text-gray-300"><!-- slot:pages.services.additional.text --><span class="ph-flag" data-q="Q3.2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><!-- /slot:pages.services.additional.text --></p>
         </article>
       </div>
     </section>
@@ -259,7 +228,7 @@
         </ul>
         <a href="sectors.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline focus-ring"><!-- slot:pages.services.mining.link -->Mining sector detail<!-- /slot:pages.services.mining.link --> <span aria-hidden="true">→</span></a>
         </div>
-        <img src="assets/img/mine-excavator-breaker.jpg" alt="<!-- slot:site.images.excavatorBreaker.alt -->Hydraulic excavator with rock breaker working on a quarry bench<!-- /slot:site.images.excavatorBreaker.alt -->" width="1600" height="1066" loading="lazy" decoding="async" class="w-full h-64 md:h-full object-cover rounded-xl border border-neutral-200/80 dark:border-neutral-800">
+        <img src="assets/img/mine-excavator-breaker-1600.webp" srcset="assets/img/mine-excavator-breaker-800.webp 800w, assets/img/mine-excavator-breaker-1600.webp 1600w" sizes="(min-width: 768px) 50vw, 100vw" alt="<!-- slot:site.images.excavatorBreaker.alt -->Hydraulic excavator with rock breaker working on a quarry bench<!-- /slot:site.images.excavatorBreaker.alt -->" width="1600" height="1066" loading="lazy" decoding="async" class="w-full h-64 md:h-full object-cover rounded-xl border border-neutral-200/80 dark:border-neutral-800">
       </div>
     </section>
 
@@ -295,14 +264,11 @@
         <div>
           <h4 class="font-heading font-semibold mb-3"><!-- slot:site.footer.quickLinks -->Quick Links<!-- /slot:site.footer.quickLinks --></h4>
           <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="about.html" class="hover:text-primary transition-colors focus-ring">About</a></li>
-            <li><a href="services.html" class="hover:text-primary transition-colors focus-ring">Services</a></li>
-            <li><a href="sectors.html" class="hover:text-primary transition-colors focus-ring">Sectors</a></li>
-            <li><a href="how-we-work.html" class="hover:text-primary transition-colors focus-ring">How we work</a></li>
-            <li><a href="projects.html" class="hover:text-primary transition-colors focus-ring">Projects</a></li>
-            <li><a href="team.html" class="hover:text-primary transition-colors focus-ring">Team</a></li>
-            <li><a href="credentials.html" class="hover:text-primary transition-colors focus-ring">Credentials</a></li>
-            <li><a href="contact.html" class="hover:text-primary transition-colors focus-ring">Contact</a></li>
+            <li><a href="about.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+            <li><a href="services.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+            <li><a href="sectors.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+            <li><a href="how-we-work.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
+            <li><a href="contact.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.contact -->Contact<!-- /slot:site.nav.contact --></a></li>
             <li><a href="privacy.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.privacy -->Privacy<!-- /slot:site.nav.privacy --></a></li>
           </ul>
         </div>
