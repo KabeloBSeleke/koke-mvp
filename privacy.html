@@ -4,20 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="<!-- slot:pages.privacy.meta.description -->Privacy notice for the Koke Holdings website.<!-- /slot:pages.privacy.meta.description -->">
-  <meta name="theme-color" content="#191D26">
   <title><!-- slot:pages.privacy.meta.title -->Privacy — Koke Holdings<!-- /slot:pages.privacy.meta.title --></title>
-
-  <script>
-    (function() {
-      var d = document.documentElement;
-      var t = localStorage.getItem('theme');
-      if (t === 'dark' || t === 'light') {
-        d.classList.toggle('dark', t === 'dark');
-      } else {
-        d.classList.toggle('dark', window.matchMedia('(prefers-color-scheme: dark)').matches);
-      }
-    })();
-  </script>
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kokeholdings.co.za/privacy.html">
@@ -28,15 +15,22 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://kokeholdings.co.za/privacy.html">
-
+  <!-- include:head -->
+  <meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111318" media="(prefers-color-scheme: dark)">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      var dark = t === 'dark' || (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.classList.toggle('dark', dark);
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="css/site.css">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,67 +50,62 @@
     }
   }
   </script>
+<!-- /include:head -->
 </head>
-<body class="font-body text-text-primary bg-white dark:bg-[#111318] dark:text-gray-200 antialiased">
+<body>
 
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold focus:outline-none">
-    Skip to main content
-  </a>
+  <!-- include:header -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- ===== NAV ===== -->
-  <nav id="navbar" class="fixed top-0 left-0 w-full bg-secondary z-50">
-    <div class="max-w-6xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
-      <a href="index.html" class="flex items-center gap-2 shrink-0">
-        <img src="assets/logo.svg" alt="Koke Holdings logo" class="h-10 w-auto">
-        <span class="text-white font-heading font-bold text-lg hidden sm:inline">Koke Holdings</span>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-transparent bg-paper/85 backdrop-blur-md transition-colors duration-300">
+    <div class="container-page flex h-[4.5rem] items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center gap-3 focus-ring" aria-label="Koke Holdings, home">
+        <span class="logo-mark" aria-hidden="true">KH</span>
+        <span class="whitespace-nowrap font-display text-lg tracking-tight text-ink sm:text-[1.3rem]"><!-- slot:company.shortName -->Koke Holdings<!-- /slot:company.shortName --></span>
       </a>
 
-      <ul class="hidden lg:flex items-center gap-5 text-[13px] font-medium text-gray-300">
-        <li><a href="index.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.home -->Home<!-- /slot:site.nav.home --></a></li>
-        <li><a href="about.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
-        <li><a href="services.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
-        <li><a href="sectors.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
-        <li><a href="how-we-work.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
-      </ul>
+      <nav aria-label="Primary" class="hidden lg:block">
+        <ul class="flex items-center gap-8 text-sm">
+          <li><a href="index.html" data-nav="index" class="nav-link focus-ring"><!-- slot:site.nav.home -->Home<!-- /slot:site.nav.home --></a></li>
+          <li><a href="about.html" data-nav="about" class="nav-link focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+          <li><a href="services.html" data-nav="services" class="nav-link focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+          <li><a href="sectors.html" data-nav="sectors" class="nav-link focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+          <li><a href="how-we-work.html" data-nav="how-we-work" class="nav-link focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
+        </ul>
+      </nav>
 
       <div class="flex items-center gap-3">
-        <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode" class="relative inline-flex items-center justify-between h-8 w-[3.75rem] px-2 shrink-0 rounded-full border border-gray-600 bg-white/5 hover:border-primary transition-colors focus-ring">
+        <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode" class="relative inline-flex h-8 w-[3.75rem] shrink-0 items-center justify-between rounded-full border border-rule bg-paper-alt px-2 transition-colors hover:border-ink/40 focus-ring">
           <span class="absolute left-1 top-1 h-6 w-6 rounded-full bg-primary shadow transition-transform duration-300 motion-reduce:transition-none dark:translate-x-[1.625rem]" aria-hidden="true"></span>
-          <svg class="relative w-4 h-4 text-white dark:text-gray-400 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
-          <svg class="relative w-4 h-4 text-gray-400 dark:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg class="relative h-4 w-4 text-secondary transition-colors dark:text-muted" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+          <svg class="relative h-4 w-4 text-muted transition-colors dark:text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
         </button>
-        <a href="contact.html" class="hidden lg:inline-flex items-center bg-primary hover:bg-accent text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors focus-ring"><!-- slot:site.cta.partner -->Partner With Us<!-- /slot:site.cta.partner --></a>
-        <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-lg text-gray-300 hover:text-primary transition-colors focus-ring">
-          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        <a href="contact.html" data-nav="contact" class="btn-ink hidden md:inline-flex focus-ring"><!-- slot:site.cta.partner -->Partner with us<!-- /slot:site.cta.partner --> <span class="arrow" aria-hidden="true">→</span></a>
+        <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="grid h-10 w-10 place-items-center rounded-full border border-rule text-ink lg:hidden focus-ring">
+          <svg id="hamburger-icon" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 8h16M4 16h16"/></svg>
+          <svg id="close-icon" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 18 18 6M6 6l12 12"/></svg>
         </button>
       </div>
     </div>
 
-    <div class="ticker" aria-label="Governance and compliance frameworks">
-      <div class="ticker-track">
-        <span class="ticker-item"><!-- slot:site.ticker.1 -->PFMA<!-- /slot:site.ticker.1 --></span>
-        <span class="ticker-item"><!-- slot:site.ticker.2 -->SAQA<!-- /slot:site.ticker.2 --></span>
-        <span class="ticker-item"><!-- slot:site.ticker.3 -->QCTO<!-- /slot:site.ticker.3 --></span>
-        <span class="ticker-item"><!-- slot:site.ticker.4 -->SETA / LMIS<!-- /slot:site.ticker.4 --></span>
-        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.1 -->PFMA<!-- /slot:site.ticker.1 --></span>
-        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.2 -->SAQA<!-- /slot:site.ticker.2 --></span>
-        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.3 -->QCTO<!-- /slot:site.ticker.3 --></span>
-        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.4 -->SETA / LMIS<!-- /slot:site.ticker.4 --></span>
-      </div>
+    <div id="mobile-menu" class="hidden h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-rule bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-page flex h-full flex-col justify-between py-8">
+        <ul class="space-y-1">
+          <li><a href="index.html" data-nav="index" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.home -->Home<!-- /slot:site.nav.home --></a></li>
+          <li><a href="about.html" data-nav="about" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+          <li><a href="services.html" data-nav="services" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+          <li><a href="sectors.html" data-nav="sectors" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+          <li><a href="how-we-work.html" data-nav="how-we-work" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
+          <li><a href="contact.html" data-nav="contact" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.contact -->Contact<!-- /slot:site.nav.contact --></a></li>
+        </ul>
+        <div class="mt-10 space-y-1 border-t border-rule pt-6 text-sm">
+          <a href="tel:+27810400918" class="block text-ink focus-ring"><!-- slot:company.phone -->+27 81 040 0918<!-- /slot:company.phone --></a>
+          <a href="mailto:kokeholdings@gmail.com" class="block text-ink focus-ring"><!-- slot:company.email -->kokeholdings@gmail.com<!-- /slot:company.email --></a>
+        </div>
+      </nav>
     </div>
-
-    <div id="mobile-menu" class="hidden lg:hidden bg-secondary border-t border-gray-700">
-      <ul class="px-4 py-4 space-y-1 text-sm font-medium text-gray-300">
-        <li><a href="index.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.home -->Home<!-- /slot:site.nav.home --></a></li>
-        <li><a href="about.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
-        <li><a href="services.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
-        <li><a href="sectors.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
-        <li><a href="how-we-work.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
-        <li><a href="contact.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.contact -->Contact<!-- /slot:site.nav.contact --></a></li>
-      </ul>
-    </div>
-  </nav>
+  </header>
+<!-- /include:header -->
 
   <main id="main-content">
 
@@ -145,49 +134,61 @@
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="relative bg-secondary text-white py-16 overflow-hidden grain-overlay">
-    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-      <svg class="absolute top-0 left-0 w-full" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height: 60px;">
-        <path d="M0 0V60C360 100 720 120 1080 80C1260 60 1380 30 1440 0H0Z" fill="#F26522" fill-opacity="0.2"/>
-      </svg>
-      <img src="assets/logo.svg" alt="" class="absolute right-8 bottom-8 h-32 w-auto opacity-5" aria-hidden="true">
-    </div>
-    <div class="relative max-w-6xl mx-auto px-4 md:px-8">
-      <div class="grid md:grid-cols-3 gap-8 mb-8">
-        <div>
-          <div class="flex items-center gap-2 mb-3">
-            <img src="assets/logo.svg" alt="Koke Holdings logo" class="h-8 w-auto">
-            <span class="font-heading font-bold text-lg"><!-- slot:company.shortName -->Koke Holdings<!-- /slot:company.shortName --></span>
-          </div>
-          <p class="text-gray-400 text-sm leading-relaxed"><!-- slot:site.footer.tagline -->Project management for publicly funded programmes, with a focus on skills development across South Africa.<!-- /slot:site.footer.tagline --></p>
+  <!-- include:footer -->
+  <footer class="relative overflow-hidden bg-secondary text-white/70">
+    <!-- Brand motif: the orange-to-navy sweep from the letterhead (once per page) -->
+    <svg class="pointer-events-none absolute left-0 top-0 h-24 w-full md:h-32" viewBox="0 0 1440 128" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="footer-sweep" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#F26522" stop-opacity="0"/>
+          <stop offset="0.6" stop-color="#F26522" stop-opacity="0.7"/>
+          <stop offset="1" stop-color="#FF8A4C"/>
+        </linearGradient>
+      </defs>
+      <path d="M0 0C420 92 980 104 1440 18V44C980 128 420 116 0 0Z" fill="url(#footer-sweep)"/>
+    </svg>
+
+    <div class="container-page relative pb-10 pt-32 md:pt-44">
+      <div class="grid gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-6">
+          <a href="index.html" class="inline-flex items-center gap-3 focus-ring" aria-label="Koke Holdings, home">
+            <span class="logo-mark ring-1 ring-white/15" aria-hidden="true">KH</span>
+            <span class="font-display text-2xl tracking-tight text-white"><!-- slot:company.shortName -->Koke Holdings<!-- /slot:company.shortName --></span>
+          </a>
+          <p class="mt-6 max-w-md font-display text-2xl leading-snug text-white md:text-[1.75rem]"><!-- slot:site.footer.tagline -->Project management for publicly funded programmes, with a focus on skills development across South Africa.<!-- /slot:site.footer.tagline --></p>
         </div>
-        <div>
-          <h4 class="font-heading font-semibold mb-3"><!-- slot:site.footer.quickLinks -->Quick Links<!-- /slot:site.footer.quickLinks --></h4>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="about.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
-            <li><a href="services.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
-            <li><a href="sectors.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
-            <li><a href="how-we-work.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
-            <li><a href="contact.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.contact -->Contact<!-- /slot:site.nav.contact --></a></li>
-            <li><a href="privacy.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.privacy -->Privacy<!-- /slot:site.nav.privacy --></a></li>
+
+        <div class="lg:col-span-2 lg:col-start-8">
+          <h2 class="text-xs font-semibold uppercase tracking-[0.18em] text-accent"><!-- slot:site.footer.quickLinks -->Explore<!-- /slot:site.footer.quickLinks --></h2>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="about.html" class="transition-colors hover:text-white focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+            <li><a href="services.html" class="transition-colors hover:text-white focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+            <li><a href="sectors.html" class="transition-colors hover:text-white focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+            <li><a href="how-we-work.html" class="transition-colors hover:text-white focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
+            <li><a href="contact.html" class="transition-colors hover:text-white focus-ring"><!-- slot:site.nav.contact -->Contact<!-- /slot:site.nav.contact --></a></li>
           </ul>
         </div>
-        <div>
-          <h4 class="font-heading font-semibold mb-3"><!-- slot:site.footer.contactHeading -->Contact<!-- /slot:site.footer.contactHeading --></h4>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="tel:+27810400918" class="hover:text-primary transition-colors focus-ring"><!-- slot:company.phone -->+27 81 040 0918<!-- /slot:company.phone --></a></li>
-            <li><a href="mailto:kokeholdings@gmail.com" class="hover:text-primary transition-colors focus-ring"><!-- slot:company.email -->kokeholdings@gmail.com<!-- /slot:company.email --></a></li>
-            <li><!-- slot:company.address -->839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660<!-- /slot:company.address --></li>
+
+        <div class="lg:col-span-3">
+          <h2 class="text-xs font-semibold uppercase tracking-[0.18em] text-accent"><!-- slot:site.footer.contactHeading -->Contact<!-- /slot:site.footer.contactHeading --></h2>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="tel:+27810400918" class="transition-colors hover:text-white focus-ring"><!-- slot:company.phone -->+27 81 040 0918<!-- /slot:company.phone --></a></li>
+            <li><a href="mailto:kokeholdings@gmail.com" class="transition-colors hover:text-white focus-ring"><!-- slot:company.email -->kokeholdings@gmail.com<!-- /slot:company.email --></a></li>
+            <li class="leading-relaxed"><!-- slot:company.address -->839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660<!-- /slot:company.address --></li>
           </ul>
         </div>
       </div>
-      <div class="border-t border-gray-700 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-xs text-gray-400"><!-- slot:site.footer.copyright -->© 2026 Koke Holdings (Pty) Ltd. Reg: 2017/231296/07. All rights reserved.<!-- /slot:site.footer.copyright --></p>
-        <p class="text-xs text-gray-400"><!-- slot:site.footer.registered -->Registered in South Africa<!-- /slot:site.footer.registered --></p>
+
+      <div class="mt-20 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
+        <p><!-- slot:site.footer.copyright -->© 2026 Koke Holdings (Pty) Ltd. Reg: 2017/231296/07. All rights reserved.<!-- /slot:site.footer.copyright --></p>
+        <p class="flex gap-6">
+          <a href="privacy.html" class="transition-colors hover:text-white focus-ring"><!-- slot:site.nav.privacy -->Privacy<!-- /slot:site.nav.privacy --></a>
+          <span><!-- slot:site.footer.registered -->Registered in South Africa<!-- /slot:site.footer.registered --></span>
+        </p>
       </div>
     </div>
   </footer>
+<!-- /include:footer -->
 
   <script src="js/main.js"></script>
 </body>

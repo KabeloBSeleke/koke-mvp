@@ -4,20 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="<!-- slot:pages.home.meta.description -->Koke Holdings is a South African project management company delivering publicly funded skills development programmes, and is positioned to support mining-sector skills development and Social and Labour Plan (SLP) programme management.<!-- /slot:pages.home.meta.description -->">
-  <meta name="theme-color" content="#191D26">
   <title><!-- slot:pages.home.meta.title -->Koke Holdings — Programme management that delivers<!-- /slot:pages.home.meta.title --></title>
-
-  <script>
-    (function() {
-      var d = document.documentElement;
-      var t = localStorage.getItem('theme');
-      if (t === 'dark' || t === 'light') {
-        d.classList.toggle('dark', t === 'dark');
-      } else {
-        d.classList.toggle('dark', window.matchMedia('(prefers-color-scheme: dark)').matches);
-      }
-    })();
-  </script>
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kokeholdings.co.za/">
@@ -28,15 +15,22 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://kokeholdings.co.za/">
-
+  <!-- include:head -->
+  <meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111318" media="(prefers-color-scheme: dark)">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      var dark = t === 'dark' || (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.classList.toggle('dark', dark);
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="css/site.css">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,298 +50,386 @@
     }
   }
   </script>
+<!-- /include:head -->
 </head>
-<body class="font-body text-text-primary bg-white dark:bg-[#111318] dark:text-gray-200 antialiased">
+<body>
 
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold focus:outline-none">
-    Skip to main content
-  </a>
+  <!-- include:header -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- ===== NAV ===== -->
-  <nav id="navbar" class="fixed top-0 left-0 w-full bg-secondary z-50">
-    <div class="max-w-6xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
-      <a href="index.html" class="flex items-center gap-2 shrink-0">
-        <img src="assets/logo.svg" alt="Koke Holdings logo" class="h-10 w-auto">
-        <span class="text-white font-heading font-bold text-lg hidden sm:inline">Koke Holdings</span>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-transparent bg-paper/85 backdrop-blur-md transition-colors duration-300">
+    <div class="container-page flex h-[4.5rem] items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center gap-3 focus-ring" aria-label="Koke Holdings, home">
+        <span class="logo-mark" aria-hidden="true">KH</span>
+        <span class="whitespace-nowrap font-display text-lg tracking-tight text-ink sm:text-[1.3rem]"><!-- slot:company.shortName -->Koke Holdings<!-- /slot:company.shortName --></span>
       </a>
 
-      <ul class="hidden lg:flex items-center gap-5 text-[13px] font-medium text-gray-300">
-        <li><a href="index.html" aria-current="page" class="py-2 px-1 text-primary hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.home -->Home<!-- /slot:site.nav.home --></a></li>
-        <li><a href="about.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
-        <li><a href="services.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
-        <li><a href="sectors.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
-        <li><a href="how-we-work.html" class="py-2 px-1 hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
-      </ul>
+      <nav aria-label="Primary" class="hidden lg:block">
+        <ul class="flex items-center gap-8 text-sm">
+          <li><a href="index.html" data-nav="index" aria-current="page" class="nav-link focus-ring"><!-- slot:site.nav.home -->Home<!-- /slot:site.nav.home --></a></li>
+          <li><a href="about.html" data-nav="about" class="nav-link focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+          <li><a href="services.html" data-nav="services" class="nav-link focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+          <li><a href="sectors.html" data-nav="sectors" class="nav-link focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+          <li><a href="how-we-work.html" data-nav="how-we-work" class="nav-link focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
+        </ul>
+      </nav>
 
       <div class="flex items-center gap-3">
-        <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode" class="relative inline-flex items-center justify-between h-8 w-[3.75rem] px-2 shrink-0 rounded-full border border-gray-600 bg-white/5 hover:border-primary transition-colors focus-ring">
+        <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode" class="relative inline-flex h-8 w-[3.75rem] shrink-0 items-center justify-between rounded-full border border-rule bg-paper-alt px-2 transition-colors hover:border-ink/40 focus-ring">
           <span class="absolute left-1 top-1 h-6 w-6 rounded-full bg-primary shadow transition-transform duration-300 motion-reduce:transition-none dark:translate-x-[1.625rem]" aria-hidden="true"></span>
-          <svg class="relative w-4 h-4 text-white dark:text-gray-400 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
-          <svg class="relative w-4 h-4 text-gray-400 dark:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg class="relative h-4 w-4 text-secondary transition-colors dark:text-muted" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+          <svg class="relative h-4 w-4 text-muted transition-colors dark:text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
         </button>
-        <a href="contact.html" class="hidden lg:inline-flex items-center bg-primary hover:bg-accent text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors focus-ring"><!-- slot:site.cta.partner -->Partner With Us<!-- /slot:site.cta.partner --></a>
-        <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-lg text-gray-300 hover:text-primary transition-colors focus-ring">
-          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        <a href="contact.html" data-nav="contact" class="btn-ink hidden md:inline-flex focus-ring"><!-- slot:site.cta.partner -->Partner with us<!-- /slot:site.cta.partner --> <span class="arrow" aria-hidden="true">→</span></a>
+        <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="grid h-10 w-10 place-items-center rounded-full border border-rule text-ink lg:hidden focus-ring">
+          <svg id="hamburger-icon" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 8h16M4 16h16"/></svg>
+          <svg id="close-icon" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 18 18 6M6 6l12 12"/></svg>
         </button>
       </div>
     </div>
 
-    <div class="ticker" aria-label="Governance and compliance frameworks">
-      <div class="ticker-track">
-        <span class="ticker-item"><!-- slot:site.ticker.1 -->PFMA<!-- /slot:site.ticker.1 --></span>
-        <span class="ticker-item"><!-- slot:site.ticker.2 -->SAQA<!-- /slot:site.ticker.2 --></span>
-        <span class="ticker-item"><!-- slot:site.ticker.3 -->QCTO<!-- /slot:site.ticker.3 --></span>
-        <span class="ticker-item"><!-- slot:site.ticker.4 -->SETA / LMIS<!-- /slot:site.ticker.4 --></span>
-        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.1 -->PFMA<!-- /slot:site.ticker.1 --></span>
-        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.2 -->SAQA<!-- /slot:site.ticker.2 --></span>
-        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.3 -->QCTO<!-- /slot:site.ticker.3 --></span>
-        <span class="ticker-item" aria-hidden="true"><!-- slot:site.ticker.4 -->SETA / LMIS<!-- /slot:site.ticker.4 --></span>
-      </div>
+    <div id="mobile-menu" class="hidden h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-rule bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-page flex h-full flex-col justify-between py-8">
+        <ul class="space-y-1">
+          <li><a href="index.html" data-nav="index" aria-current="page" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.home -->Home<!-- /slot:site.nav.home --></a></li>
+          <li><a href="about.html" data-nav="about" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+          <li><a href="services.html" data-nav="services" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+          <li><a href="sectors.html" data-nav="sectors" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+          <li><a href="how-we-work.html" data-nav="how-we-work" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
+          <li><a href="contact.html" data-nav="contact" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.contact -->Contact<!-- /slot:site.nav.contact --></a></li>
+        </ul>
+        <div class="mt-10 space-y-1 border-t border-rule pt-6 text-sm">
+          <a href="tel:+27810400918" class="block text-ink focus-ring"><!-- slot:company.phone -->+27 81 040 0918<!-- /slot:company.phone --></a>
+          <a href="mailto:kokeholdings@gmail.com" class="block text-ink focus-ring"><!-- slot:company.email -->kokeholdings@gmail.com<!-- /slot:company.email --></a>
+        </div>
+      </nav>
     </div>
-
-    <div id="mobile-menu" class="hidden lg:hidden bg-secondary border-t border-gray-700">
-      <ul class="px-4 py-4 space-y-1 text-sm font-medium text-gray-300">
-        <li><a href="index.html" aria-current="page" class="block py-2 text-primary hover:text-primary focus-ring"><!-- slot:site.nav.home -->Home<!-- /slot:site.nav.home --></a></li>
-        <li><a href="about.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
-        <li><a href="services.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
-        <li><a href="sectors.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
-        <li><a href="how-we-work.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
-        <li><a href="contact.html" class="block py-2 hover:text-primary focus-ring"><!-- slot:site.nav.contact -->Contact<!-- /slot:site.nav.contact --></a></li>
-      </ul>
-    </div>
-  </nav>
+  </header>
+<!-- /include:header -->
 
   <main id="main-content">
+
     <!-- ===== HERO ===== -->
-    <section id="hero" class="relative bg-secondary text-white pt-28 pb-16 md:pt-36 md:py-24 overflow-hidden grain-overlay">
-      <img src="assets/img/mine-sunrise-panorama-1600.webp" srcset="assets/img/mine-sunrise-panorama-800.webp 800w, assets/img/mine-sunrise-panorama-1600.webp 1600w" sizes="100vw" alt="" width="1600" height="547" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true">
-      <div class="absolute inset-0 bg-secondary/85" aria-hidden="true"></div>
-      <div class="absolute inset-0 grid-bg opacity-10" aria-hidden="true"></div>
-      <div class="relative max-w-6xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-10 items-center">
-        <div data-reveal class="reveal">
-          <span class="eyebrow"><!-- slot:pages.home.hero.badge -->Project Management Unit<!-- /slot:pages.home.hero.badge --></span>
-          <h1 class="display text-3xl md:text-5xl text-white mt-4 mb-6"><!-- slot:pages.home.hero.title -->Programme management that delivers.<!-- /slot:pages.home.hero.title --></h1>
-          <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-8 max-w-xl"><!-- slot:pages.home.hero.subtitle -->Well-planned, well-governed programmes that deliver clear, measurable benefits to communities — on time, on budget, and in line with South African laws and policies.<!-- /slot:pages.home.hero.subtitle --></p>
-          <div class="flex flex-wrap gap-4 mb-8">
-            <a href="contact.html" class="inline-flex items-center bg-primary hover:bg-accent text-white font-semibold px-6 py-3 rounded-md transition-colors focus-ring"><!-- slot:pages.home.hero.ctaPrimary -->Partner With Us<!-- /slot:pages.home.hero.ctaPrimary --></a>
-            <a href="services.html" class="inline-flex items-center border border-gray-500 hover:border-primary text-white font-semibold px-6 py-3 rounded-md transition-colors focus-ring"><!-- slot:pages.home.hero.ctaSecondary -->View Capabilities<!-- /slot:pages.home.hero.ctaSecondary --></a>
-          </div>
-          <ul class="flex flex-wrap gap-2" aria-label="Focus areas">
-            <li class="mono-badge"><!-- slot:pages.home.hero.chip1 -->Public programmes<!-- /slot:pages.home.hero.chip1 --></li>
-            <li class="mono-badge"><!-- slot:pages.home.hero.chip2 -->Skills development<!-- /slot:pages.home.hero.chip2 --></li>
-            <li class="mono-badge"><!-- slot:pages.home.hero.chip3 -->Quality assured<!-- /slot:pages.home.hero.chip3 --></li>
-            <li class="mono-badge"><!-- slot:pages.home.hero.chip4 -->South African based<!-- /slot:pages.home.hero.chip4 --></li>
-          </ul>
-        </div>
-
-        <div data-reveal class="reveal">
-          <div class="bg-[#14171e] border border-gray-700 rounded-xl p-6 shadow-elevated">
-            <div class="flex items-center justify-between mb-6">
-              <h2 class="font-heading font-semibold text-white text-lg"><!-- slot:pages.home.dashboard.title -->At a glance<!-- /slot:pages.home.dashboard.title --></h2>
-            </div>
-            <div class="grid grid-cols-2 gap-4 mb-6">
-              <div class="bg-[#1a1d24] rounded-lg p-4">
-                <p class="text-xs text-gray-400 mb-1"><!-- slot:pages.home.dashboard.m1Label -->Service lines<!-- /slot:pages.home.dashboard.m1Label --></p>
-                <p class="font-heading font-bold text-2xl text-primary"><!-- slot:pages.home.dashboard.m1Value -->7<!-- /slot:pages.home.dashboard.m1Value --></p>
-              </div>
-              <div class="bg-[#1a1d24] rounded-lg p-4">
-                <p class="text-xs text-gray-400 mb-1"><!-- slot:pages.home.dashboard.m2Label -->Delivery phases<!-- /slot:pages.home.dashboard.m2Label --></p>
-                <p class="font-heading font-bold text-2xl text-primary"><!-- slot:pages.home.dashboard.m2Value -->6<!-- /slot:pages.home.dashboard.m2Value --></p>
-              </div>
-              <div class="bg-[#1a1d24] rounded-lg p-4">
-                <p class="text-xs text-gray-400 mb-1"><!-- slot:pages.home.dashboard.m3Label -->Registered<!-- /slot:pages.home.dashboard.m3Label --></p>
-                <p class="font-heading font-bold text-2xl text-primary"><!-- slot:pages.home.dashboard.m3Value -->2017<!-- /slot:pages.home.dashboard.m3Value --></p>
-              </div>
-              <div class="bg-[#1a1d24] rounded-lg p-4">
-                <p class="text-xs text-gray-400 mb-1"><!-- slot:pages.home.dashboard.m4Label -->Based in<!-- /slot:pages.home.dashboard.m4Label --></p>
-                <p class="font-heading font-bold text-2xl text-primary"><!-- slot:pages.home.dashboard.m4Value -->North West<!-- /slot:pages.home.dashboard.m4Value --></p>
-              </div>
-            </div>
-            <div class="border-t border-gray-700 pt-4 flex flex-wrap items-center gap-2 text-xs text-gray-400">
-              <span class="text-primary">✓</span>
-              <span><!-- slot:pages.home.dashboard.frameworks -->PFMA · SAQA · QCTO · SETA / LMIS<!-- /slot:pages.home.dashboard.frameworks --></span>
-            </div>
+    <section class="relative">
+      <div class="container-page grid items-end gap-12 pb-16 pt-12 md:pt-20 lg:grid-cols-12 lg:gap-16 lg:pb-24">
+        <div class="lg:col-span-7 lg:pb-6">
+          <p data-reveal class="reveal label"><!-- slot:pages.home.hero.badge -->Project Management Unit<!-- /slot:pages.home.hero.badge --></p>
+          <h1 data-reveal data-delay="1" class="reveal h-hero mt-8"><!-- slot:pages.home.hero.title -->Programme management that <em>delivers</em>.<!-- /slot:pages.home.hero.title --></h1>
+          <p data-reveal data-delay="2" class="reveal lede mt-8 max-w-xl"><!-- slot:pages.home.hero.subtitle -->Well-planned, well-governed programmes that deliver clear, measurable benefits to communities — on time, on budget, and in line with South African laws and policies.<!-- /slot:pages.home.hero.subtitle --></p>
+          <div data-reveal data-delay="3" class="reveal mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <a href="contact.html" class="btn-primary focus-ring"><!-- slot:pages.home.hero.ctaPrimary -->Partner with us<!-- /slot:pages.home.hero.ctaPrimary --> <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="services.html" class="link-arrow focus-ring"><!-- slot:pages.home.hero.ctaSecondary -->View our services<!-- /slot:pages.home.hero.ctaSecondary --> <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ===== SERVICES TEASER ===== -->
-    <section id="services" class="relative bg-surface dark:bg-[#111318] py-16 md:py-28">
-      <div class="max-w-6xl mx-auto px-4 md:px-8">
-        <div data-reveal class="reveal mb-12">
-          <span class="eyebrow">Services</span>
-          <h2 class="display text-3xl md:text-4xl text-secondary dark:text-white mt-2 mb-4"><!-- slot:pages.home.servicesTeaser.title -->What we do<!-- /slot:pages.home.servicesTeaser.title --></h2>
-          <p class="text-gray-600 dark:text-gray-300 max-w-2xl"><!-- slot:pages.home.servicesTeaser.intro -->We run the management unit behind publicly funded programmes — from set-up and procurement to delivery, quality and reporting.<!-- /slot:pages.home.servicesTeaser.intro --></p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-4 mb-8">
-          <div data-reveal class="reveal bento-card md:col-span-2 p-6">
-            <span class="mono-badge mb-3 inline-block">01</span>
-            <h3 class="text-xl font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.home.servicesTeaser.c1Title -->Programme and project management<!-- /slot:pages.home.servicesTeaser.c1Title --></h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.home.servicesTeaser.c1Desc -->Project office set-up, governance structures, communications, and coordination from kick-off to closure.<!-- /slot:pages.home.servicesTeaser.c1Desc --></p>
+        <figure data-reveal data-delay="2" class="reveal lg:col-span-5">
+          <div class="photo aspect-[4/3] lg:aspect-[4/5]">
+            <img src="assets/img/graduation-ceremony-1600.webp" srcset="assets/img/graduation-ceremony-800.webp 800w, assets/img/graduation-ceremony-1600.webp 1600w" sizes="(min-width: 1024px) 40vw, 100vw" alt="<!-- slot:site.images.graduation.alt -->Graduates in caps and gowns at a graduation ceremony<!-- /slot:site.images.graduation.alt -->" width="1600" height="1067" fetchpriority="high" decoding="async" class="object-[60%_center]">
           </div>
-          <div data-reveal class="reveal bento-card p-6">
-            <span class="mono-badge mb-3 inline-block">02</span>
-            <h3 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.home.servicesTeaser.c2Title -->Skills development programme management<!-- /slot:pages.home.servicesTeaser.c2Title --></h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.home.servicesTeaser.c2Desc -->End-to-end management of learnerships, internships and artisan pathways, from recruitment to certification.<!-- /slot:pages.home.servicesTeaser.c2Desc --></p>
-          </div>
-          <div data-reveal class="reveal bento-card p-6">
-            <span class="mono-badge mb-3 inline-block">03</span>
-            <h3 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.home.servicesTeaser.c3Title -->Procurement and contracting support<!-- /slot:pages.home.servicesTeaser.c3Title --></h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.home.servicesTeaser.c3Desc -->Helping clients appoint accredited training providers and other service providers in line with public finance rules.<!-- /slot:pages.home.servicesTeaser.c3Desc --></p>
-          </div>
-          <div data-reveal class="reveal bento-card p-6">
-            <span class="mono-badge mb-3 inline-block">04</span>
-            <h3 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.home.servicesTeaser.c4Title -->Stakeholder engagement<!-- /slot:pages.home.servicesTeaser.c4Title --></h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.home.servicesTeaser.c4Desc -->Identifying stakeholders, clarifying roles and coordinating host workplaces such as departments, municipalities and private sector partners.<!-- /slot:pages.home.servicesTeaser.c4Desc --></p>
-          </div>
-          <div data-reveal class="reveal bento-card p-6">
-            <span class="mono-badge mb-3 inline-block">05</span>
-            <h3 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.home.servicesTeaser.c5Title -->Quality management and compliance<!-- /slot:pages.home.servicesTeaser.c5Title --></h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.home.servicesTeaser.c5Desc -->Quality management systems, training venue readiness, health and safety checks, SETA registration and QCTO evidence submission.<!-- /slot:pages.home.servicesTeaser.c5Desc --></p>
-          </div>
-          <div data-reveal class="reveal bento-card p-6">
-            <span class="mono-badge mb-3 inline-block">06</span>
-            <h3 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.home.servicesTeaser.c6Title -->Monitoring, evaluation and reporting<!-- /slot:pages.home.servicesTeaser.c6Title --></h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.home.servicesTeaser.c6Desc -->Continuous monitoring, site inspections, learner feedback, and narrative and evaluation reporting for clients and funders.<!-- /slot:pages.home.servicesTeaser.c6Desc --></p>
-          </div>
-          <div data-reveal class="reveal bento-card p-6">
-            <span class="mono-badge mb-3 inline-block">07</span>
-            <h3 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.home.servicesTeaser.c7Title -->Capacity building and exit strategy<!-- /slot:pages.home.servicesTeaser.c7Title --></h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.home.servicesTeaser.c7Desc -->Training client staff and local partners for continuity, capturing lessons learned and structured close-out.<!-- /slot:pages.home.servicesTeaser.c7Desc --></p>
-          </div>
-        </div>
-        <figure data-reveal class="reveal mb-8 rounded-xl overflow-hidden border border-neutral-200/80 dark:border-neutral-800">
-          <img src="assets/img/training-room-1600.webp" srcset="assets/img/training-room-800.webp 800w, assets/img/training-room-1600.webp 1600w" sizes="(min-width: 72rem) 72rem, 100vw" alt="<!-- slot:site.images.trainingRoom.alt -->Empty training room with desks, chairs and a large display screen<!-- /slot:site.images.trainingRoom.alt -->" width="1600" height="1066" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover">
+          <figcaption class="mt-4 flex items-start gap-3 text-sm text-muted"><span class="mt-2 h-px w-6 shrink-0 bg-primary" aria-hidden="true"></span><!-- slot:pages.home.hero.caption -->Skills development, managed from recruitment to certification.<!-- /slot:pages.home.hero.caption --></figcaption>
         </figure>
-        <a href="services.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline focus-ring"><!-- slot:pages.home.servicesTeaser.link -->All capabilities<!-- /slot:pages.home.servicesTeaser.link --> <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="container-page">
+        <dl class="grid grid-cols-2 border-t border-rule md:grid-cols-4">
+          <div data-reveal class="reveal border-b border-rule py-8 pr-6 md:border-b-0 md:border-r">
+            <dd class="font-display text-4xl text-ink lg:text-[2.75rem]"><!-- slot:pages.home.facts.f1Value -->2017<!-- /slot:pages.home.facts.f1Value --></dd>
+            <dt class="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted"><!-- slot:pages.home.facts.f1Label -->Registered<!-- /slot:pages.home.facts.f1Label --></dt>
+          </div>
+          <div data-reveal data-delay="1" class="reveal border-b border-rule py-8 pl-6 md:border-b-0 md:border-r md:pr-6">
+            <dd class="font-display text-4xl text-ink lg:text-[2.75rem]"><!-- slot:pages.home.facts.f2Value -->7<!-- /slot:pages.home.facts.f2Value --></dd>
+            <dt class="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted"><!-- slot:pages.home.facts.f2Label -->Service lines<!-- /slot:pages.home.facts.f2Label --></dt>
+          </div>
+          <div data-reveal data-delay="2" class="reveal py-8 pr-6 md:border-r md:border-rule md:pl-6">
+            <dd class="font-display text-4xl text-ink lg:text-[2.75rem]"><!-- slot:pages.home.facts.f3Value -->6<!-- /slot:pages.home.facts.f3Value --></dd>
+            <dt class="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted"><!-- slot:pages.home.facts.f3Label -->Delivery phases<!-- /slot:pages.home.facts.f3Label --></dt>
+          </div>
+          <div data-reveal data-delay="3" class="reveal py-8 pl-6">
+            <dd class="font-display text-4xl text-ink lg:text-[2.75rem]"><!-- slot:pages.home.facts.f4Value -->North West<!-- /slot:pages.home.facts.f4Value --></dd>
+            <dt class="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted"><!-- slot:pages.home.facts.f4Label -->Based in<!-- /slot:pages.home.facts.f4Label --></dt>
+          </div>
+        </dl>
       </div>
     </section>
 
-    <!-- ===== HOW WE WORK TEASER ===== -->
-    <section id="how-we-work" class="bg-white dark:bg-[#111318] py-16 md:py-28">
-      <div class="max-w-6xl mx-auto px-4 md:px-8">
-        <div data-reveal class="reveal mb-12">
-          <span class="eyebrow">Method</span>
-          <h2 class="display text-3xl md:text-4xl text-secondary dark:text-white mt-2 mb-4"><!-- slot:pages.home.howWeWorkTeaser.title -->How we work<!-- /slot:pages.home.howWeWorkTeaser.title --></h2>
-          <p class="text-gray-600 dark:text-gray-300 max-w-2xl"><!-- slot:pages.home.howWeWorkTeaser.intro -->A simple, repeatable approach — from defining the programme to a documented close-out.<!-- /slot:pages.home.howWeWorkTeaser.intro --></p>
+    <!-- ===== STATEMENT ===== -->
+    <section class="py-24 md:py-36">
+      <div class="container-page grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-7">
+          <p data-reveal class="reveal label"><!-- slot:pages.home.statement.label -->Who we are<!-- /slot:pages.home.statement.label --></p>
+          <p data-reveal data-delay="1" class="reveal mt-8 font-display text-[1.75rem] leading-[1.3] text-ink md:text-[2.6rem] md:leading-[1.2]"><!-- slot:pages.home.statement.text -->We act as the management unit behind publicly funded programmes: mobilising teams, coordinating service providers, upholding quality standards and reporting clearly on results.<!-- /slot:pages.home.statement.text --></p>
+          <a data-reveal data-delay="2" href="about.html" class="reveal link-arrow mt-10 focus-ring"><!-- slot:pages.home.statement.link -->About Koke Holdings<!-- /slot:pages.home.statement.link --> <span class="arrow" aria-hidden="true">→</span></a>
         </div>
-        <ol class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          <li data-reveal class="reveal bento-card p-6"><span class="mono-badge mb-3 inline-block">01</span><h3 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.home.howWeWorkTeaser.s1Name -->Define<!-- /slot:pages.home.howWeWorkTeaser.s1Name --></h3><p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.home.howWeWorkTeaser.s1Desc -->Confirm scope and targets: what will be delivered, where and by when.<!-- /slot:pages.home.howWeWorkTeaser.s1Desc --></p></li>
-          <li data-reveal class="reveal bento-card p-6"><span class="mono-badge mb-3 inline-block">02</span><h3 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.home.howWeWorkTeaser.s2Name -->Mobilise<!-- /slot:pages.home.howWeWorkTeaser.s2Name --></h3><p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.home.howWeWorkTeaser.s2Desc -->Set up the management unit, roles, governance and reporting lines.<!-- /slot:pages.home.howWeWorkTeaser.s2Desc --></p></li>
-          <li data-reveal class="reveal bento-card p-6"><span class="mono-badge mb-3 inline-block">03</span><h3 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.home.howWeWorkTeaser.s3Name -->Procure and contract<!-- /slot:pages.home.howWeWorkTeaser.s3Name --></h3><p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.home.howWeWorkTeaser.s3Desc -->Appoint service providers in line with public finance rules and sign agreements.<!-- /slot:pages.home.howWeWorkTeaser.s3Desc --></p></li>
-          <li data-reveal class="reveal bento-card p-6"><span class="mono-badge mb-3 inline-block">04</span><h3 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.home.howWeWorkTeaser.s4Name -->Implement<!-- /slot:pages.home.howWeWorkTeaser.s4Name --></h3><p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.home.howWeWorkTeaser.s4Desc -->Coordinate design, delivery and quality checks across all sites.<!-- /slot:pages.home.howWeWorkTeaser.s4Desc --></p></li>
-          <li data-reveal class="reveal bento-card p-6"><span class="mono-badge mb-3 inline-block">05</span><h3 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.home.howWeWorkTeaser.s5Name -->Build capacity<!-- /slot:pages.home.howWeWorkTeaser.s5Name --></h3><p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.home.howWeWorkTeaser.s5Desc -->Train client staff and local partners so the work continues after the project.<!-- /slot:pages.home.howWeWorkTeaser.s5Desc --></p></li>
-          <li data-reveal class="reveal bento-card p-6"><span class="mono-badge mb-3 inline-block">06</span><h3 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.home.howWeWorkTeaser.s6Name -->Monitor and evaluate<!-- /slot:pages.home.howWeWorkTeaser.s6Name --></h3><p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.home.howWeWorkTeaser.s6Desc -->Track progress continuously, report regularly and close out with a documented evaluation.<!-- /slot:pages.home.howWeWorkTeaser.s6Desc --></p></li>
+        <div data-reveal data-delay="2" class="reveal lg:col-span-5 lg:pt-16">
+          <div class="photo aspect-[4/3]">
+            <img src="assets/img/team-committee-meeting-1600.webp" srcset="assets/img/team-committee-meeting-800.webp 800w, assets/img/team-committee-meeting-1600.webp 1600w" sizes="(min-width: 1024px) 40vw, 100vw" alt="<!-- slot:site.images.committeeMeeting.alt -->Team members in a meeting around a conference table with laptops<!-- /slot:site.images.committeeMeeting.alt -->" width="1600" height="1068" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="bg-paper-alt py-24 md:py-32">
+      <div class="container-page grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-4">
+          <div class="lg:sticky lg:top-28">
+            <p data-reveal class="reveal label"><!-- slot:pages.home.servicesTeaser.label -->Services<!-- /slot:pages.home.servicesTeaser.label --></p>
+            <h2 data-reveal data-delay="1" class="reveal h-section mt-6"><!-- slot:pages.home.servicesTeaser.title -->What we do<!-- /slot:pages.home.servicesTeaser.title --></h2>
+            <p data-reveal data-delay="2" class="reveal mt-6 text-body"><!-- slot:pages.home.servicesTeaser.intro -->We run the management unit behind publicly funded programmes — from set-up and procurement to delivery, quality and reporting.<!-- /slot:pages.home.servicesTeaser.intro --></p>
+            <a data-reveal data-delay="3" href="services.html" class="reveal link-arrow mt-8 focus-ring"><!-- slot:pages.home.servicesTeaser.link -->All capabilities<!-- /slot:pages.home.servicesTeaser.link --> <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <ol class="border-b border-rule lg:col-span-8">
+          <li data-reveal class="reveal border-t border-rule">
+            <a href="services.html" class="group -mx-4 grid grid-cols-[2.5rem_1fr] items-baseline gap-x-4 gap-y-2 px-4 py-7 transition-colors duration-300 hover:bg-paper md:grid-cols-[3.5rem_1fr_1.25fr_1.5rem] md:gap-x-8 focus-ring">
+              <span class="font-display text-lg text-orange-ink">01</span>
+              <h3 class="font-display text-xl leading-snug text-ink md:text-2xl"><!-- slot:pages.home.servicesTeaser.c1Title -->Programme and project management<!-- /slot:pages.home.servicesTeaser.c1Title --></h3>
+              <p class="col-start-2 text-sm leading-relaxed text-muted md:col-start-3"><!-- slot:pages.home.servicesTeaser.c1Desc -->Project office set-up, governance structures, communications, and coordination from kick-off to closure.<!-- /slot:pages.home.servicesTeaser.c1Desc --></p>
+              <span class="arrow hidden text-ink opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100 md:block" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li data-reveal class="reveal border-t border-rule">
+            <a href="services.html" class="group -mx-4 grid grid-cols-[2.5rem_1fr] items-baseline gap-x-4 gap-y-2 px-4 py-7 transition-colors duration-300 hover:bg-paper md:grid-cols-[3.5rem_1fr_1.25fr_1.5rem] md:gap-x-8 focus-ring">
+              <span class="font-display text-lg text-orange-ink">02</span>
+              <h3 class="font-display text-xl leading-snug text-ink md:text-2xl"><!-- slot:pages.home.servicesTeaser.c2Title -->Skills development programme management<!-- /slot:pages.home.servicesTeaser.c2Title --></h3>
+              <p class="col-start-2 text-sm leading-relaxed text-muted md:col-start-3"><!-- slot:pages.home.servicesTeaser.c2Desc -->End-to-end management of learnerships, internships and artisan pathways, from recruitment to certification.<!-- /slot:pages.home.servicesTeaser.c2Desc --></p>
+              <span class="arrow hidden text-ink opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100 md:block" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li data-reveal class="reveal border-t border-rule">
+            <a href="services.html" class="group -mx-4 grid grid-cols-[2.5rem_1fr] items-baseline gap-x-4 gap-y-2 px-4 py-7 transition-colors duration-300 hover:bg-paper md:grid-cols-[3.5rem_1fr_1.25fr_1.5rem] md:gap-x-8 focus-ring">
+              <span class="font-display text-lg text-orange-ink">03</span>
+              <h3 class="font-display text-xl leading-snug text-ink md:text-2xl"><!-- slot:pages.home.servicesTeaser.c3Title -->Procurement and contracting support<!-- /slot:pages.home.servicesTeaser.c3Title --></h3>
+              <p class="col-start-2 text-sm leading-relaxed text-muted md:col-start-3"><!-- slot:pages.home.servicesTeaser.c3Desc -->Helping clients appoint accredited training providers and other service providers in line with public finance rules.<!-- /slot:pages.home.servicesTeaser.c3Desc --></p>
+              <span class="arrow hidden text-ink opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100 md:block" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li data-reveal class="reveal border-t border-rule">
+            <a href="services.html" class="group -mx-4 grid grid-cols-[2.5rem_1fr] items-baseline gap-x-4 gap-y-2 px-4 py-7 transition-colors duration-300 hover:bg-paper md:grid-cols-[3.5rem_1fr_1.25fr_1.5rem] md:gap-x-8 focus-ring">
+              <span class="font-display text-lg text-orange-ink">04</span>
+              <h3 class="font-display text-xl leading-snug text-ink md:text-2xl"><!-- slot:pages.home.servicesTeaser.c4Title -->Stakeholder engagement<!-- /slot:pages.home.servicesTeaser.c4Title --></h3>
+              <p class="col-start-2 text-sm leading-relaxed text-muted md:col-start-3"><!-- slot:pages.home.servicesTeaser.c4Desc -->Identifying stakeholders, clarifying roles and coordinating host workplaces such as departments, municipalities and private sector partners.<!-- /slot:pages.home.servicesTeaser.c4Desc --></p>
+              <span class="arrow hidden text-ink opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100 md:block" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li data-reveal class="reveal border-t border-rule">
+            <a href="services.html" class="group -mx-4 grid grid-cols-[2.5rem_1fr] items-baseline gap-x-4 gap-y-2 px-4 py-7 transition-colors duration-300 hover:bg-paper md:grid-cols-[3.5rem_1fr_1.25fr_1.5rem] md:gap-x-8 focus-ring">
+              <span class="font-display text-lg text-orange-ink">05</span>
+              <h3 class="font-display text-xl leading-snug text-ink md:text-2xl"><!-- slot:pages.home.servicesTeaser.c5Title -->Quality management and compliance<!-- /slot:pages.home.servicesTeaser.c5Title --></h3>
+              <p class="col-start-2 text-sm leading-relaxed text-muted md:col-start-3"><!-- slot:pages.home.servicesTeaser.c5Desc -->Quality management systems, training venue readiness, health and safety checks, SETA registration and QCTO evidence submission.<!-- /slot:pages.home.servicesTeaser.c5Desc --></p>
+              <span class="arrow hidden text-ink opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100 md:block" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li data-reveal class="reveal border-t border-rule">
+            <a href="services.html" class="group -mx-4 grid grid-cols-[2.5rem_1fr] items-baseline gap-x-4 gap-y-2 px-4 py-7 transition-colors duration-300 hover:bg-paper md:grid-cols-[3.5rem_1fr_1.25fr_1.5rem] md:gap-x-8 focus-ring">
+              <span class="font-display text-lg text-orange-ink">06</span>
+              <h3 class="font-display text-xl leading-snug text-ink md:text-2xl"><!-- slot:pages.home.servicesTeaser.c6Title -->Monitoring, evaluation and reporting<!-- /slot:pages.home.servicesTeaser.c6Title --></h3>
+              <p class="col-start-2 text-sm leading-relaxed text-muted md:col-start-3"><!-- slot:pages.home.servicesTeaser.c6Desc -->Continuous monitoring, site inspections, learner feedback, and narrative and evaluation reporting for clients and funders.<!-- /slot:pages.home.servicesTeaser.c6Desc --></p>
+              <span class="arrow hidden text-ink opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100 md:block" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li data-reveal class="reveal border-t border-rule">
+            <a href="services.html" class="group -mx-4 grid grid-cols-[2.5rem_1fr] items-baseline gap-x-4 gap-y-2 px-4 py-7 transition-colors duration-300 hover:bg-paper md:grid-cols-[3.5rem_1fr_1.25fr_1.5rem] md:gap-x-8 focus-ring">
+              <span class="font-display text-lg text-orange-ink">07</span>
+              <h3 class="font-display text-xl leading-snug text-ink md:text-2xl"><!-- slot:pages.home.servicesTeaser.c7Title -->Capacity building and exit strategy<!-- /slot:pages.home.servicesTeaser.c7Title --></h3>
+              <p class="col-start-2 text-sm leading-relaxed text-muted md:col-start-3"><!-- slot:pages.home.servicesTeaser.c7Desc -->Training client staff and local partners for continuity, capturing lessons learned and structured close-out.<!-- /slot:pages.home.servicesTeaser.c7Desc --></p>
+              <span class="arrow hidden text-ink opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100 md:block" aria-hidden="true">→</span>
+            </a>
+          </li>
         </ol>
-        <figure data-reveal class="reveal mb-8 rounded-xl overflow-hidden border border-neutral-200/80 dark:border-neutral-800">
-          <img src="assets/img/mine-workers-overlook-1600.webp" srcset="assets/img/mine-workers-overlook-800.webp 800w, assets/img/mine-workers-overlook-1600.webp 1600w" sizes="(min-width: 72rem) 72rem, 100vw" alt="<!-- slot:site.images.workersOverlook.alt -->Two site supervisors in hard hats overlooking an open-pit mine<!-- /slot:site.images.workersOverlook.alt -->" width="1600" height="546" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover">
-        </figure>
-        <a href="how-we-work.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline focus-ring"><!-- slot:pages.home.howWeWorkTeaser.link -->Our full approach<!-- /slot:pages.home.howWeWorkTeaser.link --> <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
-    <!-- ===== SECTORS STRIP ===== -->
-    <section id="sectors" class="bg-surface dark:bg-[#111318] py-16 md:py-20">
-      <div class="max-w-6xl mx-auto px-4 md:px-8">
-        <div data-reveal class="reveal mb-8">
-          <span class="eyebrow">Sectors</span>
-          <h2 class="display text-2xl md:text-3xl text-secondary dark:text-white mt-2 mb-3"><!-- slot:pages.home.sectors.title -->Sectors we serve<!-- /slot:pages.home.sectors.title --></h2>
-          <p class="text-gray-600 dark:text-gray-300 max-w-2xl"><!-- slot:pages.home.sectors.intro -->Skills development is our core; we are positioned to extend our programme management approach into mining and industry.<!-- /slot:pages.home.sectors.intro --></p>
+    <!-- ===== IMAGE BAND ===== -->
+    <div class="relative aspect-[16/10] overflow-hidden sm:aspect-[2/1] lg:aspect-[21/8]">
+      <img src="assets/img/mine-sunrise-panorama-1600.webp" srcset="assets/img/mine-sunrise-panorama-800.webp 800w, assets/img/mine-sunrise-panorama-1600.webp 1600w" sizes="100vw" alt="<!-- slot:site.images.sunrise.alt -->Sunrise over an open-pit mine, with haul roads winding through the pit<!-- /slot:site.images.sunrise.alt -->" width="1600" height="547" loading="lazy" decoding="async" data-parallax class="absolute inset-x-0 top-0 h-[118%] w-full object-cover">
+    </div>
+
+    <!-- ===== APPROACH ===== -->
+    <section class="py-24 md:py-32">
+      <div class="container-page">
+        <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7">
+            <p data-reveal class="reveal label"><!-- slot:pages.home.howWeWorkTeaser.label -->Approach<!-- /slot:pages.home.howWeWorkTeaser.label --></p>
+            <h2 data-reveal data-delay="1" class="reveal h-section mt-6"><!-- slot:pages.home.howWeWorkTeaser.title -->How we <em>work</em><!-- /slot:pages.home.howWeWorkTeaser.title --></h2>
+          </div>
+          <div class="lg:col-span-5">
+            <p data-reveal data-delay="2" class="reveal text-body"><!-- slot:pages.home.howWeWorkTeaser.intro -->A simple, repeatable approach — from defining the programme to a documented close-out.<!-- /slot:pages.home.howWeWorkTeaser.intro --></p>
+          </div>
         </div>
-        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-          <li data-reveal class="reveal bento-card p-5 flex items-start gap-3">
-            <span class="text-primary shrink-0 mt-0.5" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span>
-            <span class="text-sm font-medium text-secondary dark:text-gray-200"><!-- slot:pages.home.sectors.mining -->Mining — skills development and Social and Labour Plan (SLP) programme support<!-- /slot:pages.home.sectors.mining --></span>
+        <ol class="mt-16 grid gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+          <li data-reveal data-delay="0" class="reveal relative border-t border-rule pt-8">
+            <span class="absolute -top-[5px] left-0 h-[9px] w-[9px] rounded-full bg-primary" aria-hidden="true"></span>
+            <span class="font-display text-sm text-orange-ink">01</span>
+            <h3 class="h-card mt-3"><!-- slot:pages.home.howWeWorkTeaser.s1Name -->Define<!-- /slot:pages.home.howWeWorkTeaser.s1Name --></h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted"><!-- slot:pages.home.howWeWorkTeaser.s1Desc -->Confirm scope and targets: what will be delivered, where and by when.<!-- /slot:pages.home.howWeWorkTeaser.s1Desc --></p>
           </li>
-          <li data-reveal class="reveal bento-card p-5 flex items-start gap-3">
-            <span class="text-primary shrink-0 mt-0.5" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span>
-            <span class="text-sm text-gray-600 dark:text-gray-300"><!-- slot:pages.home.sectors.s2 -->Provincial and national government departments<!-- /slot:pages.home.sectors.s2 --></span>
+          <li data-reveal data-delay="1" class="reveal relative border-t border-rule pt-8">
+            <span class="absolute -top-[5px] left-0 h-[9px] w-[9px] rounded-full bg-primary" aria-hidden="true"></span>
+            <span class="font-display text-sm text-orange-ink">02</span>
+            <h3 class="h-card mt-3"><!-- slot:pages.home.howWeWorkTeaser.s2Name -->Mobilise<!-- /slot:pages.home.howWeWorkTeaser.s2Name --></h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted"><!-- slot:pages.home.howWeWorkTeaser.s2Desc -->Set up the management unit, roles, governance and reporting lines.<!-- /slot:pages.home.howWeWorkTeaser.s2Desc --></p>
           </li>
-          <li data-reveal class="reveal bento-card p-5 flex items-start gap-3">
-            <span class="text-primary shrink-0 mt-0.5" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-1.13a4 4 0 10-4-6.94M16 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg></span>
-            <span class="text-sm text-gray-600 dark:text-gray-300"><!-- slot:pages.home.sectors.s3 -->Municipalities and state-owned entities<!-- /slot:pages.home.sectors.s3 --></span>
+          <li data-reveal data-delay="2" class="reveal relative border-t border-rule pt-8">
+            <span class="absolute -top-[5px] left-0 h-[9px] w-[9px] rounded-full bg-primary" aria-hidden="true"></span>
+            <span class="font-display text-sm text-orange-ink">03</span>
+            <h3 class="h-card mt-3"><!-- slot:pages.home.howWeWorkTeaser.s3Name -->Procure and contract<!-- /slot:pages.home.howWeWorkTeaser.s3Name --></h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted"><!-- slot:pages.home.howWeWorkTeaser.s3Desc -->Appoint service providers in line with public finance rules and sign agreements.<!-- /slot:pages.home.howWeWorkTeaser.s3Desc --></p>
           </li>
-          <li data-reveal class="reveal bento-card p-5 flex items-start gap-3">
-            <span class="text-primary shrink-0 mt-0.5" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></span>
-            <span class="text-sm text-gray-600 dark:text-gray-300"><!-- slot:pages.home.sectors.s4 -->Accredited training providers<!-- /slot:pages.home.sectors.s4 --></span>
+          <li data-reveal data-delay="0" class="reveal relative border-t border-rule pt-8">
+            <span class="absolute -top-[5px] left-0 h-[9px] w-[9px] rounded-full bg-primary" aria-hidden="true"></span>
+            <span class="font-display text-sm text-orange-ink">04</span>
+            <h3 class="h-card mt-3"><!-- slot:pages.home.howWeWorkTeaser.s4Name -->Implement<!-- /slot:pages.home.howWeWorkTeaser.s4Name --></h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted"><!-- slot:pages.home.howWeWorkTeaser.s4Desc -->Coordinate design, delivery and quality checks across all sites.<!-- /slot:pages.home.howWeWorkTeaser.s4Desc --></p>
           </li>
-          <li data-reveal class="reveal bento-card p-5 flex items-start gap-3">
-            <span class="text-primary shrink-0 mt-0.5" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></span>
-            <span class="text-sm text-gray-600 dark:text-gray-300"><!-- slot:pages.home.sectors.s5 -->Host workplaces, including private sector partners<!-- /slot:pages.home.sectors.s5 --></span>
+          <li data-reveal data-delay="1" class="reveal relative border-t border-rule pt-8">
+            <span class="absolute -top-[5px] left-0 h-[9px] w-[9px] rounded-full bg-primary" aria-hidden="true"></span>
+            <span class="font-display text-sm text-orange-ink">05</span>
+            <h3 class="h-card mt-3"><!-- slot:pages.home.howWeWorkTeaser.s5Name -->Build capacity<!-- /slot:pages.home.howWeWorkTeaser.s5Name --></h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted"><!-- slot:pages.home.howWeWorkTeaser.s5Desc -->Train client staff and local partners so the work continues after the project.<!-- /slot:pages.home.howWeWorkTeaser.s5Desc --></p>
           </li>
-        </ul>
-        <a href="sectors.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline focus-ring"><!-- slot:pages.home.sectors.link -->Explore sectors<!-- /slot:pages.home.sectors.link --> <span aria-hidden="true">→</span></a>
+          <li data-reveal data-delay="2" class="reveal relative border-t border-rule pt-8">
+            <span class="absolute -top-[5px] left-0 h-[9px] w-[9px] rounded-full bg-primary" aria-hidden="true"></span>
+            <span class="font-display text-sm text-orange-ink">06</span>
+            <h3 class="h-card mt-3"><!-- slot:pages.home.howWeWorkTeaser.s6Name -->Monitor and evaluate<!-- /slot:pages.home.howWeWorkTeaser.s6Name --></h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted"><!-- slot:pages.home.howWeWorkTeaser.s6Desc -->Track progress continuously, report regularly and close out with a documented evaluation.<!-- /slot:pages.home.howWeWorkTeaser.s6Desc --></p>
+          </li>
+        </ol>
+        <a data-reveal href="how-we-work.html" class="reveal link-arrow mt-16 focus-ring"><!-- slot:pages.home.howWeWorkTeaser.link -->Our full approach<!-- /slot:pages.home.howWeWorkTeaser.link --> <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </section>
 
-    <!-- ===== CREDENTIALS TEASER ===== -->
-    <section id="credentials-teaser" class="bg-white dark:bg-[#111318] py-16 md:py-20">
-      <div class="max-w-6xl mx-auto px-4 md:px-8 bento-card p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-6 justify-between">
-        <div>
-          <h2 class="display text-2xl md:text-3xl text-secondary dark:text-white mb-3"><!-- slot:pages.home.credentialsTeaser.title -->Registered and accountable<!-- /slot:pages.home.credentialsTeaser.title --></h2>
-          <p class="text-gray-600 dark:text-gray-300 max-w-2xl"><!-- slot:pages.home.credentialsTeaser.text -->Koke Holdings (Pty) Ltd is a registered South African company, number 2017/231296/07. Contact us for company documents.<!-- /slot:pages.home.credentialsTeaser.text --></p>
+    <!-- ===== SECTORS ===== -->
+    <section class="bg-paper-alt py-24 md:py-32">
+      <div class="container-page grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+        <div data-reveal class="reveal lg:col-span-6">
+          <div class="photo aspect-[4/3] lg:aspect-[5/6]">
+            <img src="assets/img/mine-haul-truck-reflection-1600.webp" srcset="assets/img/mine-haul-truck-reflection-800.webp 800w, assets/img/mine-haul-truck-reflection-1600.webp 1600w" sizes="(min-width: 1024px) 50vw, 100vw" alt="<!-- slot:site.images.mining1.alt -->Large yellow haul truck reflected in a puddle on a mine access road<!-- /slot:site.images.mining1.alt -->" width="1600" height="1066" loading="lazy" decoding="async">
+          </div>
         </div>
-        <a href="about.html#company" class="inline-flex items-center gap-2 bg-primary hover:bg-accent text-white font-semibold px-6 py-3 rounded-md transition-colors focus-ring shrink-0"><!-- slot:pages.home.credentialsTeaser.link -->Company details<!-- /slot:pages.home.credentialsTeaser.link --> <span aria-hidden="true">→</span></a>
+        <div class="lg:col-span-6">
+          <p data-reveal class="reveal label"><!-- slot:pages.home.sectors.label -->Sectors<!-- /slot:pages.home.sectors.label --></p>
+          <h2 data-reveal data-delay="1" class="reveal h-section mt-6"><!-- slot:pages.home.sectors.title -->Sectors we serve<!-- /slot:pages.home.sectors.title --></h2>
+          <p data-reveal data-delay="2" class="reveal mt-6 text-body"><!-- slot:pages.home.sectors.intro -->Skills development is our core; we are positioned to extend our programme management approach into mining and industry.<!-- /slot:pages.home.sectors.intro --></p>
+          <ul class="mt-10 border-b border-rule">
+            <li data-reveal class="reveal flex items-baseline gap-4 border-t border-rule py-4"><span class="h-1.5 w-1.5 shrink-0 -translate-y-0.5 rounded-full bg-primary" aria-hidden="true"></span><span class="font-medium text-ink"><!-- slot:pages.home.sectors.mining -->Mining — skills development and Social and Labour Plan (SLP) programme support<!-- /slot:pages.home.sectors.mining --></span></li>
+            <li data-reveal class="reveal flex items-baseline gap-4 border-t border-rule py-4"><span class="h-1.5 w-1.5 shrink-0 -translate-y-0.5 rounded-full bg-rule" aria-hidden="true"></span><span><!-- slot:pages.home.sectors.s2 -->Provincial and national government departments<!-- /slot:pages.home.sectors.s2 --></span></li>
+            <li data-reveal class="reveal flex items-baseline gap-4 border-t border-rule py-4"><span class="h-1.5 w-1.5 shrink-0 -translate-y-0.5 rounded-full bg-rule" aria-hidden="true"></span><span><!-- slot:pages.home.sectors.s3 -->Municipalities and state-owned entities<!-- /slot:pages.home.sectors.s3 --></span></li>
+            <li data-reveal class="reveal flex items-baseline gap-4 border-t border-rule py-4"><span class="h-1.5 w-1.5 shrink-0 -translate-y-0.5 rounded-full bg-rule" aria-hidden="true"></span><span><!-- slot:pages.home.sectors.s4 -->Accredited training providers<!-- /slot:pages.home.sectors.s4 --></span></li>
+            <li data-reveal class="reveal flex items-baseline gap-4 border-t border-rule py-4"><span class="h-1.5 w-1.5 shrink-0 -translate-y-0.5 rounded-full bg-rule" aria-hidden="true"></span><span><!-- slot:pages.home.sectors.s5 -->Host workplaces, including private sector partners<!-- /slot:pages.home.sectors.s5 --></span></li>
+          </ul>
+          <a data-reveal href="sectors.html" class="reveal link-arrow mt-10 focus-ring"><!-- slot:pages.home.sectors.link -->Explore sectors<!-- /slot:pages.home.sectors.link --> <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ACCOUNTABILITY ===== -->
+    <section class="py-24 md:py-32">
+      <div class="container-page grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-5">
+          <p data-reveal class="reveal label"><!-- slot:pages.home.credentialsTeaser.label -->Accountability<!-- /slot:pages.home.credentialsTeaser.label --></p>
+          <h2 data-reveal data-delay="1" class="reveal h-section mt-6"><!-- slot:pages.home.credentialsTeaser.title -->Registered and accountable<!-- /slot:pages.home.credentialsTeaser.title --></h2>
+          <p data-reveal data-delay="2" class="reveal mt-6 text-body"><!-- slot:pages.home.credentialsTeaser.text -->Koke Holdings (Pty) Ltd is a registered South African company, number 2017/231296/07. Contact us for company documents.<!-- /slot:pages.home.credentialsTeaser.text --></p>
+          <a data-reveal data-delay="3" href="about.html#company" class="reveal link-arrow mt-8 focus-ring"><!-- slot:pages.home.credentialsTeaser.link -->Company details<!-- /slot:pages.home.credentialsTeaser.link --> <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div class="lg:col-span-7">
+          <p data-reveal class="reveal text-sm text-muted"><!-- slot:pages.home.credentialsTeaser.frameworksIntro -->The frameworks our programmes are run within.<!-- /slot:pages.home.credentialsTeaser.frameworksIntro --></p>
+          <dl class="mt-6 border-b border-rule">
+            <div data-reveal data-delay="0" class="reveal grid gap-1 border-t border-rule py-6 sm:grid-cols-[10rem_1fr] sm:items-baseline sm:gap-8">
+              <dt class="font-display text-3xl text-ink"><!-- slot:pages.home.credentialsTeaser.f1Name -->PFMA<!-- /slot:pages.home.credentialsTeaser.f1Name --></dt>
+              <dd class="text-sm text-muted"><!-- slot:pages.home.credentialsTeaser.f1Desc -->Public Finance Management Act: procurement and financial controls<!-- /slot:pages.home.credentialsTeaser.f1Desc --></dd>
+            </div>
+            <div data-reveal data-delay="1" class="reveal grid gap-1 border-t border-rule py-6 sm:grid-cols-[10rem_1fr] sm:items-baseline sm:gap-8">
+              <dt class="font-display text-3xl text-ink"><!-- slot:pages.home.credentialsTeaser.f2Name -->SAQA<!-- /slot:pages.home.credentialsTeaser.f2Name --></dt>
+              <dd class="text-sm text-muted"><!-- slot:pages.home.credentialsTeaser.f2Desc -->South African Qualifications Authority<!-- /slot:pages.home.credentialsTeaser.f2Desc --></dd>
+            </div>
+            <div data-reveal data-delay="2" class="reveal grid gap-1 border-t border-rule py-6 sm:grid-cols-[10rem_1fr] sm:items-baseline sm:gap-8">
+              <dt class="font-display text-3xl text-ink"><!-- slot:pages.home.credentialsTeaser.f3Name -->QCTO<!-- /slot:pages.home.credentialsTeaser.f3Name --></dt>
+              <dd class="text-sm text-muted"><!-- slot:pages.home.credentialsTeaser.f3Desc -->Quality Council for Trades and Occupations<!-- /slot:pages.home.credentialsTeaser.f3Desc --></dd>
+            </div>
+            <div data-reveal data-delay="3" class="reveal grid gap-1 border-t border-rule py-6 sm:grid-cols-[10rem_1fr] sm:items-baseline sm:gap-8">
+              <dt class="font-display text-3xl text-ink"><!-- slot:pages.home.credentialsTeaser.f4Name -->SETA<!-- /slot:pages.home.credentialsTeaser.f4Name --></dt>
+              <dd class="text-sm text-muted"><!-- slot:pages.home.credentialsTeaser.f4Desc -->Sector Education and Training Authorities: learner registration and records (LMIS)<!-- /slot:pages.home.credentialsTeaser.f4Desc --></dd>
+            </div>
+          </dl>
+        </div>
       </div>
     </section>
 
     <!-- ===== CONTACT CTA ===== -->
-    <section id="contact-cta" class="bg-secondary text-white py-16 md:py-20">
-      <div class="max-w-6xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div>
-          <h2 class="display text-2xl md:text-3xl text-white mb-3"><!-- slot:pages.home.contactCta.title -->Get in touch<!-- /slot:pages.home.contactCta.title --></h2>
-          <p class="text-gray-300 max-w-xl"><!-- slot:pages.home.contactCta.text -->Ready to partner on a skills development initiative? We would like to hear from you.<!-- /slot:pages.home.contactCta.text --></p>
+    <section class="pb-28 md:pb-40">
+      <div class="container-page">
+        <div class="border-t border-ink/80 pt-16 md:pt-24">
+          <p data-reveal class="reveal label"><!-- slot:pages.home.contactCta.label -->Contact<!-- /slot:pages.home.contactCta.label --></p>
+          <div class="mt-8 grid gap-10 lg:grid-cols-12 lg:items-end">
+            <h2 data-reveal data-delay="1" class="reveal h-hero lg:col-span-8"><!-- slot:pages.home.contactCta.title -->Let’s talk about your <em>programme</em>.<!-- /slot:pages.home.contactCta.title --></h2>
+            <div data-reveal data-delay="2" class="reveal lg:col-span-4">
+              <p class="text-body"><!-- slot:pages.home.contactCta.text -->Whether you are planning a skills development initiative or need a management unit for a programme already under way, we would like to hear from you.<!-- /slot:pages.home.contactCta.text --></p>
+              <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+                <a href="contact.html" class="btn-primary focus-ring"><!-- slot:pages.home.contactCta.button -->Contact us<!-- /slot:pages.home.contactCta.button --> <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="tel:+27810400918" class="text-sm font-semibold text-ink hover:text-orange-ink focus-ring"><!-- slot:company.phone -->+27 81 040 0918<!-- /slot:company.phone --></a>
+              </div>
+            </div>
+          </div>
         </div>
-        <a href="contact.html" class="inline-flex items-center bg-primary hover:bg-accent text-white font-semibold px-6 py-3 rounded-md transition-colors focus-ring shrink-0"><!-- slot:pages.home.contactCta.button -->Contact us<!-- /slot:pages.home.contactCta.button --></a>
       </div>
     </section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="relative bg-secondary text-white py-16 overflow-hidden grain-overlay">
-    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-      <svg class="absolute top-0 left-0 w-full" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height: 60px;">
-        <path d="M0 0V60C360 100 720 120 1080 80C1260 60 1380 30 1440 0H0Z" fill="#F26522" fill-opacity="0.2"/>
-      </svg>
-      <img src="assets/logo.svg" alt="" class="absolute right-8 bottom-8 h-32 w-auto opacity-5" aria-hidden="true">
-    </div>
-    <div class="relative max-w-6xl mx-auto px-4 md:px-8">
-      <div class="grid md:grid-cols-3 gap-8 mb-8">
-        <div>
-          <div class="flex items-center gap-2 mb-3">
-            <img src="assets/logo.svg" alt="Koke Holdings logo" class="h-8 w-auto">
-            <span class="font-heading font-bold text-lg"><!-- slot:company.shortName -->Koke Holdings<!-- /slot:company.shortName --></span>
-          </div>
-          <p class="text-gray-400 text-sm leading-relaxed"><!-- slot:site.footer.tagline -->Project management for publicly funded programmes, with a focus on skills development across South Africa.<!-- /slot:site.footer.tagline --></p>
+  <!-- include:footer -->
+  <footer class="relative overflow-hidden bg-secondary text-white/70">
+    <!-- Brand motif: the orange-to-navy sweep from the letterhead (once per page) -->
+    <svg class="pointer-events-none absolute left-0 top-0 h-24 w-full md:h-32" viewBox="0 0 1440 128" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="footer-sweep" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#F26522" stop-opacity="0"/>
+          <stop offset="0.6" stop-color="#F26522" stop-opacity="0.7"/>
+          <stop offset="1" stop-color="#FF8A4C"/>
+        </linearGradient>
+      </defs>
+      <path d="M0 0C420 92 980 104 1440 18V44C980 128 420 116 0 0Z" fill="url(#footer-sweep)"/>
+    </svg>
+
+    <div class="container-page relative pb-10 pt-32 md:pt-44">
+      <div class="grid gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-6">
+          <a href="index.html" class="inline-flex items-center gap-3 focus-ring" aria-label="Koke Holdings, home">
+            <span class="logo-mark ring-1 ring-white/15" aria-hidden="true">KH</span>
+            <span class="font-display text-2xl tracking-tight text-white"><!-- slot:company.shortName -->Koke Holdings<!-- /slot:company.shortName --></span>
+          </a>
+          <p class="mt-6 max-w-md font-display text-2xl leading-snug text-white md:text-[1.75rem]"><!-- slot:site.footer.tagline -->Project management for publicly funded programmes, with a focus on skills development across South Africa.<!-- /slot:site.footer.tagline --></p>
         </div>
-        <div>
-          <h4 class="font-heading font-semibold mb-3"><!-- slot:site.footer.quickLinks -->Quick Links<!-- /slot:site.footer.quickLinks --></h4>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="about.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
-            <li><a href="services.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
-            <li><a href="sectors.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
-            <li><a href="how-we-work.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
-            <li><a href="contact.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.contact -->Contact<!-- /slot:site.nav.contact --></a></li>
-            <li><a href="privacy.html" class="hover:text-primary transition-colors focus-ring"><!-- slot:site.nav.privacy -->Privacy<!-- /slot:site.nav.privacy --></a></li>
+
+        <div class="lg:col-span-2 lg:col-start-8">
+          <h2 class="text-xs font-semibold uppercase tracking-[0.18em] text-accent"><!-- slot:site.footer.quickLinks -->Explore<!-- /slot:site.footer.quickLinks --></h2>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="about.html" class="transition-colors hover:text-white focus-ring"><!-- slot:site.nav.about -->About<!-- /slot:site.nav.about --></a></li>
+            <li><a href="services.html" class="transition-colors hover:text-white focus-ring"><!-- slot:site.nav.services -->Services<!-- /slot:site.nav.services --></a></li>
+            <li><a href="sectors.html" class="transition-colors hover:text-white focus-ring"><!-- slot:site.nav.sectors -->Sectors<!-- /slot:site.nav.sectors --></a></li>
+            <li><a href="how-we-work.html" class="transition-colors hover:text-white focus-ring"><!-- slot:site.nav.howWeWork -->How we work<!-- /slot:site.nav.howWeWork --></a></li>
+            <li><a href="contact.html" class="transition-colors hover:text-white focus-ring"><!-- slot:site.nav.contact -->Contact<!-- /slot:site.nav.contact --></a></li>
           </ul>
         </div>
-        <div>
-          <h4 class="font-heading font-semibold mb-3"><!-- slot:site.footer.contactHeading -->Contact<!-- /slot:site.footer.contactHeading --></h4>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="tel:+27810400918" class="hover:text-primary transition-colors focus-ring"><!-- slot:company.phone -->+27 81 040 0918<!-- /slot:company.phone --></a></li>
-            <li><a href="mailto:kokeholdings@gmail.com" class="hover:text-primary transition-colors focus-ring"><!-- slot:company.email -->kokeholdings@gmail.com<!-- /slot:company.email --></a></li>
-            <li><!-- slot:company.address -->839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660<!-- /slot:company.address --></li>
+
+        <div class="lg:col-span-3">
+          <h2 class="text-xs font-semibold uppercase tracking-[0.18em] text-accent"><!-- slot:site.footer.contactHeading -->Contact<!-- /slot:site.footer.contactHeading --></h2>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="tel:+27810400918" class="transition-colors hover:text-white focus-ring"><!-- slot:company.phone -->+27 81 040 0918<!-- /slot:company.phone --></a></li>
+            <li><a href="mailto:kokeholdings@gmail.com" class="transition-colors hover:text-white focus-ring"><!-- slot:company.email -->kokeholdings@gmail.com<!-- /slot:company.email --></a></li>
+            <li class="leading-relaxed"><!-- slot:company.address -->839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660<!-- /slot:company.address --></li>
           </ul>
         </div>
       </div>
-      <div class="border-t border-gray-700 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-xs text-gray-400"><!-- slot:site.footer.copyright -->© 2026 Koke Holdings (Pty) Ltd. Reg: 2017/231296/07. All rights reserved.<!-- /slot:site.footer.copyright --></p>
-        <p class="text-xs text-gray-400"><!-- slot:site.footer.registered -->Registered in South Africa<!-- /slot:site.footer.registered --></p>
+
+      <div class="mt-20 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
+        <p><!-- slot:site.footer.copyright -->© 2026 Koke Holdings (Pty) Ltd. Reg: 2017/231296/07. All rights reserved.<!-- /slot:site.footer.copyright --></p>
+        <p class="flex gap-6">
+          <a href="privacy.html" class="transition-colors hover:text-white focus-ring"><!-- slot:site.nav.privacy -->Privacy<!-- /slot:site.nav.privacy --></a>
+          <span><!-- slot:site.footer.registered -->Registered in South Africa<!-- /slot:site.footer.registered --></span>
+        </p>
       </div>
     </div>
   </footer>
+<!-- /include:footer -->
 
   <script src="js/main.js"></script>
 </body>

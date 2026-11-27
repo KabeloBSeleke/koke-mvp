@@ -1,0 +1,51 @@
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header id="site-header" class="sticky top-0 z-50 border-b border-transparent bg-paper/85 backdrop-blur-md transition-colors duration-300">
+    <div class="container-page flex h-[4.5rem] items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center gap-3 focus-ring" aria-label="Koke Holdings, home">
+        <span class="logo-mark" aria-hidden="true">KH</span>
+        <span class="whitespace-nowrap font-display text-lg tracking-tight text-ink sm:text-[1.3rem]"><!-- slot:company.shortName --><!-- /slot:company.shortName --></span>
+      </a>
+
+      <nav aria-label="Primary" class="hidden lg:block">
+        <ul class="flex items-center gap-8 text-sm">
+          <li><a href="index.html" data-nav="index" class="nav-link focus-ring"><!-- slot:site.nav.home --><!-- /slot:site.nav.home --></a></li>
+          <li><a href="about.html" data-nav="about" class="nav-link focus-ring"><!-- slot:site.nav.about --><!-- /slot:site.nav.about --></a></li>
+          <li><a href="services.html" data-nav="services" class="nav-link focus-ring"><!-- slot:site.nav.services --><!-- /slot:site.nav.services --></a></li>
+          <li><a href="sectors.html" data-nav="sectors" class="nav-link focus-ring"><!-- slot:site.nav.sectors --><!-- /slot:site.nav.sectors --></a></li>
+          <li><a href="how-we-work.html" data-nav="how-we-work" class="nav-link focus-ring"><!-- slot:site.nav.howWeWork --><!-- /slot:site.nav.howWeWork --></a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode" class="relative inline-flex h-8 w-[3.75rem] shrink-0 items-center justify-between rounded-full border border-rule bg-paper-alt px-2 transition-colors hover:border-ink/40 focus-ring">
+          <span class="absolute left-1 top-1 h-6 w-6 rounded-full bg-primary shadow transition-transform duration-300 motion-reduce:transition-none dark:translate-x-[1.625rem]" aria-hidden="true"></span>
+          <svg class="relative h-4 w-4 text-secondary transition-colors dark:text-muted" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+          <svg class="relative h-4 w-4 text-muted transition-colors dark:text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <a href="contact.html" data-nav="contact" class="btn-ink hidden md:inline-flex focus-ring"><!-- slot:site.cta.partner --><!-- /slot:site.cta.partner --> <span class="arrow" aria-hidden="true">→</span></a>
+        <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="grid h-10 w-10 place-items-center rounded-full border border-rule text-ink lg:hidden focus-ring">
+          <svg id="hamburger-icon" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 8h16M4 16h16"/></svg>
+          <svg id="close-icon" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 18 18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-rule bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-page flex h-full flex-col justify-between py-8">
+        <ul class="space-y-1">
+          <li><a href="index.html" data-nav="index" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.home --><!-- /slot:site.nav.home --></a></li>
+          <li><a href="about.html" data-nav="about" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.about --><!-- /slot:site.nav.about --></a></li>
+          <li><a href="services.html" data-nav="services" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.services --><!-- /slot:site.nav.services --></a></li>
+          <li><a href="sectors.html" data-nav="sectors" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.sectors --><!-- /slot:site.nav.sectors --></a></li>
+          <li><a href="how-we-work.html" data-nav="how-we-work" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.howWeWork --><!-- /slot:site.nav.howWeWork --></a></li>
+          <li><a href="contact.html" data-nav="contact" class="block py-2 font-display text-4xl text-ink aria-[current=page]:text-orange-ink focus-ring"><!-- slot:site.nav.contact --><!-- /slot:site.nav.contact --></a></li>
+        </ul>
+        <div class="mt-10 space-y-1 border-t border-rule pt-6 text-sm">
+          <a href="tel:+27810400918" class="block text-ink focus-ring"><!-- slot:company.phone --><!-- /slot:company.phone --></a>
+          <a href="mailto:kokeholdings@gmail.com" class="block text-ink focus-ring"><!-- slot:company.email --><!-- /slot:company.email --></a>
+        </div>
+      </nav>
+    </div>
+  </header>
