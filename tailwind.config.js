@@ -19,17 +19,10 @@ module.exports = {
         muted: v('muted'),
         rule: v('rule'),
         'orange-ink': v('orange-ink'),
-        // Legacy tokens still used by pages awaiting the revamp
-        surface: '#F5F5F5',
-        border: '#E0E0E0',
-        'text-primary': '#1A1A1A',
-        'text-inverse': '#FFFFFF',
       },
       fontFamily: {
         display: ['Fraunces', 'Georgia', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
       },
       maxWidth: {
         page: '72rem',

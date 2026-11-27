@@ -17,7 +17,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="stylesheet" href="/css/site.css">
@@ -97,13 +97,18 @@
   </header>
 <!-- /include:header -->
 
-  <main id="main-content" class="min-h-[70vh] flex items-center justify-center pt-32 pb-20">
-    <div class="max-w-xl mx-auto px-4 text-center">
-      <p class="display text-7xl md:text-8xl text-primary mb-4">404</p>
-      <h1 class="display text-2xl md:text-3xl text-secondary dark:text-white mb-4"><!-- slot:pages.notFound.title -->Page Not Found<!-- /slot:pages.notFound.title --></h1>
-      <p class="text-gray-600 dark:text-gray-400 mb-8"><!-- slot:pages.notFound.text -->The page you are looking for does not exist or has moved.<!-- /slot:pages.notFound.text --></p>
-      <a href="/index.html" class="inline-flex items-center bg-primary hover:bg-accent text-white font-semibold px-6 py-3 rounded-md transition-colors focus-ring"><!-- slot:pages.notFound.button -->Back to home<!-- /slot:pages.notFound.button --></a>
-    </div>
+  <main id="main-content">
+    <section class="flex min-h-[60vh] items-center py-24">
+      <div class="container-page">
+        <p class="label"><!-- slot:pages.notFound.label -->Error 404<!-- /slot:pages.notFound.label --></p>
+        <h1 class="h-hero mt-8"><!-- slot:pages.notFound.title -->Page not <em>found</em><!-- /slot:pages.notFound.title --></h1>
+        <p class="lede mt-6 max-w-xl"><!-- slot:pages.notFound.text -->The page you are looking for does not exist or has moved.<!-- /slot:pages.notFound.text --></p>
+        <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <a href="/index.html" class="btn-primary focus-ring"><!-- slot:pages.notFound.button -->Back to home<!-- /slot:pages.notFound.button --> <span class="arrow" aria-hidden="true">→</span></a>
+          <a href="/contact.html" class="link-arrow focus-ring"><!-- slot:pages.notFound.contactLink -->Contact us<!-- /slot:pages.notFound.contactLink --> <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- include:footer -->

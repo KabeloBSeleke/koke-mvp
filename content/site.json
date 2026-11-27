@@ -122,27 +122,9 @@
           "status": "derived"
         }
       },
-      "trainingRoom": {
-        "alt": {
-          "value": "Empty training room with desks, chairs and a large display screen",
-          "status": "derived"
-        }
-      },
       "committeeMeeting": {
         "alt": {
           "value": "Team members in a meeting around a conference table with laptops",
-          "status": "derived"
-        }
-      },
-      "limestoneStockpile": {
-        "alt": {
-          "value": "White limestone stockpile rising above green fields under a blue sky",
-          "status": "derived"
-        }
-      },
-      "haulTruck": {
-        "alt": {
-          "value": "Yellow haul truck parked against a rock face in an open-pit mine",
           "status": "derived"
         }
       },
@@ -157,6 +139,68 @@
           "value": "Sunrise over an open-pit mine, with haul roads winding through the pit",
           "status": "derived"
         }
+      },
+      "grasslandHills": {
+        "alt": {
+          "value": "Grassland and flat-topped hills under a clear blue sky",
+          "status": "derived"
+        }
+      },
+      "peopleInOffice": {
+        "alt": {
+          "value": "Four colleagues in conversation in a bright office",
+          "status": "derived"
+        }
+      },
+      "lectureHall": {
+        "alt": {
+          "value": "Rows of empty seats in a lecture hall",
+          "status": "derived"
+        }
+      },
+      "suburbGrid": {
+        "alt": {
+          "value": "Aerial view of a dense town street grid",
+          "status": "derived"
+        }
+      },
+      "blueprint": {
+        "alt": {
+          "value": "Drafting compass resting on an architectural floor plan",
+          "status": "derived"
+        }
+      },
+      "desk": {
+        "alt": {
+          "value": "Office desk with a computer and a tall stack of printed documents",
+          "status": "derived"
+        }
+      },
+      "openRoad": {
+        "alt": {
+          "value": "Open road running through green hills under a cloudy sky",
+          "status": "derived"
+        }
+      }
+    },
+    "closing": {
+      "label": {
+        "value": "Contact",
+        "status": "derived"
+      },
+      "title": {
+        "value": "Let’s plan your <em>programme</em>.",
+        "status": "derived",
+        "needsReview": true
+      },
+      "text": {
+        "value": "Talk to us about your next skills development or public-sector programme.",
+        "status": "derived",
+        "needsReview": true
+      },
+      "button": {
+        "value": "Contact us",
+        "status": "derived"
       }
     }
   },
@@ -533,7 +577,7 @@
           "status": "derived"
         },
         "title": {
-          "value": "Capabilities that deliver programmes",
+          "value": "Capabilities that <em>deliver</em> programmes",
           "status": "derived",
           "needsReview": true
         },
@@ -543,7 +587,7 @@
           "needsReview": true
         },
         "cta1": {
-          "value": "Partner With Us",
+          "value": "Partner with us",
           "status": "derived",
           "needsReview": true
         },
@@ -622,23 +666,6 @@
           "status": "derived"
         }
       },
-      "cta": {
-        "title": {
-          "value": "Let's plan your programme",
-          "status": "derived",
-          "needsReview": true
-        },
-        "text": {
-          "value": "Talk to us about your next skills development or public-sector programme.",
-          "status": "derived",
-          "needsReview": true
-        },
-        "button": {
-          "value": "Partner With Us",
-          "status": "derived",
-          "needsReview": true
-        }
-      },
       "mining": {
         "title": {
           "value": "Skills development for mining and industry",
@@ -685,6 +712,11 @@
         "link": {
           "value": "Mining sector detail",
           "status": "derived"
+        },
+        "label": {
+          "value": "Target sector",
+          "status": "derived",
+          "needsReview": true
         }
       }
     },
@@ -706,7 +738,7 @@
           "status": "derived"
         },
         "title": {
-          "value": "How we work",
+          "value": "How we <em>work</em>",
           "status": "derived"
         },
         "intro": {
@@ -805,6 +837,10 @@
           "value": "Ongoing monitoring and evaluation with site inspections and learner feedback.",
           "status": "derived"
         }
+      },
+      "phasesLabel": {
+        "value": "Six phases",
+        "status": "derived"
       }
     },
     "about": {
@@ -825,7 +861,7 @@
           "status": "derived"
         },
         "title": {
-          "value": "Who we are",
+          "value": "Who we <em>are</em>",
           "status": "derived",
           "needsReview": true
         },
@@ -865,6 +901,18 @@
           "value": "Accountability to our clients, compliance with public finance and quality standards, transparent reporting, and building capacity that lasts beyond the project.",
           "status": "derived",
           "needsReview": true
+        },
+        "missionLabel": {
+          "value": "Mission",
+          "status": "derived"
+        },
+        "visionLabel": {
+          "value": "Vision",
+          "status": "derived"
+        },
+        "valuesLabel": {
+          "value": "Values",
+          "status": "derived"
         }
       },
       "differentiators": {
@@ -889,6 +937,15 @@
         },
         "districts": {
           "value": "Dr Ruth Segomotsi Mompati, Dr Kenneth Kaunda, Ngaka Modiri Molema, Bojanala",
+          "status": "derived"
+        },
+        "districtsLabel": {
+          "value": "Districts",
+          "status": "derived",
+          "needsReview": true
+        },
+        "hqLabel": {
+          "value": "Head office",
           "status": "derived"
         }
       },
@@ -940,7 +997,7 @@
           "status": "derived"
         },
         "title": {
-          "value": "Talk to us",
+          "value": "Talk to <em>us</em>",
           "status": "derived",
           "needsReview": true
         },
@@ -966,6 +1023,10 @@
         "addressValue": {
           "value": "839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660",
           "status": "confirmed"
+        },
+        "title": {
+          "value": "Reach us",
+          "status": "derived"
         }
       },
       "form": {
@@ -1018,6 +1079,10 @@
         "privacyLink": {
           "value": "Privacy notice",
           "status": "derived"
+        },
+        "title": {
+          "value": "Send an enquiry",
+          "status": "derived"
         }
       }
     },
@@ -1054,11 +1119,19 @@
         "value": "Our Information Officer can be contacted at kokeholdings@gmail.com or +27 81 040 0918.",
         "status": "derived",
         "needsReview": true
+      },
+      "label": {
+        "value": "Legal",
+        "status": "derived"
+      },
+      "collectTitle": {
+        "value": "Information we collect",
+        "status": "derived"
       }
     },
     "notFound": {
       "title": {
-        "value": "Page Not Found",
+        "value": "Page not <em>found</em>",
         "status": "derived"
       },
       "text": {
@@ -1067,6 +1140,14 @@
       },
       "button": {
         "value": "Back to home",
+        "status": "derived"
+      },
+      "label": {
+        "value": "Error 404",
+        "status": "derived"
+      },
+      "contactLink": {
+        "value": "Contact us",
         "status": "derived"
       }
     },
@@ -1089,7 +1170,7 @@
           "status": "derived"
         },
         "title": {
-          "value": "Sectors we serve",
+          "value": "Sectors we <em>serve</em>",
           "status": "derived",
           "needsReview": true
         },

@@ -27,7 +27,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="css/site.css">
@@ -110,47 +110,110 @@
   <main id="main-content">
 
     <!-- ===== PAGE HERO ===== -->
-    <section class="bg-secondary text-white pt-28 pb-14 md:pt-36 md:pb-20 relative overflow-hidden grain-overlay">
-      <img src="assets/img/graduation-ceremony-1600.webp" srcset="assets/img/graduation-ceremony-800.webp 800w, assets/img/graduation-ceremony-1600.webp 1600w" sizes="100vw" alt="" width="1600" height="1067" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true">
-      <div class="absolute inset-0 bg-secondary/85" aria-hidden="true"></div>
-      <div class="absolute inset-0 grid-bg opacity-10" aria-hidden="true"></div>
-      <div class="relative max-w-6xl mx-auto px-4 md:px-8">
-        <span class="eyebrow"><!-- slot:pages.howWeWork.hero.badge -->Method<!-- /slot:pages.howWeWork.hero.badge --></span>
-        <h1 class="display text-3xl md:text-5xl text-white mt-4 mb-6"><!-- slot:pages.howWeWork.hero.title -->How we work<!-- /slot:pages.howWeWork.hero.title --></h1>
-        <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl"><!-- slot:pages.howWeWork.hero.intro -->Six phases that take a programme from scope to documented close-out — with quality and compliance built in at every step.<!-- /slot:pages.howWeWork.hero.intro --></p>
+    <section class="pb-16 pt-12 md:pb-20 md:pt-20">
+      <div class="container-page">
+        <p data-reveal class="reveal label"><!-- slot:pages.howWeWork.hero.badge -->Method<!-- /slot:pages.howWeWork.hero.badge --></p>
+        <div class="mt-8 grid gap-8 lg:grid-cols-12 lg:items-end">
+          <h1 data-reveal data-delay="1" class="reveal h-hero lg:col-span-7"><!-- slot:pages.howWeWork.hero.title -->How we <em>work</em><!-- /slot:pages.howWeWork.hero.title --></h1>
+          <div data-reveal data-delay="2" class="reveal lg:col-span-5 lg:pb-3">
+            <p class="lede"><!-- slot:pages.howWeWork.hero.intro -->Six phases that take a programme from scope to documented close-out — with quality and compliance built in at every step.<!-- /slot:pages.howWeWork.hero.intro --></p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="bg-white dark:bg-[#111318] py-16 md:py-24">
-      <div class="max-w-6xl mx-auto px-4 md:px-8">
-        <ol class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <li data-reveal class="reveal bento-card p-6"><span class="mono-badge mb-3 inline-block">01</span><h2 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.howWeWork.phase1.name -->Define<!-- /slot:pages.howWeWork.phase1.name --></h2><p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.howWeWork.phase1.desc -->Confirm scope and targets: what will be delivered, where and by when.<!-- /slot:pages.howWeWork.phase1.desc --></p></li>
-          <li data-reveal class="reveal bento-card p-6"><span class="mono-badge mb-3 inline-block">02</span><h2 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.howWeWork.phase2.name -->Mobilise<!-- /slot:pages.howWeWork.phase2.name --></h2><p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.howWeWork.phase2.desc -->Set up the management unit, roles, governance and reporting lines.<!-- /slot:pages.howWeWork.phase2.desc --></p></li>
-          <li data-reveal class="reveal bento-card p-6"><span class="mono-badge mb-3 inline-block">03</span><h2 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.howWeWork.phase3.name -->Procure and contract<!-- /slot:pages.howWeWork.phase3.name --></h2><p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.howWeWork.phase3.desc -->Appoint service providers in line with public finance rules and sign agreements.<!-- /slot:pages.howWeWork.phase3.desc --></p></li>
-          <li data-reveal class="reveal bento-card p-6"><span class="mono-badge mb-3 inline-block">04</span><h2 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.howWeWork.phase4.name -->Implement<!-- /slot:pages.howWeWork.phase4.name --></h2><p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.howWeWork.phase4.desc -->Coordinate design, delivery and quality checks across all sites.<!-- /slot:pages.howWeWork.phase4.desc --></p></li>
-          <li data-reveal class="reveal bento-card p-6"><span class="mono-badge mb-3 inline-block">05</span><h2 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.howWeWork.phase5.name -->Build capacity<!-- /slot:pages.howWeWork.phase5.name --></h2><p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.howWeWork.phase5.desc -->Train client staff and local partners so the work continues after the project.<!-- /slot:pages.howWeWork.phase5.desc --></p></li>
-          <li data-reveal class="reveal bento-card p-6"><span class="mono-badge mb-3 inline-block">06</span><h2 class="text-lg font-semibold text-secondary dark:text-white mb-2"><!-- slot:pages.howWeWork.phase6.name -->Monitor and evaluate<!-- /slot:pages.howWeWork.phase6.name --></h2><p class="text-gray-600 dark:text-gray-300 text-sm"><!-- slot:pages.howWeWork.phase6.desc -->Track progress continuously, report regularly and close out with a documented evaluation.<!-- /slot:pages.howWeWork.phase6.desc --></p></li>
+    <div data-reveal class="reveal container-page">
+      <div class="photo aspect-[16/10] sm:aspect-[2/1] lg:aspect-[21/8]">
+        <img src="assets/img/drafting-blueprint-1600.webp" srcset="assets/img/drafting-blueprint-800.webp 800w, assets/img/drafting-blueprint-1600.webp 1600w" sizes="(min-width: 72rem) 72rem, 100vw" alt="<!-- slot:site.images.blueprint.alt -->Drafting compass resting on an architectural floor plan<!-- /slot:site.images.blueprint.alt -->" width="1600" height="1067" fetchpriority="high" decoding="async">
+      </div>
+    </div>
+
+    <!-- ===== PHASES ===== -->
+    <section class="py-24 md:py-32">
+      <div class="container-page">
+        <p data-reveal class="reveal label"><!-- slot:pages.howWeWork.phasesLabel -->Six phases<!-- /slot:pages.howWeWork.phasesLabel --></p>
+        <ol class="mt-10 border-b border-rule">
+          <li data-reveal class="reveal relative grid gap-x-10 gap-y-3 border-t border-rule py-10 pl-10 md:grid-cols-12 md:py-14 md:pl-0">
+            <span class="absolute left-0 top-[3.1rem] h-[9px] w-[9px] rounded-full bg-primary md:hidden" aria-hidden="true"></span>
+            <span class="font-display text-5xl font-light leading-none text-orange-ink md:col-span-2 md:text-7xl">01</span>
+            <h2 class="h-card md:col-span-4 md:pt-2 md:text-4xl"><!-- slot:pages.howWeWork.phase1.name -->Define<!-- /slot:pages.howWeWork.phase1.name --></h2>
+            <p class="lede md:col-span-6 md:pt-3"><!-- slot:pages.howWeWork.phase1.desc -->Confirm scope and targets: what will be delivered, where and by when.<!-- /slot:pages.howWeWork.phase1.desc --></p>
+          </li>
+          <li data-reveal class="reveal relative grid gap-x-10 gap-y-3 border-t border-rule py-10 pl-10 md:grid-cols-12 md:py-14 md:pl-0">
+            <span class="absolute left-0 top-[3.1rem] h-[9px] w-[9px] rounded-full bg-primary md:hidden" aria-hidden="true"></span>
+            <span class="font-display text-5xl font-light leading-none text-orange-ink md:col-span-2 md:text-7xl">02</span>
+            <h2 class="h-card md:col-span-4 md:pt-2 md:text-4xl"><!-- slot:pages.howWeWork.phase2.name -->Mobilise<!-- /slot:pages.howWeWork.phase2.name --></h2>
+            <p class="lede md:col-span-6 md:pt-3"><!-- slot:pages.howWeWork.phase2.desc -->Set up the management unit, roles, governance and reporting lines.<!-- /slot:pages.howWeWork.phase2.desc --></p>
+          </li>
+          <li data-reveal class="reveal relative grid gap-x-10 gap-y-3 border-t border-rule py-10 pl-10 md:grid-cols-12 md:py-14 md:pl-0">
+            <span class="absolute left-0 top-[3.1rem] h-[9px] w-[9px] rounded-full bg-primary md:hidden" aria-hidden="true"></span>
+            <span class="font-display text-5xl font-light leading-none text-orange-ink md:col-span-2 md:text-7xl">03</span>
+            <h2 class="h-card md:col-span-4 md:pt-2 md:text-4xl"><!-- slot:pages.howWeWork.phase3.name -->Procure and contract<!-- /slot:pages.howWeWork.phase3.name --></h2>
+            <p class="lede md:col-span-6 md:pt-3"><!-- slot:pages.howWeWork.phase3.desc -->Appoint service providers in line with public finance rules and sign agreements.<!-- /slot:pages.howWeWork.phase3.desc --></p>
+          </li>
+          <li data-reveal class="reveal relative grid gap-x-10 gap-y-3 border-t border-rule py-10 pl-10 md:grid-cols-12 md:py-14 md:pl-0">
+            <span class="absolute left-0 top-[3.1rem] h-[9px] w-[9px] rounded-full bg-primary md:hidden" aria-hidden="true"></span>
+            <span class="font-display text-5xl font-light leading-none text-orange-ink md:col-span-2 md:text-7xl">04</span>
+            <h2 class="h-card md:col-span-4 md:pt-2 md:text-4xl"><!-- slot:pages.howWeWork.phase4.name -->Implement<!-- /slot:pages.howWeWork.phase4.name --></h2>
+            <p class="lede md:col-span-6 md:pt-3"><!-- slot:pages.howWeWork.phase4.desc -->Coordinate design, delivery and quality checks across all sites.<!-- /slot:pages.howWeWork.phase4.desc --></p>
+          </li>
+          <li data-reveal class="reveal relative grid gap-x-10 gap-y-3 border-t border-rule py-10 pl-10 md:grid-cols-12 md:py-14 md:pl-0">
+            <span class="absolute left-0 top-[3.1rem] h-[9px] w-[9px] rounded-full bg-primary md:hidden" aria-hidden="true"></span>
+            <span class="font-display text-5xl font-light leading-none text-orange-ink md:col-span-2 md:text-7xl">05</span>
+            <h2 class="h-card md:col-span-4 md:pt-2 md:text-4xl"><!-- slot:pages.howWeWork.phase5.name -->Build capacity<!-- /slot:pages.howWeWork.phase5.name --></h2>
+            <p class="lede md:col-span-6 md:pt-3"><!-- slot:pages.howWeWork.phase5.desc -->Train client staff and local partners so the work continues after the project.<!-- /slot:pages.howWeWork.phase5.desc --></p>
+          </li>
+          <li data-reveal class="reveal relative grid gap-x-10 gap-y-3 border-t border-rule py-10 pl-10 md:grid-cols-12 md:py-14 md:pl-0">
+            <span class="absolute left-0 top-[3.1rem] h-[9px] w-[9px] rounded-full bg-primary md:hidden" aria-hidden="true"></span>
+            <span class="font-display text-5xl font-light leading-none text-orange-ink md:col-span-2 md:text-7xl">06</span>
+            <h2 class="h-card md:col-span-4 md:pt-2 md:text-4xl"><!-- slot:pages.howWeWork.phase6.name -->Monitor and evaluate<!-- /slot:pages.howWeWork.phase6.name --></h2>
+            <p class="lede md:col-span-6 md:pt-3"><!-- slot:pages.howWeWork.phase6.desc -->Track progress continuously, report regularly and close out with a documented evaluation.<!-- /slot:pages.howWeWork.phase6.desc --></p>
+          </li>
         </ol>
       </div>
     </section>
 
-    <section class="bg-surface dark:bg-[#111318] py-16 md:py-24">
-      <div class="max-w-6xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-10 items-start">
-        <div>
-          <h2 data-reveal class="reveal display text-2xl md:text-3xl text-secondary dark:text-white mb-2"><!-- slot:pages.howWeWork.quality.title -->Quality and compliance<!-- /slot:pages.howWeWork.quality.title --></h2>
-          <p class="text-gray-600 dark:text-gray-300 mb-8"><!-- slot:pages.howWeWork.quality.intro -->Applied across every project we run.<!-- /slot:pages.howWeWork.quality.intro --></p>
-          <ul class="space-y-3">
-            <li class="bento-card p-4 flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.howWeWork.quality.s1 -->Service providers appointed in line with public finance supply chain procedures.<!-- /slot:pages.howWeWork.quality.s1 --></span></li>
-            <li class="bento-card p-4 flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.howWeWork.quality.s2 -->Quality management system applied across projects.<!-- /slot:pages.howWeWork.quality.s2 --></span></li>
-            <li class="bento-card p-4 flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.howWeWork.quality.s3 -->Health and safety checks on training venues before learners start.<!-- /slot:pages.howWeWork.quality.s3 --></span></li>
-            <li class="bento-card p-4 flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.howWeWork.quality.s4 -->Learner records registered on SETA systems, with internal and external moderation and QCTO submission.<!-- /slot:pages.howWeWork.quality.s4 --></span></li>
-            <li class="bento-card p-4 flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.howWeWork.quality.s5 -->Ongoing monitoring and evaluation with site inspections and learner feedback.<!-- /slot:pages.howWeWork.quality.s5 --></span></li>
+    <!-- ===== QUALITY ===== -->
+    <section class="bg-paper-alt py-24 md:py-32">
+      <div class="container-page grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-6">
+          <h2 data-reveal class="reveal h-section"><!-- slot:pages.howWeWork.quality.title -->Quality and compliance<!-- /slot:pages.howWeWork.quality.title --></h2>
+          <p data-reveal data-delay="1" class="reveal mt-6 text-body"><!-- slot:pages.howWeWork.quality.intro -->Applied across every project we run.<!-- /slot:pages.howWeWork.quality.intro --></p>
+          <ul class="mt-10 border-b border-rule">
+            <li data-reveal class="reveal flex gap-4 border-t border-rule py-5"><svg class="mt-1 h-4 w-4 shrink-0 text-primary" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg><span class="text-ink"><!-- slot:pages.howWeWork.quality.s1 -->Service providers appointed in line with public finance supply chain procedures.<!-- /slot:pages.howWeWork.quality.s1 --></span></li>
+            <li data-reveal class="reveal flex gap-4 border-t border-rule py-5"><svg class="mt-1 h-4 w-4 shrink-0 text-primary" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg><span class="text-ink"><!-- slot:pages.howWeWork.quality.s2 -->Quality management system applied across projects.<!-- /slot:pages.howWeWork.quality.s2 --></span></li>
+            <li data-reveal class="reveal flex gap-4 border-t border-rule py-5"><svg class="mt-1 h-4 w-4 shrink-0 text-primary" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg><span class="text-ink"><!-- slot:pages.howWeWork.quality.s3 -->Health and safety checks on training venues before learners start.<!-- /slot:pages.howWeWork.quality.s3 --></span></li>
+            <li data-reveal class="reveal flex gap-4 border-t border-rule py-5"><svg class="mt-1 h-4 w-4 shrink-0 text-primary" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg><span class="text-ink"><!-- slot:pages.howWeWork.quality.s4 -->Learner records registered on SETA systems, with internal and external moderation and QCTO submission.<!-- /slot:pages.howWeWork.quality.s4 --></span></li>
+            <li data-reveal class="reveal flex gap-4 border-t border-rule py-5"><svg class="mt-1 h-4 w-4 shrink-0 text-primary" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg><span class="text-ink"><!-- slot:pages.howWeWork.quality.s5 -->Ongoing monitoring and evaluation with site inspections and learner feedback.<!-- /slot:pages.howWeWork.quality.s5 --></span></li>
           </ul>
         </div>
-        <img src="assets/img/mine-haul-truck-1600.webp" srcset="assets/img/mine-haul-truck-800.webp 800w, assets/img/mine-haul-truck-1600.webp 1600w" sizes="(min-width: 768px) 50vw, 100vw" alt="<!-- slot:site.images.haulTruck.alt -->Yellow haul truck parked against a rock face in an open-pit mine<!-- /slot:site.images.haulTruck.alt -->" width="1600" height="1071" loading="lazy" decoding="async" class="w-full h-64 md:h-full object-cover rounded-xl border border-neutral-200/80 dark:border-neutral-800">
+        <div data-reveal data-delay="1" class="reveal lg:sticky lg:top-28 lg:col-span-6">
+          <div class="photo aspect-[4/3] lg:aspect-[4/5]">
+            <img src="assets/img/desk-with-documents-1600.webp" srcset="assets/img/desk-with-documents-800.webp 800w, assets/img/desk-with-documents-1600.webp 1600w" sizes="(min-width: 1024px) 50vw, 100vw" alt="<!-- slot:site.images.desk.alt -->Office desk with a computer and a tall stack of printed documents<!-- /slot:site.images.desk.alt -->" width="1600" height="1066" loading="lazy" decoding="async">
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- include:closing -->
+    <section class="pb-28 pt-24 md:pb-40 md:pt-32">
+      <div class="container-page">
+        <div class="border-t border-ink/80 pt-16 md:pt-24">
+          <p data-reveal class="reveal label"><!-- slot:site.closing.label -->Contact<!-- /slot:site.closing.label --></p>
+          <div class="mt-8 grid gap-10 lg:grid-cols-12 lg:items-end">
+            <h2 data-reveal data-delay="1" class="reveal h-hero lg:col-span-8"><!-- slot:site.closing.title -->Let’s plan your <em>programme</em>.<!-- /slot:site.closing.title --></h2>
+            <div data-reveal data-delay="2" class="reveal lg:col-span-4">
+              <p class="text-body"><!-- slot:site.closing.text -->Talk to us about your next skills development or public-sector programme.<!-- /slot:site.closing.text --></p>
+              <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+                <a href="contact.html" class="btn-primary focus-ring"><!-- slot:site.closing.button -->Contact us<!-- /slot:site.closing.button --> <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="tel:+27810400918" class="text-sm font-semibold text-ink hover:text-orange-ink focus-ring"><!-- slot:company.phone -->+27 81 040 0918<!-- /slot:company.phone --></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- /include:closing -->
   </main>
 
   <!-- include:footer -->

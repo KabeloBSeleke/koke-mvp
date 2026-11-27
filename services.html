@@ -27,7 +27,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="css/site.css">
@@ -110,127 +110,116 @@
   <main id="main-content">
 
     <!-- ===== PAGE HERO ===== -->
-    <section class="bg-secondary text-white pt-28 pb-14 md:pt-36 md:pb-20 relative overflow-hidden grain-overlay">
-      <img src="assets/img/lecture-hall-1600.webp" srcset="assets/img/lecture-hall-800.webp 800w, assets/img/lecture-hall-1600.webp 1600w" sizes="100vw" alt="" width="1600" height="1067" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true">
-      <div class="absolute inset-0 bg-secondary/85" aria-hidden="true"></div>
-      <div class="absolute inset-0 grid-bg opacity-10" aria-hidden="true"></div>
-      <div class="relative max-w-6xl mx-auto px-4 md:px-8">
-        <span class="eyebrow"><!-- slot:pages.services.hero.badge -->Services<!-- /slot:pages.services.hero.badge --></span>
-        <h1 class="display text-3xl md:text-5xl text-white mt-4 mb-6"><!-- slot:pages.services.hero.title -->Capabilities that deliver programmes<!-- /slot:pages.services.hero.title --></h1>
-        <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl"><!-- slot:pages.services.hero.intro -->Seven service lines covering the full life of a publicly funded programme — from set-up and procurement to certification and close-out.<!-- /slot:pages.services.hero.intro --></p>
-      </div>
-    </section>
-
-    <section class="bg-white dark:bg-[#111318] py-14 md:py-20">
-      <div class="max-w-6xl mx-auto px-4 md:px-8 flex flex-wrap gap-4">
-        <a href="contact.html" class="inline-flex items-center bg-primary hover:bg-accent text-white font-semibold px-6 py-3 rounded-md transition-colors focus-ring"><!-- slot:pages.services.hero.cta1 -->Partner With Us<!-- /slot:pages.services.hero.cta1 --></a>
-        <a href="how-we-work.html" class="inline-flex items-center border border-gray-400 dark:border-gray-600 hover:border-primary text-secondary dark:text-white font-semibold px-6 py-3 rounded-md transition-colors focus-ring"><!-- slot:pages.services.hero.cta2 -->See how we work<!-- /slot:pages.services.hero.cta2 --></a>
-      </div>
-    </section>
-
-    <section class="bg-surface dark:bg-[#111318] py-16 md:py-24">
-      <div class="max-w-6xl mx-auto px-4 md:px-8 space-y-6">
-        <article data-reveal class="reveal bento-card p-6 md:p-8 grid md:grid-cols-12 gap-4 items-start">
-          <div class="md:col-span-2">
-            <span class="mono-badge">CAP-01</span>
-          </div>
-          <div class="md:col-span-10">
-            <h2 class="display text-xl md:text-2xl text-secondary dark:text-white mb-2"><!-- slot:pages.services.cap1.title -->Programme and project management<!-- /slot:pages.services.cap1.title --></h2>
-            <p class="text-gray-600 dark:text-gray-300 leading-relaxed"><!-- slot:pages.services.cap1.desc -->Project office set-up, governance structures, communications, and coordination from kick-off to closure.<!-- /slot:pages.services.cap1.desc --></p>
-          </div>
-        </article>
-        <article data-reveal class="reveal bento-card p-6 md:p-8 grid md:grid-cols-12 gap-4 items-start">
-          <div class="md:col-span-2">
-            <span class="mono-badge">CAP-02</span>
-          </div>
-          <div class="md:col-span-10 grid md:grid-cols-2 gap-4 items-start">
-            <div>
-              <h2 class="display text-xl md:text-2xl text-secondary dark:text-white mb-2"><!-- slot:pages.services.cap2.title -->Skills development programme management<!-- /slot:pages.services.cap2.title --></h2>
-              <p class="text-gray-600 dark:text-gray-300 leading-relaxed"><!-- slot:pages.services.cap2.desc -->End-to-end management of learnerships, internships and artisan pathways, from recruitment to certification.<!-- /slot:pages.services.cap2.desc --></p>
+    <section class="pb-16 pt-12 md:pb-20 md:pt-20">
+      <div class="container-page">
+        <p data-reveal class="reveal label"><!-- slot:pages.services.hero.badge -->Services<!-- /slot:pages.services.hero.badge --></p>
+        <div class="mt-8 grid gap-8 lg:grid-cols-12 lg:items-end">
+          <h1 data-reveal data-delay="1" class="reveal h-hero lg:col-span-7"><!-- slot:pages.services.hero.title -->Capabilities that <em>deliver</em> programmes<!-- /slot:pages.services.hero.title --></h1>
+          <div data-reveal data-delay="2" class="reveal lg:col-span-5 lg:pb-3">
+            <p class="lede"><!-- slot:pages.services.hero.intro -->Seven service lines covering the full life of a publicly funded programme — from set-up and procurement to certification and close-out.<!-- /slot:pages.services.hero.intro --></p>
+            <div class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <a href="contact.html" class="btn-primary focus-ring"><!-- slot:pages.services.hero.cta1 -->Partner with us<!-- /slot:pages.services.hero.cta1 --> <span class="arrow" aria-hidden="true">→</span></a>
+              <a href="how-we-work.html" class="link-arrow focus-ring"><!-- slot:pages.services.hero.cta2 -->See how we work<!-- /slot:pages.services.hero.cta2 --> <span class="arrow" aria-hidden="true">→</span></a>
             </div>
-            <img src="assets/img/training-room-1600.webp" srcset="assets/img/training-room-800.webp 800w, assets/img/training-room-1600.webp 1600w" sizes="(min-width: 768px) 50vw, 100vw" alt="<!-- slot:site.images.trainingRoom.alt -->Empty training room with desks, chairs and a large display screen<!-- /slot:site.images.trainingRoom.alt -->" width="1600" height="1066" loading="lazy" decoding="async" class="w-full h-40 md:h-44 object-cover rounded-xl border border-neutral-200/80 dark:border-neutral-800">
           </div>
-        </article>
-        <article data-reveal class="reveal bento-card p-6 md:p-8 grid md:grid-cols-12 gap-4 items-start">
-          <div class="md:col-span-2">
-            <span class="mono-badge">CAP-03</span>
+        </div>
+      </div>
+    </section>
+
+    <div data-reveal class="reveal container-page">
+      <div class="photo aspect-[16/10] sm:aspect-[2/1] lg:aspect-[21/8]">
+        <img src="assets/img/lecture-hall-1600.webp" srcset="assets/img/lecture-hall-800.webp 800w, assets/img/lecture-hall-1600.webp 1600w" sizes="(min-width: 72rem) 72rem, 100vw" alt="<!-- slot:site.images.lectureHall.alt -->Rows of empty seats in a lecture hall<!-- /slot:site.images.lectureHall.alt -->" width="1600" height="1067" fetchpriority="high" decoding="async">
+      </div>
+    </div>
+
+    <!-- ===== CAPABILITIES ===== -->
+    <section class="py-24 md:py-32">
+      <div class="container-page">
+        <ol class="border-b border-rule">
+          <li data-reveal class="reveal grid gap-x-8 gap-y-3 border-t border-rule py-10 md:grid-cols-12 md:py-12">
+            <span class="font-display text-2xl text-orange-ink md:col-span-1">01</span>
+            <h2 class="h-card md:col-span-5 md:text-[2rem]"><!-- slot:pages.services.cap1.title -->Programme and project management<!-- /slot:pages.services.cap1.title --></h2>
+            <p class="text-body md:col-span-6 md:pt-2 md:text-lg md:leading-relaxed"><!-- slot:pages.services.cap1.desc -->Project office set-up, governance structures, communications, and coordination from kick-off to closure.<!-- /slot:pages.services.cap1.desc --></p>
+          </li>
+          <li data-reveal class="reveal grid gap-x-8 gap-y-3 border-t border-rule py-10 md:grid-cols-12 md:py-12">
+            <span class="font-display text-2xl text-orange-ink md:col-span-1">02</span>
+            <h2 class="h-card md:col-span-5 md:text-[2rem]"><!-- slot:pages.services.cap2.title -->Skills development programme management<!-- /slot:pages.services.cap2.title --></h2>
+            <p class="text-body md:col-span-6 md:pt-2 md:text-lg md:leading-relaxed"><!-- slot:pages.services.cap2.desc -->End-to-end management of learnerships, internships and artisan pathways, from recruitment to certification.<!-- /slot:pages.services.cap2.desc --></p>
+          </li>
+          <li data-reveal class="reveal grid gap-x-8 gap-y-3 border-t border-rule py-10 md:grid-cols-12 md:py-12">
+            <span class="font-display text-2xl text-orange-ink md:col-span-1">03</span>
+            <h2 class="h-card md:col-span-5 md:text-[2rem]"><!-- slot:pages.services.cap3.title -->Procurement and contracting support<!-- /slot:pages.services.cap3.title --></h2>
+            <p class="text-body md:col-span-6 md:pt-2 md:text-lg md:leading-relaxed"><!-- slot:pages.services.cap3.desc -->Helping clients appoint accredited training providers and other service providers in line with public finance rules.<!-- /slot:pages.services.cap3.desc --></p>
+          </li>
+          <li data-reveal class="reveal grid gap-x-8 gap-y-3 border-t border-rule py-10 md:grid-cols-12 md:py-12">
+            <span class="font-display text-2xl text-orange-ink md:col-span-1">04</span>
+            <h2 class="h-card md:col-span-5 md:text-[2rem]"><!-- slot:pages.services.cap4.title -->Stakeholder engagement<!-- /slot:pages.services.cap4.title --></h2>
+            <p class="text-body md:col-span-6 md:pt-2 md:text-lg md:leading-relaxed"><!-- slot:pages.services.cap4.desc -->Identifying stakeholders, clarifying roles and coordinating host workplaces such as departments, municipalities and private sector partners.<!-- /slot:pages.services.cap4.desc --></p>
+          </li>
+          <li data-reveal class="reveal grid gap-x-8 gap-y-3 border-t border-rule py-10 md:grid-cols-12 md:py-12">
+            <span class="font-display text-2xl text-orange-ink md:col-span-1">05</span>
+            <h2 class="h-card md:col-span-5 md:text-[2rem]"><!-- slot:pages.services.cap5.title -->Quality management and compliance<!-- /slot:pages.services.cap5.title --></h2>
+            <p class="text-body md:col-span-6 md:pt-2 md:text-lg md:leading-relaxed"><!-- slot:pages.services.cap5.desc -->Quality management systems, training venue readiness, health and safety checks, SETA registration and QCTO evidence submission.<!-- /slot:pages.services.cap5.desc --></p>
+          </li>
+          <li data-reveal class="reveal grid gap-x-8 gap-y-3 border-t border-rule py-10 md:grid-cols-12 md:py-12">
+            <span class="font-display text-2xl text-orange-ink md:col-span-1">06</span>
+            <h2 class="h-card md:col-span-5 md:text-[2rem]"><!-- slot:pages.services.cap6.title -->Monitoring, evaluation and reporting<!-- /slot:pages.services.cap6.title --></h2>
+            <p class="text-body md:col-span-6 md:pt-2 md:text-lg md:leading-relaxed"><!-- slot:pages.services.cap6.desc -->Continuous monitoring, site inspections, learner feedback, and narrative and evaluation reporting for clients and funders.<!-- /slot:pages.services.cap6.desc --></p>
+          </li>
+          <li data-reveal class="reveal grid gap-x-8 gap-y-3 border-t border-rule py-10 md:grid-cols-12 md:py-12">
+            <span class="font-display text-2xl text-orange-ink md:col-span-1">07</span>
+            <h2 class="h-card md:col-span-5 md:text-[2rem]"><!-- slot:pages.services.cap7.title -->Capacity building and exit strategy<!-- /slot:pages.services.cap7.title --></h2>
+            <p class="text-body md:col-span-6 md:pt-2 md:text-lg md:leading-relaxed"><!-- slot:pages.services.cap7.desc -->Training client staff and local partners for continuity, capturing lessons learned and structured close-out.<!-- /slot:pages.services.cap7.desc --></p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== MINING ===== -->
+    <section class="bg-paper-alt py-24 md:py-32">
+      <div class="container-page grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-6">
+          <p data-reveal class="reveal label"><!-- slot:pages.services.mining.label -->Target sector<!-- /slot:pages.services.mining.label --></p>
+          <h2 data-reveal data-delay="1" class="reveal h-section mt-6"><!-- slot:pages.services.mining.title -->Skills development for mining and industry<!-- /slot:pages.services.mining.title --></h2>
+          <p data-reveal data-delay="2" class="reveal mt-6 text-body"><!-- slot:pages.services.mining.intro -->Koke Holdings is positioned to support mining right holders and industry clients with skills development programme management, building on our public-sector delivery approach.<!-- /slot:pages.services.mining.intro --></p>
+          <div class="mt-10">
+          <ul class="border-b border-rule">
+            <li data-reveal class="reveal flex items-baseline gap-4 border-t border-rule py-4"><span class="h-1.5 w-1.5 shrink-0 -translate-y-0.5 rounded-full bg-primary" aria-hidden="true"></span><span class="text-ink"><!-- slot:pages.services.mining.p1 -->Skills development programmes that support Social and Labour Plan (SLP) commitments<!-- /slot:pages.services.mining.p1 --></span></li>
+            <li data-reveal class="reveal flex items-baseline gap-4 border-t border-rule py-4"><span class="h-1.5 w-1.5 shrink-0 -translate-y-0.5 rounded-full bg-primary" aria-hidden="true"></span><span class="text-ink"><!-- slot:pages.services.mining.p2 -->Learnerships, internships and artisan pathways aligned to Mining Qualifications Authority (MQA) accredited training<!-- /slot:pages.services.mining.p2 --></span></li>
+            <li data-reveal class="reveal flex items-baseline gap-4 border-t border-rule py-4"><span class="h-1.5 w-1.5 shrink-0 -translate-y-0.5 rounded-full bg-primary" aria-hidden="true"></span><span class="text-ink"><!-- slot:pages.services.mining.p3 -->Community and portable-skills programmes in mining-affected districts<!-- /slot:pages.services.mining.p3 --></span></li>
+            <li data-reveal class="reveal flex items-baseline gap-4 border-t border-rule py-4"><span class="h-1.5 w-1.5 shrink-0 -translate-y-0.5 rounded-full bg-primary" aria-hidden="true"></span><span class="text-ink"><!-- slot:pages.services.mining.p4 -->Compliance, quality management, monitoring and reporting suitable for audit by mining right holders and the Department of Mineral and Petroleum Resources<!-- /slot:pages.services.mining.p4 --></span></li>
+            <li data-reveal class="reveal flex items-baseline gap-4 border-t border-rule py-4"><span class="h-1.5 w-1.5 shrink-0 -translate-y-0.5 rounded-full bg-primary" aria-hidden="true"></span><span class="text-ink"><!-- slot:pages.services.mining.p5 -->Stakeholder coordination between mines, municipalities, training providers and communities<!-- /slot:pages.services.mining.p5 --></span></li>
+          </ul>
           </div>
-          <div class="md:col-span-10">
-            <h2 class="display text-xl md:text-2xl text-secondary dark:text-white mb-2"><!-- slot:pages.services.cap3.title -->Procurement and contracting support<!-- /slot:pages.services.cap3.title --></h2>
-            <p class="text-gray-600 dark:text-gray-300 leading-relaxed"><!-- slot:pages.services.cap3.desc -->Helping clients appoint accredited training providers and other service providers in line with public finance rules.<!-- /slot:pages.services.cap3.desc --></p>
+          <a data-reveal href="sectors.html" class="reveal link-arrow mt-10 focus-ring"><!-- slot:pages.services.mining.link -->Mining sector detail<!-- /slot:pages.services.mining.link --> <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div data-reveal data-delay="1" class="reveal lg:sticky lg:top-28 lg:col-span-6">
+          <div class="photo aspect-[4/3] lg:aspect-[4/5]">
+            <img src="assets/img/mine-excavator-breaker-1600.webp" srcset="assets/img/mine-excavator-breaker-800.webp 800w, assets/img/mine-excavator-breaker-1600.webp 1600w" sizes="(min-width: 1024px) 50vw, 100vw" alt="<!-- slot:site.images.excavatorBreaker.alt -->Hydraulic excavator with rock breaker working on a quarry bench<!-- /slot:site.images.excavatorBreaker.alt -->" width="1600" height="1066" loading="lazy" decoding="async">
           </div>
-        </article>
-        <article data-reveal class="reveal bento-card p-6 md:p-8 grid md:grid-cols-12 gap-4 items-start">
-          <div class="md:col-span-2">
-            <span class="mono-badge">CAP-04</span>
-          </div>
-          <div class="md:col-span-10">
-            <h2 class="display text-xl md:text-2xl text-secondary dark:text-white mb-2"><!-- slot:pages.services.cap4.title -->Stakeholder engagement<!-- /slot:pages.services.cap4.title --></h2>
-            <p class="text-gray-600 dark:text-gray-300 leading-relaxed"><!-- slot:pages.services.cap4.desc -->Identifying stakeholders, clarifying roles and coordinating host workplaces such as departments, municipalities and private sector partners.<!-- /slot:pages.services.cap4.desc --></p>
-          </div>
-        </article>
-        <article data-reveal class="reveal bento-card p-6 md:p-8 grid md:grid-cols-12 gap-4 items-start">
-          <div class="md:col-span-2">
-            <span class="mono-badge">CAP-05</span>
-          </div>
-          <div class="md:col-span-10">
-            <h2 class="display text-xl md:text-2xl text-secondary dark:text-white mb-2"><!-- slot:pages.services.cap5.title -->Quality management and compliance<!-- /slot:pages.services.cap5.title --></h2>
-            <p class="text-gray-600 dark:text-gray-300 leading-relaxed"><!-- slot:pages.services.cap5.desc -->Quality management systems, training venue readiness, health and safety checks, SETA registration and QCTO evidence submission.<!-- /slot:pages.services.cap5.desc --></p>
-          </div>
-        </article>
-        <article data-reveal class="reveal bento-card p-6 md:p-8 grid md:grid-cols-12 gap-4 items-start">
-          <div class="md:col-span-2">
-            <span class="mono-badge">CAP-06</span>
-          </div>
-          <div class="md:col-span-10 grid md:grid-cols-2 gap-4 items-start">
-            <div>
-              <h2 class="display text-xl md:text-2xl text-secondary dark:text-white mb-2"><!-- slot:pages.services.cap6.title -->Monitoring, evaluation and reporting<!-- /slot:pages.services.cap6.title --></h2>
-              <p class="text-gray-600 dark:text-gray-300 leading-relaxed"><!-- slot:pages.services.cap6.desc -->Continuous monitoring, site inspections, learner feedback, and narrative and evaluation reporting for clients and funders.<!-- /slot:pages.services.cap6.desc --></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- include:closing -->
+    <section class="pb-28 pt-24 md:pb-40 md:pt-32">
+      <div class="container-page">
+        <div class="border-t border-ink/80 pt-16 md:pt-24">
+          <p data-reveal class="reveal label"><!-- slot:site.closing.label -->Contact<!-- /slot:site.closing.label --></p>
+          <div class="mt-8 grid gap-10 lg:grid-cols-12 lg:items-end">
+            <h2 data-reveal data-delay="1" class="reveal h-hero lg:col-span-8"><!-- slot:site.closing.title -->Let’s plan your <em>programme</em>.<!-- /slot:site.closing.title --></h2>
+            <div data-reveal data-delay="2" class="reveal lg:col-span-4">
+              <p class="text-body"><!-- slot:site.closing.text -->Talk to us about your next skills development or public-sector programme.<!-- /slot:site.closing.text --></p>
+              <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+                <a href="contact.html" class="btn-primary focus-ring"><!-- slot:site.closing.button -->Contact us<!-- /slot:site.closing.button --> <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="tel:+27810400918" class="text-sm font-semibold text-ink hover:text-orange-ink focus-ring"><!-- slot:company.phone -->+27 81 040 0918<!-- /slot:company.phone --></a>
+              </div>
             </div>
-            <img src="assets/img/mine-aerial-excavator-1600.webp" srcset="assets/img/mine-aerial-excavator-800.webp 800w, assets/img/mine-aerial-excavator-1600.webp 1600w" sizes="(min-width: 768px) 50vw, 100vw" alt="<!-- slot:site.images.aerialExcavator.alt -->Aerial view of an excavator working on a dark mineral stockpile<!-- /slot:site.images.aerialExcavator.alt -->" width="1600" height="949" loading="lazy" decoding="async" class="w-full h-40 md:h-44 object-cover rounded-xl border border-neutral-200/80 dark:border-neutral-800">
           </div>
-        </article>
-        <article data-reveal class="reveal bento-card p-6 md:p-8 grid md:grid-cols-12 gap-4 items-start">
-          <div class="md:col-span-2">
-            <span class="mono-badge">CAP-07</span>
-          </div>
-          <div class="md:col-span-10">
-            <h2 class="display text-xl md:text-2xl text-secondary dark:text-white mb-2"><!-- slot:pages.services.cap7.title -->Capacity building and exit strategy<!-- /slot:pages.services.cap7.title --></h2>
-            <p class="text-gray-600 dark:text-gray-300 leading-relaxed"><!-- slot:pages.services.cap7.desc -->Training client staff and local partners for continuity, capturing lessons learned and structured close-out.<!-- /slot:pages.services.cap7.desc --></p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="bg-white dark:bg-[#111318] py-16 md:py-24">
-      <div class="max-w-6xl mx-auto px-4 md:px-8 bento-card p-6 md:p-8 grid md:grid-cols-2 gap-8 items-start">
-        <div>
-          <span class="eyebrow">Target sector</span>
-          <h2 class="display text-2xl md:text-3xl text-secondary dark:text-white mt-2 mb-3"><!-- slot:pages.services.mining.title -->Skills development for mining and industry<!-- /slot:pages.services.mining.title --></h2>
-          <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl"><!-- slot:pages.services.mining.intro -->Koke Holdings is positioned to support mining right holders and industry clients with skills development programme management, building on our public-sector delivery approach.<!-- /slot:pages.services.mining.intro --></p>
-        <ul class="space-y-3 mb-6 max-w-3xl">
-          <li class="flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.services.mining.p1 -->Skills development programmes that support Social and Labour Plan (SLP) commitments<!-- /slot:pages.services.mining.p1 --></span></li>
-          <li class="flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.services.mining.p2 -->Learnerships, internships and artisan pathways aligned to Mining Qualifications Authority (MQA) accredited training<!-- /slot:pages.services.mining.p2 --></span></li>
-          <li class="flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.services.mining.p3 -->Community and portable-skills programmes in mining-affected districts<!-- /slot:pages.services.mining.p3 --></span></li>
-          <li class="flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.services.mining.p4 -->Compliance, quality management, monitoring and reporting suitable for audit by mining right holders and the Department of Mineral and Petroleum Resources<!-- /slot:pages.services.mining.p4 --></span></li>
-          <li class="flex gap-3"><span class="text-primary font-bold">✓</span><span class="text-sm text-gray-700 dark:text-gray-300"><!-- slot:pages.services.mining.p5 -->Stakeholder coordination between mines, municipalities, training providers and communities<!-- /slot:pages.services.mining.p5 --></span></li>
-        </ul>
-        <a href="sectors.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline focus-ring"><!-- slot:pages.services.mining.link -->Mining sector detail<!-- /slot:pages.services.mining.link --> <span aria-hidden="true">→</span></a>
         </div>
-        <img src="assets/img/mine-excavator-breaker-1600.webp" srcset="assets/img/mine-excavator-breaker-800.webp 800w, assets/img/mine-excavator-breaker-1600.webp 1600w" sizes="(min-width: 768px) 50vw, 100vw" alt="<!-- slot:site.images.excavatorBreaker.alt -->Hydraulic excavator with rock breaker working on a quarry bench<!-- /slot:site.images.excavatorBreaker.alt -->" width="1600" height="1066" loading="lazy" decoding="async" class="w-full h-64 md:h-full object-cover rounded-xl border border-neutral-200/80 dark:border-neutral-800">
       </div>
     </section>
-
-    <section class="bg-secondary text-white py-16 md:py-20">
-      <div class="max-w-6xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div>
-          <h2 class="display text-2xl md:text-3xl text-white mb-3"><!-- slot:pages.services.cta.title -->Let's plan your programme<!-- /slot:pages.services.cta.title --></h2>
-          <p class="text-gray-300 max-w-xl"><!-- slot:pages.services.cta.text -->Talk to us about your next skills development or public-sector programme.<!-- /slot:pages.services.cta.text --></p>
-        </div>
-        <a href="contact.html" class="inline-flex items-center bg-primary hover:bg-accent text-white font-semibold px-6 py-3 rounded-md transition-colors focus-ring shrink-0"><!-- slot:pages.services.cta.button -->Partner With Us<!-- /slot:pages.services.cta.button --></a>
-      </div>
-    </section>
-
+<!-- /include:closing -->
   </main>
 
   <!-- include:footer -->

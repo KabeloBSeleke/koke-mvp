@@ -27,7 +27,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="css/site.css">
@@ -110,69 +110,130 @@
   <main id="main-content">
 
     <!-- ===== PAGE HERO ===== -->
-    <section class="bg-secondary text-white pt-28 pb-14 md:pt-36 md:pb-20 relative overflow-hidden grain-overlay">
-      <img src="assets/img/grassland-hills-1600.webp" srcset="assets/img/grassland-hills-800.webp 800w, assets/img/grassland-hills-1600.webp 1600w" sizes="100vw" alt="" width="1600" height="1067" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true">
-      <div class="absolute inset-0 bg-secondary/85" aria-hidden="true"></div>
-      <div class="absolute inset-0 grid-bg opacity-10" aria-hidden="true"></div>
-      <div class="relative max-w-6xl mx-auto px-4 md:px-8">
-        <span class="eyebrow"><!-- slot:pages.about.hero.badge -->About<!-- /slot:pages.about.hero.badge --></span>
-        <h1 class="display text-3xl md:text-5xl text-white mt-4 mb-6"><!-- slot:pages.about.hero.title -->Who we are<!-- /slot:pages.about.hero.title --></h1>
-        <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl"><!-- slot:pages.about.hero.intro -->A project management company that acts as the management unit on publicly funded programmes, with a focus on skills development.<!-- /slot:pages.about.hero.intro --></p>
-      </div>
-    </section>
-
-    <section class="bg-white dark:bg-[#111318] py-16 md:py-24">
-      <div class="max-w-6xl mx-auto px-4 md:px-8 grid md:grid-cols-3 gap-10">
-        <div data-reveal class="reveal md:col-span-2">
-          <span class="eyebrow">Story</span>
-          <h2 class="display text-2xl md:text-3xl text-secondary dark:text-white mt-2 mb-4"><!-- slot:pages.about.story.title -->Our story<!-- /slot:pages.about.story.title --></h2>
-          <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6"><!-- slot:pages.about.story.text -->Koke Holdings (Pty) Ltd was registered in 2017 and is based in Boitumelong, Bloemhof, in the North West. We are a project management company that acts as the management unit on publicly funded programmes, with a focus on skills development: learnerships, internships and artisan pathways. Our role is to bring structure to complex programmes. We mobilise teams, coordinate service providers, uphold quality standards and report clearly on results, so our clients always know what is being delivered, where and by when.<!-- /slot:pages.about.story.text --></p>
-          <img src="assets/img/team-committee-meeting-1600.webp" srcset="assets/img/team-committee-meeting-800.webp 800w, assets/img/team-committee-meeting-1600.webp 1600w" sizes="(min-width: 768px) 66vw, 100vw" alt="<!-- slot:site.images.committeeMeeting.alt -->Team members in a meeting around a conference table with laptops<!-- /slot:site.images.committeeMeeting.alt -->" width="1600" height="1068" loading="lazy" decoding="async" class="w-full h-56 md:h-72 object-cover rounded-xl border border-neutral-200/80 dark:border-neutral-800">
-        </div>
-        <div data-reveal class="reveal bento-card p-6 h-fit">
-          <h2 class="display text-xl text-secondary dark:text-white mb-4"><!-- slot:pages.about.mvv.title -->Mission, vision and values<!-- /slot:pages.about.mvv.title --></h2>
-          <h3 class="font-heading font-semibold text-sm text-primary mb-1">Mission</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-300 mb-4"><!-- slot:pages.about.mvv.mission -->To plan, govern and deliver publicly funded programmes that create clear, measurable benefits for communities: on time, on budget and in line with South African laws and policies.<!-- /slot:pages.about.mvv.mission --></p>
-          <h3 class="font-heading font-semibold text-sm text-primary mb-1">Vision</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-300 mb-4"><!-- slot:pages.about.mvv.vision -->Programmes that leave lasting skills and capacity in the communities they serve.<!-- /slot:pages.about.mvv.vision --></p>
-          <h3 class="font-heading font-semibold text-sm text-primary mb-1">Values</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-300"><!-- slot:pages.about.mvv.values -->Accountability to our clients, compliance with public finance and quality standards, transparent reporting, and building capacity that lasts beyond the project.<!-- /slot:pages.about.mvv.values --></p>
+    <section class="pb-16 pt-12 md:pb-20 md:pt-20">
+      <div class="container-page">
+        <p data-reveal class="reveal label"><!-- slot:pages.about.hero.badge -->About<!-- /slot:pages.about.hero.badge --></p>
+        <div class="mt-8 grid gap-8 lg:grid-cols-12 lg:items-end">
+          <h1 data-reveal data-delay="1" class="reveal h-hero lg:col-span-7"><!-- slot:pages.about.hero.title -->Who we <em>are</em><!-- /slot:pages.about.hero.title --></h1>
+          <div data-reveal data-delay="2" class="reveal lg:col-span-5 lg:pb-3">
+            <p class="lede"><!-- slot:pages.about.hero.intro -->A project management company that acts as the management unit on publicly funded programmes, with a focus on skills development.<!-- /slot:pages.about.hero.intro --></p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-surface dark:bg-[#111318] py-16 md:py-24">
-      <div class="max-w-6xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-10">
-        <div data-reveal class="reveal">
-          <h2 class="display text-2xl md:text-3xl text-secondary dark:text-white mb-4"><!-- slot:pages.about.differentiators.title -->What makes us different<!-- /slot:pages.about.differentiators.title --></h2>
-          <p class="text-gray-600 dark:text-gray-300 leading-relaxed"><!-- slot:pages.about.differentiators.text -->We work as the management unit, not as one more service provider: a single point of coordination across clients, training providers and host workplaces. Compliance is built in from the start, from procurement in line with public finance rules to SETA registration and QCTO evidence. And we plan for close-out from day one, training client staff and local partners so the work continues after we leave.<!-- /slot:pages.about.differentiators.text --></p>
+    <div data-reveal class="reveal container-page">
+      <div class="photo aspect-[16/10] sm:aspect-[2/1] lg:aspect-[21/8]">
+        <img src="assets/img/grassland-hills-1600.webp" srcset="assets/img/grassland-hills-800.webp 800w, assets/img/grassland-hills-1600.webp 1600w" sizes="(min-width: 72rem) 72rem, 100vw" alt="<!-- slot:site.images.grasslandHills.alt -->Grassland and flat-topped hills under a clear blue sky<!-- /slot:site.images.grasslandHills.alt -->" width="1600" height="1067" fetchpriority="high" decoding="async">
+      </div>
+    </div>
+
+    <!-- ===== STORY ===== -->
+    <section class="py-24 md:py-32">
+      <div class="container-page grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-5">
+          <h2 data-reveal class="reveal h-section"><!-- slot:pages.about.story.title -->Our story<!-- /slot:pages.about.story.title --></h2>
+          <div data-reveal data-delay="1" class="reveal photo mt-10 hidden aspect-[4/5] lg:block">
+            <img src="assets/img/people-in-office-1600.webp" srcset="assets/img/people-in-office-800.webp 800w, assets/img/people-in-office-1600.webp 1600w" sizes="(min-width: 1024px) 35vw, 100vw" alt="<!-- slot:site.images.peopleInOffice.alt -->Four colleagues in conversation in a bright office<!-- /slot:site.images.peopleInOffice.alt -->" width="1600" height="1067" loading="lazy" decoding="async">
+          </div>
         </div>
-        <div data-reveal class="reveal bento-card p-6">
-          <img src="assets/img/limestone-stockpile-1600.webp" srcset="assets/img/limestone-stockpile-800.webp 800w, assets/img/limestone-stockpile-1600.webp 1600w" sizes="(min-width: 768px) 50vw, 100vw" alt="<!-- slot:site.images.limestoneStockpile.alt -->White limestone stockpile rising above green fields under a blue sky<!-- /slot:site.images.limestoneStockpile.alt -->" width="1600" height="1066" loading="lazy" decoding="async" class="w-full h-40 object-cover rounded-xl border border-neutral-200/80 dark:border-neutral-800 mb-5">
-          <h2 class="display text-2xl md:text-3xl text-secondary dark:text-white mb-4"><!-- slot:pages.about.operate.title -->Where we operate<!-- /slot:pages.about.operate.title --></h2>
-          <p class="text-gray-700 dark:text-gray-300 mb-3"><!-- slot:pages.about.operate.hq -->Headquartered in Boitumelong, Bloemhof, North West.<!-- /slot:pages.about.operate.hq --></p>
-          <p class="text-sm text-gray-600 dark:text-gray-400 mb-3"><span class="mono-badge mr-2">Districts</span><!-- slot:pages.about.operate.districts -->Dr Ruth Segomotsi Mompati, Dr Kenneth Kaunda, Ngaka Modiri Molema, Bojanala<!-- /slot:pages.about.operate.districts --></p>
+        <div class="lg:col-span-7 lg:pt-3">
+          <p data-reveal class="reveal font-display text-2xl leading-[1.4] text-ink md:text-[1.85rem]"><!-- slot:pages.about.story.text -->Koke Holdings (Pty) Ltd was registered in 2017 and is based in Boitumelong, Bloemhof, in the North West. We are a project management company that acts as the management unit on publicly funded programmes, with a focus on skills development: learnerships, internships and artisan pathways. Our role is to bring structure to complex programmes. We mobilise teams, coordinate service providers, uphold quality standards and report clearly on results, so our clients always know what is being delivered, where and by when.<!-- /slot:pages.about.story.text --></p>
+          <div data-reveal class="reveal photo mt-10 aspect-[4/3] lg:hidden">
+            <img src="assets/img/people-in-office-1600.webp" srcset="assets/img/people-in-office-800.webp 800w, assets/img/people-in-office-1600.webp 1600w" sizes="100vw" alt="<!-- slot:site.images.peopleInOffice.alt -->Four colleagues in conversation in a bright office<!-- /slot:site.images.peopleInOffice.alt -->" width="1600" height="1067" loading="lazy" decoding="async">
+          </div>
+          <div class="mt-16">
+            <p data-reveal class="reveal label"><!-- slot:pages.about.mvv.title -->Mission, vision and values<!-- /slot:pages.about.mvv.title --></p>
+            <dl class="mt-8 border-b border-rule">
+              <div data-reveal data-delay="0" class="reveal grid gap-2 border-t border-rule py-7 sm:grid-cols-[8rem_1fr] sm:gap-8">
+                <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-orange-ink sm:pt-1.5"><!-- slot:pages.about.mvv.missionLabel -->Mission<!-- /slot:pages.about.mvv.missionLabel --></dt>
+                <dd class="font-display text-xl leading-snug text-ink md:text-2xl"><!-- slot:pages.about.mvv.mission -->To plan, govern and deliver publicly funded programmes that create clear, measurable benefits for communities: on time, on budget and in line with South African laws and policies.<!-- /slot:pages.about.mvv.mission --></dd>
+              </div>
+              <div data-reveal data-delay="1" class="reveal grid gap-2 border-t border-rule py-7 sm:grid-cols-[8rem_1fr] sm:gap-8">
+                <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-orange-ink sm:pt-1.5"><!-- slot:pages.about.mvv.visionLabel -->Vision<!-- /slot:pages.about.mvv.visionLabel --></dt>
+                <dd class="font-display text-xl leading-snug text-ink md:text-2xl"><!-- slot:pages.about.mvv.vision -->Programmes that leave lasting skills and capacity in the communities they serve.<!-- /slot:pages.about.mvv.vision --></dd>
+              </div>
+              <div data-reveal data-delay="2" class="reveal grid gap-2 border-t border-rule py-7 sm:grid-cols-[8rem_1fr] sm:gap-8">
+                <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-orange-ink sm:pt-1.5"><!-- slot:pages.about.mvv.valuesLabel -->Values<!-- /slot:pages.about.mvv.valuesLabel --></dt>
+                <dd class="font-display text-xl leading-snug text-ink md:text-2xl"><!-- slot:pages.about.mvv.values -->Accountability to our clients, compliance with public finance and quality standards, transparent reporting, and building capacity that lasts beyond the project.<!-- /slot:pages.about.mvv.values --></dd>
+              </div>
+            </dl>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="company" class="bg-white dark:bg-[#111318] py-16 md:py-20">
-      <div class="max-w-6xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-4">
-        <div data-reveal class="reveal bento-card p-8">
-          <h2 class="display text-2xl text-secondary dark:text-white mb-4"><!-- slot:pages.about.company.title -->Company details<!-- /slot:pages.about.company.title --></h2>
-          <dl class="space-y-3 text-sm">
-            <div><dt class="text-gray-500 dark:text-gray-400"><!-- slot:pages.about.company.legalNameLabel -->Registered name<!-- /slot:pages.about.company.legalNameLabel --></dt><dd class="font-medium text-secondary dark:text-gray-200"><!-- slot:company.legalName -->Koke Holdings (Pty) Ltd<!-- /slot:company.legalName --></dd></div>
-            <div><dt class="text-gray-500 dark:text-gray-400"><!-- slot:pages.about.company.regNumberLabel -->Registration number<!-- /slot:pages.about.company.regNumberLabel --></dt><dd class="font-medium text-secondary dark:text-gray-200 font-mono"><!-- slot:company.regNumber -->2017/231296/07<!-- /slot:company.regNumber --></dd></div>
-            <div><dt class="text-gray-500 dark:text-gray-400"><!-- slot:pages.about.company.addressLabel -->Registered address<!-- /slot:pages.about.company.addressLabel --></dt><dd class="font-medium text-secondary dark:text-gray-200"><!-- slot:company.address -->839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660<!-- /slot:company.address --></dd></div>
+    <!-- ===== DIFFERENTIATORS ===== -->
+    <section class="bg-secondary py-24 text-white md:py-32">
+      <div class="container-page grid gap-10 lg:grid-cols-12 lg:gap-16">
+        <h2 data-reveal class="reveal font-display text-[2.125rem] leading-[1.06] tracking-tight md:text-5xl lg:col-span-5"><!-- slot:pages.about.differentiators.title -->What makes us different<!-- /slot:pages.about.differentiators.title --></h2>
+        <p data-reveal data-delay="1" class="reveal font-display text-xl leading-[1.5] text-white/85 md:text-2xl md:leading-[1.5] lg:col-span-7"><!-- slot:pages.about.differentiators.text -->We work as the management unit, not as one more service provider: a single point of coordination across clients, training providers and host workplaces. Compliance is built in from the start, from procurement in line with public finance rules to SETA registration and QCTO evidence. And we plan for close-out from day one, training client staff and local partners so the work continues after we leave.<!-- /slot:pages.about.differentiators.text --></p>
+      </div>
+    </section>
+
+    <!-- ===== OPERATE + STRUCTURE ===== -->
+    <section class="py-24 md:py-32">
+      <div class="container-page grid gap-16 lg:grid-cols-2 lg:gap-20">
+        <div>
+          <h2 data-reveal class="reveal h-section"><!-- slot:pages.about.operate.title -->Where we operate<!-- /slot:pages.about.operate.title --></h2>
+          <dl class="mt-10 border-b border-rule">
+            <div data-reveal class="reveal grid gap-2 border-t border-rule py-6 sm:grid-cols-[8rem_1fr] sm:gap-8">
+              <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-muted sm:pt-1"><!-- slot:pages.about.operate.hqLabel -->Head office<!-- /slot:pages.about.operate.hqLabel --></dt>
+              <dd class="text-ink"><!-- slot:pages.about.operate.hq -->Headquartered in Boitumelong, Bloemhof, North West.<!-- /slot:pages.about.operate.hq --></dd>
+            </div>
+            <div data-reveal class="reveal grid gap-2 border-t border-rule py-6 sm:grid-cols-[8rem_1fr] sm:gap-8">
+              <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-muted sm:pt-1"><!-- slot:pages.about.operate.districtsLabel -->Districts<!-- /slot:pages.about.operate.districtsLabel --></dt>
+              <dd class="text-ink"><!-- slot:pages.about.operate.districts -->Dr Ruth Segomotsi Mompati, Dr Kenneth Kaunda, Ngaka Modiri Molema, Bojanala<!-- /slot:pages.about.operate.districts --></dd>
+            </div>
           </dl>
         </div>
-        <div data-reveal class="reveal bento-card p-8">
-          <h2 class="display text-2xl text-secondary dark:text-white mb-3"><!-- slot:pages.about.structure.title -->How our delivery team is structured<!-- /slot:pages.about.structure.title --></h2>
-          <p class="text-gray-600 dark:text-gray-300"><!-- slot:pages.about.structure.text -->Delivery teams are formed around the programme, combining central programme management with district-level coordination.<!-- /slot:pages.about.structure.text --></p>
+        <div>
+          <h2 data-reveal class="reveal h-section"><!-- slot:pages.about.structure.title -->How our delivery team is structured<!-- /slot:pages.about.structure.title --></h2>
+          <p data-reveal data-delay="1" class="reveal lede mt-10"><!-- slot:pages.about.structure.text -->Delivery teams are formed around the programme, combining central programme management with district-level coordination.<!-- /slot:pages.about.structure.text --></p>
         </div>
       </div>
     </section>
 
+    <!-- ===== COMPANY DETAILS ===== -->
+    <section id="company" class="bg-paper-alt py-24 md:py-28">
+      <div class="container-page grid gap-10 lg:grid-cols-12 lg:gap-16">
+        <h2 data-reveal class="reveal h-section lg:col-span-5"><!-- slot:pages.about.company.title -->Company details<!-- /slot:pages.about.company.title --></h2>
+        <dl class="border-b border-rule lg:col-span-7">
+          <div data-reveal data-delay="0" class="reveal grid gap-1 border-t border-rule py-6 sm:grid-cols-[12rem_1fr] sm:items-baseline sm:gap-8">
+            <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-muted"><!-- slot:pages.about.company.legalNameLabel -->Registered name<!-- /slot:pages.about.company.legalNameLabel --></dt>
+            <dd class="font-display text-2xl text-ink"><!-- slot:company.legalName -->Koke Holdings (Pty) Ltd<!-- /slot:company.legalName --></dd>
+          </div>
+          <div data-reveal data-delay="1" class="reveal grid gap-1 border-t border-rule py-6 sm:grid-cols-[12rem_1fr] sm:items-baseline sm:gap-8">
+            <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-muted"><!-- slot:pages.about.company.regNumberLabel -->Registration number<!-- /slot:pages.about.company.regNumberLabel --></dt>
+            <dd class="font-display text-2xl tabular-nums text-ink"><!-- slot:company.regNumber -->2017/231296/07<!-- /slot:company.regNumber --></dd>
+          </div>
+          <div data-reveal data-delay="2" class="reveal grid gap-1 border-t border-rule py-6 sm:grid-cols-[12rem_1fr] sm:items-baseline sm:gap-8">
+            <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-muted"><!-- slot:pages.about.company.addressLabel -->Registered address<!-- /slot:pages.about.company.addressLabel --></dt>
+            <dd class="text-ink"><!-- slot:company.address -->839 Ntlole Street, Boitumelong, Bloemhof, North West, 2660<!-- /slot:company.address --></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- include:closing -->
+    <section class="pb-28 pt-24 md:pb-40 md:pt-32">
+      <div class="container-page">
+        <div class="border-t border-ink/80 pt-16 md:pt-24">
+          <p data-reveal class="reveal label"><!-- slot:site.closing.label -->Contact<!-- /slot:site.closing.label --></p>
+          <div class="mt-8 grid gap-10 lg:grid-cols-12 lg:items-end">
+            <h2 data-reveal data-delay="1" class="reveal h-hero lg:col-span-8"><!-- slot:site.closing.title -->Let’s plan your <em>programme</em>.<!-- /slot:site.closing.title --></h2>
+            <div data-reveal data-delay="2" class="reveal lg:col-span-4">
+              <p class="text-body"><!-- slot:site.closing.text -->Talk to us about your next skills development or public-sector programme.<!-- /slot:site.closing.text --></p>
+              <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+                <a href="contact.html" class="btn-primary focus-ring"><!-- slot:site.closing.button -->Contact us<!-- /slot:site.closing.button --> <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="tel:+27810400918" class="text-sm font-semibold text-ink hover:text-orange-ink focus-ring"><!-- slot:company.phone -->+27 81 040 0918<!-- /slot:company.phone --></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- /include:closing -->
   </main>
 
   <!-- include:footer -->
